@@ -1,0 +1,2847 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+	<!-- /toolkit styles -->
+
+</head>
+<body>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="f-menu">
+		
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="f-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="atoms.html" class="f-menu__heading">Atoms</a>
+					<ul>
+						<li>
+							<a href="atoms.html#blockquotes">Blockquotes</a>
+						</li>
+						<li>
+							<a href="atoms.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="atoms.html#checkboxes">Checkboxes</a>
+						</li>
+						<li>
+							<a href="atoms.html#inputs">Inputs</a>
+						</li>
+						<li>
+							<a href="atoms.html#lists">Lists</a>
+						</li>
+						<li>
+							<a href="atoms.html#loading">Loading</a>
+						</li>
+						<li>
+							<a href="atoms.html#paragraph">Paragraph</a>
+						</li>
+						<li>
+							<a href="atoms.html#radio">Radio</a>
+						</li>
+						<li>
+							<a href="atoms.html#select">Select</a>
+						</li>
+						<li>
+							<a href="atoms.html#switch">Switch</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="molecules.html" class="f-menu__heading">Molecules</a>
+					<ul>
+						<li>
+							<a href="molecules.html#home-cards">Home Cards</a>
+						</li>
+						<li>
+							<a href="molecules.html#modal">Modal</a>
+						</li>
+						<li>
+							<a href="molecules.html#slider">Slider</a>
+						</li>
+						<li>
+							<a href="molecules.html#table">Table</a>
+						</li>
+						<li>
+							<a href="molecules.html#tabs">Tabs</a>
+						</li>
+						<li>
+							<a href="molecules.html#toolboxes">Toolboxes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="organisms.html" class="f-menu__heading">Organisms</a>
+					<ul>
+						<li>
+							<a href="organisms.html#cards">Cards</a>
+						</li>
+						<li>
+							<a href="organisms.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="organisms.html#header">Header</a>
+						</li>
+						<li>
+							<a href="organisms.html#home-sidebar">Home Sidebar</a>
+						</li>
+						<li>
+							<a href="organisms.html#modals">Modals</a>
+						</li>
+						<li>
+							<a href="organisms.html#timeline">Timeline</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="pages.html" class="f-menu__heading">Pages</a>
+					<ul>
+						<li>
+							<a href="pages/home.html">Home</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#javascript">Javascript</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="f-container">
+			<div class="f-control-bar">
+				<div class="f-control f-menu-toggle">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+
+	<h1 data-f-toggle="labels">Organisms</h1>
+<p>In interfaces, molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.</p>
+
+
+<div class="f-item-group" id="cards">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Cards</h2>
+	</div>
+		<div class="f-item-group" id="cards.main">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Main</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p><code>Cards</code> are self contained peices of information that open in a modal for further exploration.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="card hover-card tileContent">
+	<div class="card-title default">Default card
+		<div id="shareThis" class="card-share">
+			<!-- Icon button -->
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+		</div>
+	</div>
+	<div class="card-subtopics">
+		<div class="">
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
+			</div>
+		</div>
+	</div>
+	<div class="card-content">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</p>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent&quot;&gt;
+	&lt;div class=&quot;card-title default&quot;&gt;Default card
+		&lt;div id=&quot;shareThis&quot; class=&quot;card-share&quot;&gt;
+			&lt;!-- Icon button --&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-subtopics&quot;&gt;
+		&lt;div class=&quot;&quot;&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Teacher Stories&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Administrator Handbook&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Resources for Students&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Advisory Council&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;School Partnerships&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-content&quot;&gt;
+		&lt;p&gt;
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="cards.news">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">News</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p><code>Cards</code> are self contained peices of information that open in a modal for further exploration.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="card hover-card tileContent news">
+	<div class="card-title">News card
+		<div id="shareThis" class="cardToolbox">
+			<!-- Icon button -->
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+		</div>
+	</div>
+	<div class="card-subtopics subtopics-news">
+		<div class="">
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
+			</div>
+		</div>
+	</div>
+	<div class="card-content">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</p>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent news&quot;&gt;
+	&lt;div class=&quot;card-title&quot;&gt;News card
+		&lt;div id=&quot;shareThis&quot; class=&quot;cardToolbox&quot;&gt;
+			&lt;!-- Icon button --&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-subtopics subtopics-news&quot;&gt;
+		&lt;div class=&quot;&quot;&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Teacher Stories&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Administrator Handbook&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Resources for Students&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Advisory Council&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;School Partnerships&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-content&quot;&gt;
+		&lt;p&gt;
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="cards.promo">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Promo</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p><code>Cards</code> are self contained peices of information that open in a modal for further exploration.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="card hover-card tileContent promTile">
+	<div class="card-title promo">Promo card
+		<div id="shareThis" class="cardToolbox">
+			<!-- Icon button -->
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+		</div>
+	</div>
+	<div class="card-subtopics subtopics-promo">
+		<div class="">
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
+			</div>
+			<div class="">
+				<span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
+			</div>
+		</div>
+	</div>
+	<div class="card-content">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		</p>
+	</div>
+
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent promTile&quot;&gt;
+	&lt;div class=&quot;card-title promo&quot;&gt;Promo card
+		&lt;div id=&quot;shareThis&quot; class=&quot;cardToolbox&quot;&gt;
+			&lt;!-- Icon button --&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-subtopics subtopics-promo&quot;&gt;
+		&lt;div class=&quot;&quot;&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Teacher Stories&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Administrator Handbook&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Resources for Students&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;Advisory Council&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;&quot;&gt;
+				&lt;span href=&quot;#dialogBox&quot; class=&quot;sub-topic popup-with-zoom-anim ng-binding&quot;&gt;School Partnerships&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-content&quot;&gt;
+		&lt;p&gt;
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="footer">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Footer</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Footer component.</p>
+
+</div>
+<div class="f-item-preview">
+	<footer class="mini-footer">
+	<div class="mini-footer__left-section">
+		<ul class="mini-footer__link-list desktop-only">
+			<li><a href="#">Accessibility</a></li>
+			<li><a href="#">Disclaimer</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">© Copyright</a></li>
+		</ul>
+		<div class="mobile-only">
+			<button id="menu-top-left" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+				<i class="material-icons">more_vert</i>
+			</button>
+
+			<div class="mdl-menu__container is-upgraded">
+				<div class="mdl-menu__outline mdl-menu--top-left"></div>
+				<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" for="menu-top-left" data-upgraded=",MaterialMenu,MaterialRipple">
+					<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Accessibility</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+					</li>
+					<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Disclaimer</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+					</li>
+					<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Privacy</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mini-footer__right-section">
+		<ul class="social-links">
+			<li><a target="blank" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+			<li><a target="blank" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+			<li><a target="blank" href="https://www.youtube.com/" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+			<li class="mobile-only">© Copyright</li>
+		</ul>
+	</div>
+</footer>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;footer class=&quot;mini-footer&quot;&gt;
+	&lt;div class=&quot;mini-footer__left-section&quot;&gt;
+		&lt;ul class=&quot;mini-footer__link-list desktop-only&quot;&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Accessibility&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Disclaimer&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Privacy&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;© Copyright&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div class=&quot;mobile-only&quot;&gt;
+			&lt;button id=&quot;menu-top-left&quot; class=&quot;mdl-button mdl-js-button mdl-button--icon&quot; data-upgraded=&quot;,MaterialButton&quot;&gt;
+				&lt;i class=&quot;material-icons&quot;&gt;more_vert&lt;/i&gt;
+			&lt;/button&gt;
+
+			&lt;div class=&quot;mdl-menu__container is-upgraded&quot;&gt;
+				&lt;div class=&quot;mdl-menu__outline mdl-menu--top-left&quot;&gt;&lt;/div&gt;
+				&lt;ul class=&quot;mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events&quot; for=&quot;menu-top-left&quot; data-upgraded=&quot;,MaterialMenu,MaterialRipple&quot;&gt;
+					&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;#&quot;&gt;Accessibility&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disclaimer&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;#&quot;&gt;Privacy&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;mini-footer__right-section&quot;&gt;
+		&lt;ul class=&quot;social-links&quot;&gt;
+			&lt;li&gt;&lt;a target=&quot;blank&quot; href=&quot;https://www.facebook.com/&quot; title=&quot;Facebook&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a target=&quot;blank&quot; href=&quot;https://twitter.com/&quot; title=&quot;Twitter&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a target=&quot;blank&quot; href=&quot;https://www.youtube.com/&quot; title=&quot;YouTube&quot;&gt;&lt;i class=&quot;fa fa-youtube&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;mobile-only&quot;&gt;© Copyright&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="header">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Header</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Header component.</p>
+
+</div>
+<div class="f-item-preview">
+	<header>
+	<div class="topBar">
+		<div class="logo">
+			<a href="#">
+				<img src="/assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
+			</a>
+		</div>
+		<div class="utility">
+			<div class="fr-eng-toggle">
+				<input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
+				<label class="fr-eng-switch-label" for="fr-eng-switch">
+					<span class="fr-eng-switch-inner"></span>
+					<span class="fr-eng-switch-switch"></span>
+				</label>
+			</div>
+			<div class="searchBar">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+					<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+						<i class="material-icons">search</i>
+					</label>
+					<div class="mdl-textfield__expandable-holder">
+						<input class="mdl-textfield__input" type="text" id="sample6">
+						<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;header&gt;
+	&lt;div class=&quot;topBar&quot;&gt;
+		&lt;div class=&quot;logo&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;
+				&lt;img src=&quot;/assets/toolkit/images/GoA-Education_logo-w.png&quot; height=&quot;30&quot; width=&quot;179&quot; alt=&quot;Government of Alberta&quot;&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;utility&quot;&gt;
+			&lt;div class=&quot;fr-eng-toggle&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; name=&quot;fr-eng-switch&quot; class=&quot;fr-eng-switch-checkbox&quot; id=&quot;fr-eng-switch&quot; onchange=&quot;AlbertaEducationApp.ToggleLanguage(&#x27;fr-eng-switch&#x27;)&quot;&gt;
+				&lt;label class=&quot;fr-eng-switch-label&quot; for=&quot;fr-eng-switch&quot;&gt;
+					&lt;span class=&quot;fr-eng-switch-inner&quot;&gt;&lt;/span&gt;
+					&lt;span class=&quot;fr-eng-switch-switch&quot;&gt;&lt;/span&gt;
+				&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;searchBar&quot;&gt;
+				&lt;div class=&quot;mdl-textfield mdl-js-textfield mdl-textfield--expandable&quot;&gt;
+					&lt;label class=&quot;mdl-button mdl-js-button mdl-button--icon&quot; for=&quot;sample6&quot;&gt;
+						&lt;i class=&quot;material-icons&quot;&gt;search&lt;/i&gt;
+					&lt;/label&gt;
+					&lt;div class=&quot;mdl-textfield__expandable-holder&quot;&gt;
+						&lt;input class=&quot;mdl-textfield__input&quot; type=&quot;text&quot; id=&quot;sample6&quot;&gt;
+						&lt;label class=&quot;mdl-textfield__label&quot; for=&quot;sample-expandable&quot;&gt;Expandable Input&lt;/label&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="home-sidebar">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Home Sidebar</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Footer component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="rightSidebar">
+	<div class="welcome">
+		<a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
+			<div class="minister-image"><img src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+			<div class="minister-title">
+				<p>
+					<span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
+					<span style="font-weight:400; font-size:14px">Minister of Education</span>
+				</p>
+			</div>
+		</a>
+	</div>
+	<div class="news">
+
+
+		<h5>News</h5>
+		<a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
+		<div class="newsItem">
+			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+				<h4 class="newsHeadline">Bulletin Two</h4>
+			</a>
+
+		</div>
+		<div class="newsItem">
+			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18936">
+				<h4 class="newsHeadline">Bulletin Three - Priority</h4>
+			</a>
+
+		</div>
+		<div class="newsItem">
+			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=14313">
+				<h4 class="newsHeadline">As good as it gets</h4>
+			</a>
+
+		</div>
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;rightSidebar&quot;&gt;
+	&lt;div class=&quot;welcome&quot;&gt;
+		&lt;a href=&quot;http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;amp;rnumber=29&amp;amp;leg=29&quot; target=&quot;_blank&quot;&gt;
+			&lt;div class=&quot;minister-image&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;minister-title&quot;&gt;
+				&lt;p&gt;
+					&lt;span style=&quot;font-weight:600; font-size:16px; display:block;&quot;&gt;Hon. David Eggen&lt;/span&gt;
+					&lt;span style=&quot;font-weight:400; font-size:14px&quot;&gt;Minister of Education&lt;/span&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;news&quot;&gt;
+
+
+		&lt;h5&gt;News&lt;/h5&gt;
+		&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot; class=&quot;news-view-all-btn&quot;&gt;View All&lt;/a&gt;
+		&lt;div class=&quot;newsItem&quot;&gt;
+			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/h4&gt;
+			&lt;/a&gt;
+
+		&lt;/div&gt;
+		&lt;div class=&quot;newsItem&quot;&gt;
+			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18936&quot;&gt;
+				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Three - Priority&lt;/h4&gt;
+			&lt;/a&gt;
+
+		&lt;/div&gt;
+		&lt;div class=&quot;newsItem&quot;&gt;
+			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=14313&quot;&gt;
+				&lt;h4 class=&quot;newsHeadline&quot;&gt;As good as it gets&lt;/h4&gt;
+			&lt;/a&gt;
+
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="modals">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Modals</h2>
+	</div>
+		<div class="f-item-group" id="modals.default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Modal template.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-modal">
+	<div class="mdl-layout__header is-casting-shadow">
+		<div class="mdl-layout__header-row mdl-modal__title">
+			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+		</div>
+
+		<div class="dialogToolbox">
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide">
+				<span class="lang-toggle-fr">FR</span>
+				<span class="lang-toggle-en ng-hide">EN</span>
+				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+			</button>
+
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">close</i>
+			</button>
+		</div>
+		<div class="templateFaqsContainer ng-scope">
+			<div class="dialogTopics">
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18920" class="ng-binding subTopic selected">
+          Sample SubTopic
+          </a>
+				</div>
+
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18956" class="ng-binding subTopic">
+          Sample Alternate SubTopic
+          </a>
+				</div>
+			</div>
+
+			<div class="dialogContent">
+
+			</div>
+			<div class="dialogTool">
+				<div class="toolboxItemContainer">
+					<div class="toolboxItemContainer">
+						<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div class="selected">
+								<a href="#">
+									<div class="toolbox-faq ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                          <span class="tool" title="Faq">
+                            <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                          </span> FAQs
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div>
+								<a href="#">
+									<div class="toolbox-resources ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div>
+								<a href="#">
+									<div class="toolbox-event ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<a href="#">
+								<div class="toolbox-poll ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="sideBottom">
+							<!-- ngIf: selectedTopic.News.length > 0 -->
+							<div class="toolboxItem ng-scope">
+								<a href="#">
+									<div class="toolbox-news">
+										<span class="toolbox-title" style="font-weight: bold">
+                            <span class="tool" title="News">
+                                <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                            </span> News
+										</span>
+										<div class="toolbox-content toolbox-content-news">
+											<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
+											<div style="height: 100%" class="ng-scope">
+												<div class="toolbox-preview Preview1-18918" style="display: block;">
+													<div class="toolbox-news-details">
+														<span class="toolbox-news-headline ng-binding">
+                                            Bulletin Three - Priority
+                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
+                                        </span>
+														<div class="toolbox-news-description ng-binding">
+															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
+															<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
+														</div>
+													</div>
+												</div>
+												<div class="toolbox-preview Preview0-18918" style="display: none;">
+													<div class="toolbox-news-details">
+														<span class="toolbox-news-headline ng-binding">
+                                            As good as it gets
+                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
+                                        </span>
+														<div class="toolbox-news-description ng-binding">
+															As good as it gets
+															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- end ngIf: selectedTopic.News.length > 0 -->
+							<div class="toolboxItem ng-scope ng-hide">
+								<div>
+									<a href="#">
+										<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
+										<div class="toolbox-internallinks ng-scope">
+											<span class="toolbox-title ng-binding" style="font-weight: bold">
+                            <span class="tool"  title="Internal Link">
+                              <i class="material-icons mdl-badge" >link</i>
+                            </span> Related Content
+											</span>
+											<div class="toolbox-content toolbox-content-link">
+												<div class="toolbox-link-display">
+													<div class="toolbox-link-title">
+														<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+		</div>
+	</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
+	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title&quot;&gt;
+			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;dialogToolbox&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect ng-hide&quot;&gt;
+				&lt;span class=&quot;lang-toggle-fr&quot;&gt;FR&lt;/span&gt;
+				&lt;span class=&quot;lang-toggle-en ng-hide&quot;&gt;EN&lt;/span&gt;
+				&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;/button&gt;
+
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;templateFaqsContainer ng-scope&quot;&gt;
+			&lt;div class=&quot;dialogTopics&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18920&quot; class=&quot;ng-binding subTopic selected&quot;&gt;
+          Sample SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18956&quot; class=&quot;ng-binding subTopic&quot;&gt;
+          Sample Alternate SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;dialogContent&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;dialogTool&quot;&gt;
+				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+					&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+						&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div class=&quot;selected&quot;&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                          &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                            &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                          &lt;/span&gt; FAQs
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;sideBottom&quot;&gt;
+							&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
+							&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-news&quot;&gt;
+										&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                                &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                            &lt;/span&gt; News
+										&lt;/span&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+											&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+											&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+													&lt;div class=&quot;toolbox-news-details&quot;&gt;
+														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                            Bulletin Three - Priority
+                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
+                                        &lt;/span&gt;
+														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
+															&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
+													&lt;div class=&quot;toolbox-news-details&quot;&gt;
+														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                            As good as it gets
+                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
+                                        &lt;/span&gt;
+														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+															As good as it gets
+															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;
+							&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
+								&lt;div&gt;
+									&lt;a href=&quot;#&quot;&gt;
+										&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
+										&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
+											&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                              &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                            &lt;/span&gt; Related Content
+											&lt;/span&gt;
+											&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+												&lt;div class=&quot;toolbox-link-display&quot;&gt;
+													&lt;div class=&quot;toolbox-link-title&quot;&gt;
+														&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="modals.news">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">News</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Modal template.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-modal">
+	<div class="mdl-layout__header is-casting-shadow">
+		<div class="mdl-layout__header-row mdl-modal__title news">
+			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+		</div>
+
+		<div class="dialogToolbox">
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide">
+				<span class="lang-toggle-fr">FR</span>
+				<span class="lang-toggle-en ng-hide">EN</span>
+				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+			</button>
+
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">close</i>
+			</button>
+		</div>
+		<div class="templateFaqsContainer ng-scope">
+			<div class="dialogTopics">
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18920" class="ng-binding subTopic selected news">
+          Sample SubTopic
+          </a>
+				</div>
+
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18956" class="ng-binding subTopic">
+          Sample Alternate SubTopic
+          </a>
+				</div>
+			</div>
+
+			<div class="dialogContent">
+
+			</div>
+			<div class="dialogTool">
+				<div class="toolboxItemContainer">
+					<div class="toolboxItemContainer">
+						<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div class="selected">
+								<a href="#">
+									<div class="toolbox-faq ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                          <span class="tool" title="Faq">
+                            <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                          </span> FAQs
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div>
+								<a href="#">
+									<div class="toolbox-resources ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div>
+								<a href="#">
+									<div class="toolbox-event ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<a href="#">
+								<div class="toolbox-poll ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="sideBottom">
+							<!-- ngIf: selectedTopic.News.length > 0 -->
+							<div class="toolboxItem ng-scope">
+								<a href="#">
+									<div class="toolbox-news">
+										<span class="toolbox-title" style="font-weight: bold">
+                            <span class="tool" title="News">
+                                <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                            </span> News
+										</span>
+										<div class="toolbox-content toolbox-content-news">
+											<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
+											<div style="height: 100%" class="ng-scope">
+												<div class="toolbox-preview Preview1-18918" style="display: block;">
+													<div class="toolbox-news-details">
+														<span class="toolbox-news-headline ng-binding">
+                                            Bulletin Three - Priority
+                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
+                                        </span>
+														<div class="toolbox-news-description ng-binding">
+															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
+															<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
+														</div>
+													</div>
+												</div>
+												<div class="toolbox-preview Preview0-18918" style="display: none;">
+													<div class="toolbox-news-details">
+														<span class="toolbox-news-headline ng-binding">
+                                            As good as it gets
+                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
+                                        </span>
+														<div class="toolbox-news-description ng-binding">
+															As good as it gets
+															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- end ngIf: selectedTopic.News.length > 0 -->
+							<div class="toolboxItem ng-scope ng-hide">
+								<div>
+									<a href="#">
+										<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
+										<div class="toolbox-internallinks ng-scope">
+											<span class="toolbox-title ng-binding" style="font-weight: bold">
+                            <span class="tool"  title="Internal Link">
+                              <i class="material-icons mdl-badge" >link</i>
+                            </span> Related Content
+											</span>
+											<div class="toolbox-content toolbox-content-link">
+												<div class="toolbox-link-display">
+													<div class="toolbox-link-title">
+														<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+		</div>
+	</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
+	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title news&quot;&gt;
+			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;dialogToolbox&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect ng-hide&quot;&gt;
+				&lt;span class=&quot;lang-toggle-fr&quot;&gt;FR&lt;/span&gt;
+				&lt;span class=&quot;lang-toggle-en ng-hide&quot;&gt;EN&lt;/span&gt;
+				&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;/button&gt;
+
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;templateFaqsContainer ng-scope&quot;&gt;
+			&lt;div class=&quot;dialogTopics&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18920&quot; class=&quot;ng-binding subTopic selected news&quot;&gt;
+          Sample SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18956&quot; class=&quot;ng-binding subTopic&quot;&gt;
+          Sample Alternate SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;dialogContent&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;dialogTool&quot;&gt;
+				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+					&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+						&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div class=&quot;selected&quot;&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                          &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                            &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                          &lt;/span&gt; FAQs
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;sideBottom&quot;&gt;
+							&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
+							&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-news&quot;&gt;
+										&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                                &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                            &lt;/span&gt; News
+										&lt;/span&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+											&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+											&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+													&lt;div class=&quot;toolbox-news-details&quot;&gt;
+														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                            Bulletin Three - Priority
+                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
+                                        &lt;/span&gt;
+														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
+															&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
+													&lt;div class=&quot;toolbox-news-details&quot;&gt;
+														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                            As good as it gets
+                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
+                                        &lt;/span&gt;
+														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+															As good as it gets
+															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;
+							&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
+								&lt;div&gt;
+									&lt;a href=&quot;#&quot;&gt;
+										&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
+										&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
+											&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                              &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                            &lt;/span&gt; Related Content
+											&lt;/span&gt;
+											&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+												&lt;div class=&quot;toolbox-link-display&quot;&gt;
+													&lt;div class=&quot;toolbox-link-title&quot;&gt;
+														&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="modals.promo">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Promo</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Modal template.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-modal">
+	<div class="mdl-layout__header is-casting-shadow">
+		<div class="mdl-layout__header-row mdl-modal__title promo">
+			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+		</div>
+
+		<div class="dialogToolbox">
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide">
+				<span class="lang-toggle-fr">FR</span>
+				<span class="lang-toggle-en ng-hide">EN</span>
+				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+			</button>
+
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">close</i>
+			</button>
+		</div>
+		<div class="templateFaqsContainer ng-scope">
+			<div class="dialogTopics">
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18920" class="ng-binding subTopic selected promo">
+          Sample SubTopic
+          </a>
+				</div>
+
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18956" class="ng-binding subTopic">
+          Sample Alternate SubTopic
+          </a>
+				</div>
+			</div>
+
+			<div class="dialogContent">
+
+			</div>
+			<div class="dialogTool">
+				<div class="toolboxItemContainer">
+					<div class="toolboxItemContainer">
+						<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div class="selected">
+								<a href="#">
+									<div class="toolbox-faq ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                          <span class="tool" title="Faq">
+                            <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                          </span> FAQs
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div>
+								<a href="#">
+									<div class="toolbox-resources ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<div>
+								<a href="#">
+									<div class="toolbox-event ng-scope">
+										<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+										</span>
+										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="toolboxItem ng-scope">
+							<a href="#">
+								<div class="toolbox-poll ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						<div class="sideBottom">
+							<!-- ngIf: selectedTopic.News.length > 0 -->
+							<div class="toolboxItem ng-scope">
+								<a href="#">
+									<div class="toolbox-news">
+										<span class="toolbox-title" style="font-weight: bold">
+                            <span class="tool" title="News">
+                                <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                            </span> News
+										</span>
+										<div class="toolbox-content toolbox-content-news">
+											<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
+											<div style="height: 100%" class="ng-scope">
+												<div class="toolbox-preview Preview1-18918" style="display: block;">
+													<div class="toolbox-news-details">
+														<span class="toolbox-news-headline ng-binding">
+                                            Bulletin Three - Priority
+                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
+                                        </span>
+														<div class="toolbox-news-description ng-binding">
+															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
+															<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
+														</div>
+													</div>
+												</div>
+												<div class="toolbox-preview Preview0-18918" style="display: none;">
+													<div class="toolbox-news-details">
+														<span class="toolbox-news-headline ng-binding">
+                                            As good as it gets
+                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
+                                        </span>
+														<div class="toolbox-news-description ng-binding">
+															As good as it gets
+															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
+										</div>
+									</div>
+								</a>
+							</div>
+							<!-- end ngIf: selectedTopic.News.length > 0 -->
+							<div class="toolboxItem ng-scope ng-hide">
+								<div>
+									<a href="#">
+										<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
+										<div class="toolbox-internallinks ng-scope">
+											<span class="toolbox-title ng-binding" style="font-weight: bold">
+                            <span class="tool"  title="Internal Link">
+                              <i class="material-icons mdl-badge" >link</i>
+                            </span> Related Content
+											</span>
+											<div class="toolbox-content toolbox-content-link">
+												<div class="toolbox-link-display">
+													<div class="toolbox-link-title">
+														<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+		</div>
+	</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
+	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title promo&quot;&gt;
+			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;dialogToolbox&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect ng-hide&quot;&gt;
+				&lt;span class=&quot;lang-toggle-fr&quot;&gt;FR&lt;/span&gt;
+				&lt;span class=&quot;lang-toggle-en ng-hide&quot;&gt;EN&lt;/span&gt;
+				&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;/button&gt;
+
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;templateFaqsContainer ng-scope&quot;&gt;
+			&lt;div class=&quot;dialogTopics&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18920&quot; class=&quot;ng-binding subTopic selected promo&quot;&gt;
+          Sample SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18956&quot; class=&quot;ng-binding subTopic&quot;&gt;
+          Sample Alternate SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;dialogContent&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;dialogTool&quot;&gt;
+				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+					&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+						&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div class=&quot;selected&quot;&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                          &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                            &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                          &lt;/span&gt; FAQs
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;div&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+										&lt;/span&gt;
+										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;div class=&quot;sideBottom&quot;&gt;
+							&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
+							&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+								&lt;a href=&quot;#&quot;&gt;
+									&lt;div class=&quot;toolbox-news&quot;&gt;
+										&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                                &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                            &lt;/span&gt; News
+										&lt;/span&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+											&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+											&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+													&lt;div class=&quot;toolbox-news-details&quot;&gt;
+														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                            Bulletin Three - Priority
+                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
+                                        &lt;/span&gt;
+														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
+															&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
+													&lt;div class=&quot;toolbox-news-details&quot;&gt;
+														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                            As good as it gets
+                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
+                                        &lt;/span&gt;
+														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+															As good as it gets
+															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/a&gt;
+							&lt;/div&gt;
+							&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;
+							&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
+								&lt;div&gt;
+									&lt;a href=&quot;#&quot;&gt;
+										&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
+										&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
+											&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                              &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                            &lt;/span&gt; Related Content
+											&lt;/span&gt;
+											&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+												&lt;div class=&quot;toolbox-link-display&quot;&gt;
+													&lt;div class=&quot;toolbox-link-title&quot;&gt;
+														&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="timeline">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Timeline</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Header component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div id="timeline-embed" class="tl-timeline tl-layout-landscape">
+	<div class="tl-storyslider tl-storyslider" style="top: 1px; height: 2px;" id="tl-xrpnj">
+		<div class="tl-slider-container-mask">
+			<div class="tl-slider-container tlanimate" style="left: 0px;">
+				<div class="tl-slider-item-container">
+					<div class="tl-slide tl-slide-titleslide tl-slide-text-only" id="alberta-education-timeline" style="left: 0px; top: 0px;">
+						<div class="tl-slide-scrollable-container">
+							<div class="tl-slide-content-container">
+								<div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
+									<div class="tl-text" id="tl-urlvhn">
+										<div class="tl-text-content-container">
+											<h3 class="tl-headline-date"></h3>
+											<h2 class="tl-headline tl-headline-title">Alberta Education Timeline</h2>
+											<div class="tl-text-content">
+												<p>Timeline showing events</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tl-slide-background"></div>
+					</div>
+					<div class="tl-slide tl-slide-text-only" id="test-timeline-itemdiv-classnodeid-hidden9846-div" style="left: 3508px; top: 0px;">
+						<div class="tl-slide-scrollable-container">
+							<div class="tl-slide-content-container">
+								<div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
+									<div class="tl-text" id="tl-obnpf">
+										<div class="tl-text-content-container">
+											<h3 class="tl-headline-date">November 5, 2015 — November 30, 2015</h3>
+											<h2 class="tl-headline">Test Timeline Item<div class="nodeId hidden">9846</div></h2>
+											<div class="tl-text-content">
+												<p>Test Timeline Item</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tl-slide-background"></div>
+					</div>
+					<div class="tl-slide tl-slide-text-only" id="test-item-3div-classnodeid-hidden19052-div" style="left: 7016px; top: 0px;">
+						<div class="tl-slide-scrollable-container">
+							<div class="tl-slide-content-container">
+								<div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
+									<div class="tl-text" id="tl-fqmun">
+										<div class="tl-text-content-container">
+											<h3 class="tl-headline-date">November 5, 2015 — November 28, 2015</h3>
+											<h2 class="tl-headline">Test item #3<div class="nodeId hidden">19052</div></h2>
+											<div class="tl-text-content">
+												<p>Test item #3</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tl-slide-background"></div>
+					</div>
+					<div class="tl-slide tl-slide-text-only" id="test-item-2div-classnodeid-hidden19051-div" style="left: 10524px; top: 0px;">
+						<div class="tl-slide-scrollable-container">
+							<div class="tl-slide-content-container">
+								<div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
+									<div class="tl-text" id="tl-vfiz">
+										<div class="tl-text-content-container">
+											<h3 class="tl-headline-date">November 6, 2015 — November 29, 2015</h3>
+											<h2 class="tl-headline">Test item #2<div class="nodeId hidden">19051</div></h2>
+											<div class="tl-text-content">
+												<p>Test item #2</p>
+												<p>Test item #2</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tl-slide-background"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tl-slider-background tl-animate" style="background-image: none; background-color: rgb(255, 255, 255);"></div>
+		<div class="tl-slidenav-next" style="top: 1px; display: block;">
+			<div class="tl-slidenav-content-container">
+				<div class="tl-slidenav-icon">&nbsp;</div>
+				<div class="tl-slidenav-title">Test Timeline Item
+					<div class="nodeId hidden">9846</div>
+				</div>
+				<div class="tl-slidenav-description">November 5, 2015 — November 30, 2015</div>
+			</div>
+		</div>
+		<div class="tl-slidenav-previous" style="top: 1px; display: none;">
+			<div class="tl-slidenav-content-container">
+				<div class="tl-slidenav-icon">&nbsp;</div>
+				<div class="tl-slidenav-title">Previous</div>
+				<div class="tl-slidenav-description">Date</div>
+			</div>
+		</div>
+	</div>
+	<div class="tl-timenav" style="height: 165px;">
+		<div class="tl-attribution"></div>
+		<div class="tl-timenav-line"></div>
+		<div class="tl-timenav-slider" style="position: absolute; width: 2455.5px; left: 877px;">
+			<div class="tl-timenav-slider-background" style="width: 2455.5px; left: -877px;"></div>
+			<div class="tl-timenav-container-mask">
+				<div class="tl-timenav-container">
+					<div class="tl-timenav-item-container">
+						<div class="tl-timemarker tl-timemarker-with-end" id="test-timeline-itemdiv-classnodeid-hidden9846-div-marker" style="left: 0px; width: 701.5px; top: 5px;">
+							<div class="tl-timemarker-timespan" style="height: 120px;">
+								<div class="tl-timemarker-timespan-content" style="height: 35px;"></div>
+								<div class="tl-timemarker-line-left"></div>
+								<div class="tl-timemarker-line-right"></div>
+							</div>
+							<div class="tl-timemarker-content-container tl-timemarker-content-container-long tl-timemarker-content-container-small" style="width: 701.5px; height: 35px;">
+								<div class="tl-timemarker-content">
+									<div class="tl-timemarker-text">
+										<h2 class="tl-headline" style="-webkit-line-clamp: 2;">Test Timeline Item<div class="nodeId hidden">9846</div></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tl-timemarker tl-timemarker-with-end" id="test-item-3div-classnodeid-hidden19052-div-marker" style="left: 0px; width: 645.38px; top: 45px;">
+							<div class="tl-timemarker-timespan" style="height: 80px;">
+								<div class="tl-timemarker-timespan-content" style="height: 35px;"></div>
+								<div class="tl-timemarker-line-left"></div>
+								<div class="tl-timemarker-line-right"></div>
+							</div>
+							<div class="tl-timemarker-content-container tl-timemarker-content-container-long tl-timemarker-content-container-small" style="width: 645.38px; height: 35px;">
+								<div class="tl-timemarker-content">
+									<div class="tl-timemarker-text">
+										<h2 class="tl-headline" style="-webkit-line-clamp: 2;">Test item #3<div class="nodeId hidden">19052</div></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tl-timemarker tl-timemarker-with-end" id="test-item-2div-classnodeid-hidden19051-div-marker" style="left: 28.06px; width: 645.38px; top: 85px;">
+							<div class="tl-timemarker-timespan" style="height: 40px;">
+								<div class="tl-timemarker-timespan-content" style="height: 35px;"></div>
+								<div class="tl-timemarker-line-left"></div>
+								<div class="tl-timemarker-line-right"></div>
+							</div>
+							<div class="tl-timemarker-content-container tl-timemarker-content-container-long tl-timemarker-content-container-small" style="width: 645.38px; height: 35px;">
+								<div class="tl-timemarker-content">
+									<div class="tl-timemarker-text">
+										<h2 class="tl-headline" style="-webkit-line-clamp: 2;">Test item #2<div class="nodeId hidden">19051</div></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tl-timeaxis">
+				<div class="tl-timeaxis-content-container">
+					<div class="tl-timeaxis-major tl-animate-opacity tl-timeaxis-animate-opacity" style="opacity: 1;">
+						<div class="tl-timeaxis-tick" style="left: -21467.1px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct.</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -20597.2px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov.</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -19754.2px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec.</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -18884.4px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Jan.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -18014.5px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Feb.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -17228.8px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">March</span></div>
+						<div class="tl-timeaxis-tick" style="left: -16360.1px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">April</span></div>
+						<div class="tl-timeaxis-tick" style="left: -15518.3px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">May</span></div>
+						<div class="tl-timeaxis-tick" style="left: -14648.5px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">June</span></div>
+						<div class="tl-timeaxis-tick" style="left: -13806.7px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">July</span></div>
+						<div class="tl-timeaxis-tick" style="left: -12936.8px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Aug.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -12067px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Sept.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -11225.2px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -10355.3px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -9512.34px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -8642.48px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Jan.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -7772.62px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Feb.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -6986.94px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">March</span></div>
+						<div class="tl-timeaxis-tick" style="left: -6118.25px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">April</span></div>
+						<div class="tl-timeaxis-tick" style="left: -5276.45px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">May</span></div>
+						<div class="tl-timeaxis-tick" style="left: -4406.59px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">June</span></div>
+						<div class="tl-timeaxis-tick" style="left: -3564.79px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">July</span></div>
+						<div class="tl-timeaxis-tick" style="left: -2694.93px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Aug.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -1825.07px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Sept.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -983.269px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct.</span></div>
+						<div class="tl-timeaxis-tick" style="left: -113.409px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 729.56px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 1599.42px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Jan.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 2469.28px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Feb.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 3283.02px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">March</span></div>
+						<div class="tl-timeaxis-tick" style="left: 4151.71px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">April</span></div>
+						<div class="tl-timeaxis-tick" style="left: 4993.51px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">May</span></div>
+						<div class="tl-timeaxis-tick" style="left: 5863.37px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">June</span></div>
+						<div class="tl-timeaxis-tick" style="left: 6705.17px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">July</span></div>
+						<div class="tl-timeaxis-tick" style="left: 7575.03px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Aug.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 7575.03px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Aug.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 8444.89px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Sept.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 9286.69px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 10156.6px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 10999.5px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 11869.4px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Jan.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 12739.2px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Feb.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 13524.9px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">March</span></div>
+						<div class="tl-timeaxis-tick" style="left: 14393.6px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">April</span></div>
+						<div class="tl-timeaxis-tick" style="left: 15235.4px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">May</span></div>
+						<div class="tl-timeaxis-tick" style="left: 16105.3px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">June</span></div>
+						<div class="tl-timeaxis-tick" style="left: 16947.1px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">July</span></div>
+						<div class="tl-timeaxis-tick" style="left: 17816.9px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Aug.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 18686.8px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Sept.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 19528.6px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct.</span></div>
+						<div class="tl-timeaxis-tick" style="left: 20398.5px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov.</span></div>
+					</div>
+					<div class="tl-timeaxis-minor tl-animate-opacity tl-timeaxis-animate-opacity" style="opacity: 1;">
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -702.669px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 11</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -674.609px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 12</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -646.549px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 13</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -618.489px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 14</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -590.429px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 15</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -562.369px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 16</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -534.309px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 17</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -506.249px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 18</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -478.189px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 19</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -450.129px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 20</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -422.069px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 21</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -394.009px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 22</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -365.949px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 23</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -337.889px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 24</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -309.829px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 25</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -281.769px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 26</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -253.709px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 27</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -225.649px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 28</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -197.589px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 29</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -169.529px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Oct. 30</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -141.469px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Oct. 31</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -84.18px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 2</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: -56.12px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 3</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: -28.06px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 4</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 0px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 5</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: 28.06px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 6</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 56.12px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 7</span></div>
+						<div class="tl-timeaxis-tick" style="left: 84.18px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 8</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 112.24px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 9</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: 140.3px;"><span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 10</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 168.36px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 11</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: 196.42px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 12</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 224.48px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 13</span>
+						</div>
+						<div class="tl-timeaxis-tick" style="left: 252.54px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 14</span>
+						</div>
+						<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 280.6px;">
+							<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 15</span>
+							< /div>
+								<div class="tl-timeaxis-tick" style="left: 308.66px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 16</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 336.72px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 17</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 364.78px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 18</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 392.84px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 19</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 420.9px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 20</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 448.96px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 21</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 477.02px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 22</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 505.08px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 23</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 533.14px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 24</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 561.2px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 25</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 589.26px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 26</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 617.32px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 27</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 645.38px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 28</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 673.44px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Nov. 29</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 701.5px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Nov. 30</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 757.62px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 2</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 785.68px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 3</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 813.74px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 4</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 841.8px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 5</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 869.86px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 6</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 897.92px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 7</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 925.98px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 8</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 954.04px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 9</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 982.1px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 10</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1010.16px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 11</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1038.22px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 12</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1066.28px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 13</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1094.34px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 14</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1122.4px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 15</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1150.46px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 16</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1178.52px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 17</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1206.58px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 18</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1234.64px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 19</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1262.7px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 20</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1290.76px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 21</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1318.82px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 22</span>
+								</div>
+								<div class="tl-timeaxis-tick" style="left: 1346.88px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 1;">Dec. 23</span>
+								</div>
+								<div class="tl-timeaxis-tick tl-timeaxis-tick-hidden" style="left: 1374.94px;">
+									<span class="tl-timeaxis-tick-text tl-animate-opacity" style="opacity: 0;">Dec. 24</span>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tl-timeaxis-background"></div>
+		</div>
+		<div class="tl-menubar" style="top: 68px;">
+			<span class="tl-menubar-button"><span class="tl-icon-zoom-in"></span></span>
+			<span class="tl-menubar-button"><span class="tl-icon-zoom-out"></span></span>
+			<span class="tl-menubar-button"><span class="tl-icon-goback"></span></span>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;timeline-embed&quot; class=&quot;tl-timeline tl-layout-landscape&quot;&gt;
+	&lt;div class=&quot;tl-storyslider tl-storyslider&quot; style=&quot;top: 1px; height: 2px;&quot; id=&quot;tl-xrpnj&quot;&gt;
+		&lt;div class=&quot;tl-slider-container-mask&quot;&gt;
+			&lt;div class=&quot;tl-slider-container tlanimate&quot; style=&quot;left: 0px;&quot;&gt;
+				&lt;div class=&quot;tl-slider-item-container&quot;&gt;
+					&lt;div class=&quot;tl-slide tl-slide-titleslide tl-slide-text-only&quot; id=&quot;alberta-education-timeline&quot; style=&quot;left: 0px; top: 0px;&quot;&gt;
+						&lt;div class=&quot;tl-slide-scrollable-container&quot;&gt;
+							&lt;div class=&quot;tl-slide-content-container&quot;&gt;
+								&lt;div class=&quot;tl-slide-content&quot; style=&quot;padding-left: 100px; padding-right: 100px; width: 1554px;&quot;&gt;
+									&lt;div class=&quot;tl-text&quot; id=&quot;tl-urlvhn&quot;&gt;
+										&lt;div class=&quot;tl-text-content-container&quot;&gt;
+											&lt;h3 class=&quot;tl-headline-date&quot;&gt;&lt;/h3&gt;
+											&lt;h2 class=&quot;tl-headline tl-headline-title&quot;&gt;Alberta Education Timeline&lt;/h2&gt;
+											&lt;div class=&quot;tl-text-content&quot;&gt;
+												&lt;p&gt;Timeline showing events&lt;/p&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-slide-background&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;tl-slide tl-slide-text-only&quot; id=&quot;test-timeline-itemdiv-classnodeid-hidden9846-div&quot; style=&quot;left: 3508px; top: 0px;&quot;&gt;
+						&lt;div class=&quot;tl-slide-scrollable-container&quot;&gt;
+							&lt;div class=&quot;tl-slide-content-container&quot;&gt;
+								&lt;div class=&quot;tl-slide-content&quot; style=&quot;padding-left: 100px; padding-right: 100px; width: 1554px;&quot;&gt;
+									&lt;div class=&quot;tl-text&quot; id=&quot;tl-obnpf&quot;&gt;
+										&lt;div class=&quot;tl-text-content-container&quot;&gt;
+											&lt;h3 class=&quot;tl-headline-date&quot;&gt;November 5, 2015 — November 30, 2015&lt;/h3&gt;
+											&lt;h2 class=&quot;tl-headline&quot;&gt;Test Timeline Item&lt;div class=&quot;nodeId hidden&quot;&gt;9846&lt;/div&gt;&lt;/h2&gt;
+											&lt;div class=&quot;tl-text-content&quot;&gt;
+												&lt;p&gt;Test Timeline Item&lt;/p&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-slide-background&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;tl-slide tl-slide-text-only&quot; id=&quot;test-item-3div-classnodeid-hidden19052-div&quot; style=&quot;left: 7016px; top: 0px;&quot;&gt;
+						&lt;div class=&quot;tl-slide-scrollable-container&quot;&gt;
+							&lt;div class=&quot;tl-slide-content-container&quot;&gt;
+								&lt;div class=&quot;tl-slide-content&quot; style=&quot;padding-left: 100px; padding-right: 100px; width: 1554px;&quot;&gt;
+									&lt;div class=&quot;tl-text&quot; id=&quot;tl-fqmun&quot;&gt;
+										&lt;div class=&quot;tl-text-content-container&quot;&gt;
+											&lt;h3 class=&quot;tl-headline-date&quot;&gt;November 5, 2015 — November 28, 2015&lt;/h3&gt;
+											&lt;h2 class=&quot;tl-headline&quot;&gt;Test item #3&lt;div class=&quot;nodeId hidden&quot;&gt;19052&lt;/div&gt;&lt;/h2&gt;
+											&lt;div class=&quot;tl-text-content&quot;&gt;
+												&lt;p&gt;Test item #3&lt;/p&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-slide-background&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;tl-slide tl-slide-text-only&quot; id=&quot;test-item-2div-classnodeid-hidden19051-div&quot; style=&quot;left: 10524px; top: 0px;&quot;&gt;
+						&lt;div class=&quot;tl-slide-scrollable-container&quot;&gt;
+							&lt;div class=&quot;tl-slide-content-container&quot;&gt;
+								&lt;div class=&quot;tl-slide-content&quot; style=&quot;padding-left: 100px; padding-right: 100px; width: 1554px;&quot;&gt;
+									&lt;div class=&quot;tl-text&quot; id=&quot;tl-vfiz&quot;&gt;
+										&lt;div class=&quot;tl-text-content-container&quot;&gt;
+											&lt;h3 class=&quot;tl-headline-date&quot;&gt;November 6, 2015 — November 29, 2015&lt;/h3&gt;
+											&lt;h2 class=&quot;tl-headline&quot;&gt;Test item #2&lt;div class=&quot;nodeId hidden&quot;&gt;19051&lt;/div&gt;&lt;/h2&gt;
+											&lt;div class=&quot;tl-text-content&quot;&gt;
+												&lt;p&gt;Test item #2&lt;/p&gt;
+												&lt;p&gt;Test item #2&lt;/p&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-slide-background&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;tl-slider-background tl-animate&quot; style=&quot;background-image: none; background-color: rgb(255, 255, 255);&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;tl-slidenav-next&quot; style=&quot;top: 1px; display: block;&quot;&gt;
+			&lt;div class=&quot;tl-slidenav-content-container&quot;&gt;
+				&lt;div class=&quot;tl-slidenav-icon&quot;&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;div class=&quot;tl-slidenav-title&quot;&gt;Test Timeline Item
+					&lt;div class=&quot;nodeId hidden&quot;&gt;9846&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;tl-slidenav-description&quot;&gt;November 5, 2015 — November 30, 2015&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;tl-slidenav-previous&quot; style=&quot;top: 1px; display: none;&quot;&gt;
+			&lt;div class=&quot;tl-slidenav-content-container&quot;&gt;
+				&lt;div class=&quot;tl-slidenav-icon&quot;&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;div class=&quot;tl-slidenav-title&quot;&gt;Previous&lt;/div&gt;
+				&lt;div class=&quot;tl-slidenav-description&quot;&gt;Date&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tl-timenav&quot; style=&quot;height: 165px;&quot;&gt;
+		&lt;div class=&quot;tl-attribution&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;tl-timenav-line&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;tl-timenav-slider&quot; style=&quot;position: absolute; width: 2455.5px; left: 877px;&quot;&gt;
+			&lt;div class=&quot;tl-timenav-slider-background&quot; style=&quot;width: 2455.5px; left: -877px;&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;tl-timenav-container-mask&quot;&gt;
+				&lt;div class=&quot;tl-timenav-container&quot;&gt;
+					&lt;div class=&quot;tl-timenav-item-container&quot;&gt;
+						&lt;div class=&quot;tl-timemarker tl-timemarker-with-end&quot; id=&quot;test-timeline-itemdiv-classnodeid-hidden9846-div-marker&quot; style=&quot;left: 0px; width: 701.5px; top: 5px;&quot;&gt;
+							&lt;div class=&quot;tl-timemarker-timespan&quot; style=&quot;height: 120px;&quot;&gt;
+								&lt;div class=&quot;tl-timemarker-timespan-content&quot; style=&quot;height: 35px;&quot;&gt;&lt;/div&gt;
+								&lt;div class=&quot;tl-timemarker-line-left&quot;&gt;&lt;/div&gt;
+								&lt;div class=&quot;tl-timemarker-line-right&quot;&gt;&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;tl-timemarker-content-container tl-timemarker-content-container-long tl-timemarker-content-container-small&quot; style=&quot;width: 701.5px; height: 35px;&quot;&gt;
+								&lt;div class=&quot;tl-timemarker-content&quot;&gt;
+									&lt;div class=&quot;tl-timemarker-text&quot;&gt;
+										&lt;h2 class=&quot;tl-headline&quot; style=&quot;-webkit-line-clamp: 2;&quot;&gt;Test Timeline Item&lt;div class=&quot;nodeId hidden&quot;&gt;9846&lt;/div&gt;&lt;/h2&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timemarker tl-timemarker-with-end&quot; id=&quot;test-item-3div-classnodeid-hidden19052-div-marker&quot; style=&quot;left: 0px; width: 645.38px; top: 45px;&quot;&gt;
+							&lt;div class=&quot;tl-timemarker-timespan&quot; style=&quot;height: 80px;&quot;&gt;
+								&lt;div class=&quot;tl-timemarker-timespan-content&quot; style=&quot;height: 35px;&quot;&gt;&lt;/div&gt;
+								&lt;div class=&quot;tl-timemarker-line-left&quot;&gt;&lt;/div&gt;
+								&lt;div class=&quot;tl-timemarker-line-right&quot;&gt;&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;tl-timemarker-content-container tl-timemarker-content-container-long tl-timemarker-content-container-small&quot; style=&quot;width: 645.38px; height: 35px;&quot;&gt;
+								&lt;div class=&quot;tl-timemarker-content&quot;&gt;
+									&lt;div class=&quot;tl-timemarker-text&quot;&gt;
+										&lt;h2 class=&quot;tl-headline&quot; style=&quot;-webkit-line-clamp: 2;&quot;&gt;Test item #3&lt;div class=&quot;nodeId hidden&quot;&gt;19052&lt;/div&gt;&lt;/h2&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timemarker tl-timemarker-with-end&quot; id=&quot;test-item-2div-classnodeid-hidden19051-div-marker&quot; style=&quot;left: 28.06px; width: 645.38px; top: 85px;&quot;&gt;
+							&lt;div class=&quot;tl-timemarker-timespan&quot; style=&quot;height: 40px;&quot;&gt;
+								&lt;div class=&quot;tl-timemarker-timespan-content&quot; style=&quot;height: 35px;&quot;&gt;&lt;/div&gt;
+								&lt;div class=&quot;tl-timemarker-line-left&quot;&gt;&lt;/div&gt;
+								&lt;div class=&quot;tl-timemarker-line-right&quot;&gt;&lt;/div&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;tl-timemarker-content-container tl-timemarker-content-container-long tl-timemarker-content-container-small&quot; style=&quot;width: 645.38px; height: 35px;&quot;&gt;
+								&lt;div class=&quot;tl-timemarker-content&quot;&gt;
+									&lt;div class=&quot;tl-timemarker-text&quot;&gt;
+										&lt;h2 class=&quot;tl-headline&quot; style=&quot;-webkit-line-clamp: 2;&quot;&gt;Test item #2&lt;div class=&quot;nodeId hidden&quot;&gt;19051&lt;/div&gt;&lt;/h2&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;tl-timeaxis&quot;&gt;
+				&lt;div class=&quot;tl-timeaxis-content-container&quot;&gt;
+					&lt;div class=&quot;tl-timeaxis-major tl-animate-opacity tl-timeaxis-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -21467.1px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct.&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -20597.2px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov.&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -19754.2px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec.&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -18884.4px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Jan.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -18014.5px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Feb.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -17228.8px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;March&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -16360.1px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;April&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -15518.3px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;May&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -14648.5px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;June&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -13806.7px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;July&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -12936.8px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Aug.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -12067px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Sept.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -11225.2px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -10355.3px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -9512.34px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -8642.48px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Jan.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -7772.62px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Feb.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -6986.94px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;March&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -6118.25px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;April&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -5276.45px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;May&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -4406.59px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;June&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -3564.79px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;July&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -2694.93px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Aug.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -1825.07px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Sept.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -983.269px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -113.409px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 729.56px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1599.42px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Jan.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 2469.28px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Feb.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 3283.02px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;March&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 4151.71px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;April&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 4993.51px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;May&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 5863.37px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;June&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 6705.17px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;July&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 7575.03px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Aug.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 7575.03px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Aug.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 8444.89px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Sept.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 9286.69px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 10156.6px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 10999.5px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 11869.4px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Jan.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 12739.2px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Feb.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 13524.9px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;March&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 14393.6px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;April&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 15235.4px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;May&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 16105.3px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;June&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 16947.1px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;July&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 17816.9px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Aug.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 18686.8px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Sept.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 19528.6px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct.&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 20398.5px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov.&lt;/span&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;tl-timeaxis-minor tl-animate-opacity tl-timeaxis-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -702.669px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 11&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -674.609px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 12&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -646.549px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 13&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -618.489px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 14&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -590.429px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 15&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -562.369px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 16&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -534.309px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 17&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -506.249px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 18&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -478.189px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 19&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -450.129px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 20&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -422.069px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 21&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -394.009px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 22&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -365.949px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 23&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -337.889px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 24&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -309.829px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 25&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -281.769px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 26&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -253.709px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 27&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -225.649px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 28&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -197.589px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 29&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -169.529px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Oct. 30&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -141.469px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Oct. 31&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -84.18px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 2&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: -56.12px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 3&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: -28.06px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 4&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 0px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 5&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 28.06px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 6&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 56.12px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 7&lt;/span&gt;&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 84.18px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 8&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 112.24px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 9&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 140.3px;&quot;&gt;&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 10&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 168.36px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 11&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 196.42px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 12&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 224.48px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 13&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 252.54px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 14&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 280.6px;&quot;&gt;
+							&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 15&lt;/span&gt;
+							&lt; /div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 308.66px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 16&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 336.72px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 17&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 364.78px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 18&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 392.84px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 19&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 420.9px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 20&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 448.96px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 21&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 477.02px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 22&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 505.08px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 23&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 533.14px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 24&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 561.2px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 25&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 589.26px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 26&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 617.32px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 27&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 645.38px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 28&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 673.44px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Nov. 29&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 701.5px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Nov. 30&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 757.62px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 2&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 785.68px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 3&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 813.74px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 4&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 841.8px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 5&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 869.86px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 6&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 897.92px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 7&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 925.98px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 8&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 954.04px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 9&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 982.1px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 10&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1010.16px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 11&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1038.22px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 12&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1066.28px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 13&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1094.34px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 14&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1122.4px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 15&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1150.46px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 16&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1178.52px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 17&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1206.58px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 18&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1234.64px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 19&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1262.7px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 20&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1290.76px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 21&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1318.82px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 22&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick&quot; style=&quot;left: 1346.88px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 1;&quot;&gt;Dec. 23&lt;/span&gt;
+								&lt;/div&gt;
+								&lt;div class=&quot;tl-timeaxis-tick tl-timeaxis-tick-hidden&quot; style=&quot;left: 1374.94px;&quot;&gt;
+									&lt;span class=&quot;tl-timeaxis-tick-text tl-animate-opacity&quot; style=&quot;opacity: 0;&quot;&gt;Dec. 24&lt;/span&gt;
+								&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;tl-timeaxis-background&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;tl-menubar&quot; style=&quot;top: 68px;&quot;&gt;
+			&lt;span class=&quot;tl-menubar-button&quot;&gt;&lt;span class=&quot;tl-icon-zoom-in&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span class=&quot;tl-menubar-button&quot;&gt;&lt;span class=&quot;tl-icon-zoom-out&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span class=&quot;tl-menubar-button&quot;&gt;&lt;span class=&quot;tl-icon-goback&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js"></script>
+
+	<!-- toolkit scripts -->
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+
+		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
+		<script src="assets/toolkit/scripts/search.js"></script>
+	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
+
+		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+
+		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+
+		<script>
+		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+		    this.MaterialProgress.setProgress(44);
+		  });
+		</script>
+
+		<!--
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="assets/toolkit/scripts/forms.js"></script>
+
+	/toolkit scripts -->
+
+</body>
+</html>

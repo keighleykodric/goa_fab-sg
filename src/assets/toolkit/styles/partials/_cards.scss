@@ -1,0 +1,618 @@
+h2.topic span.featured{display:none;position:absolute;font-size:10px;top:-5px}
+h2.topic span.ministryNews, h2.topic span.featured {
+    display: none;
+    position: absolute;
+    font-size: 10px;
+    top: -5px;
+}
+div#shareThis {
+    top: 0px;
+    display: inline-block;
+    float: right;
+}
+h5.category {
+  font-size:.7em;
+  color:#fff;
+  position:absolute;
+  background:#adb9ca;
+  bottom:0;
+  right:10px;
+  padding:0 5px;
+  border-radius:3px
+}
+h2.topic {
+  padding:10px 2%;
+  color:$white;
+  font-size:16px;
+  margin:0;
+  font-weight:500;
+  width:96%;
+  line-height:28px
+}
+.mdl-modal h2.topic {
+  padding:0
+}
+.filterClose .tileContent {
+  width:24%;
+}
+
+
+
+
+/*---Card styles---*/
+
+.card {
+  color:#fff;
+  background-color: #5f6a72;
+  position:relative;
+  width:420px;
+  max-width: 440px;
+  height: 229px;
+  float: left;
+  overflow:hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.card:hover{
+  color: #FFF;
+  background: $primary-color;
+}
+a.card-share {
+  float:right;
+  padding: 0px 10px;
+  margin-right: 10px;
+}
+.hover-card a.card {
+  transition:all .1s
+}
+.card a{
+  padding: 0px 10px;
+  margin-right: 10px;
+}
+
+.card-header {
+  animation:cardEnter .75s ease-in-out .5s;
+  animation-fill-mode: both;
+  max-width: 960px;
+  height:300px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
+  margin: 20px auto;
+  opacity: 0;
+}
+
+.card-title{
+  padding: 10px;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+  width: calc(100% 20px);
+  line-height: 28px;
+}
+
+.card h1 {width:172px; float:left; padding:10px; color:#fff;}
+
+
+
+/*---Default Card styles---*/
+.sdefault{
+  color: #FFF;
+  background: #a5acb0;
+}
+.sdefault:hover{
+  color: #FFF;
+  background: $primary-color;
+}
+
+
+
+
+
+/*---Promo Card styles---*/
+.promo{
+  background: #f68a1e !important;
+  color: #fff;
+}
+
+.promoTile h2.topic {
+    background: #f68a1e;
+    color: #fff;
+}
+.promoTile .card-topics {
+  background:#faf4ee
+}
+
+.subtopics-promo {
+  background:#faf4ee
+}
+
+
+
+/*---News Card styles---*/
+.news{
+  background: #005983 !important;
+  color: #fff;
+}
+
+
+
+
+
+
+/*---Card Subtopics styles---*/
+.card-subtopics{
+  width: 37%;
+  float: left;
+  background: #F9FAFC;
+  height: 100%;
+  overflow: auto;
+  text-align: right;
+  box-shadow:5px -4px 0px -4px #ddd;
+  padding-top:16px;
+}
+
+.card-subtopic_list ul{
+  width:110px;
+  float:right;
+  list-style:none;
+  padding:10px;
+}
+.card-subtopic_list li {
+  border-radius:3px;
+  border:1px solid #fff;
+  padding:5px;
+  margin-bottom:2px;
+  color:#fff;
+  font-size:12px;
+  text-align:center;
+}
+
+
+
+
+
+.card .subTopicList {
+  width:110px;
+  float:right;
+  list-style:none;
+  padding:10px
+}
+.card .subTopicList li {
+  border-radius:3px;
+  border:1px solid #fff;
+  padding:5px;
+  margin-bottom:2px;
+  color:#fff;
+  font-size:12px;
+  text-align:center
+}
+.subContent .card {
+  background:#fff
+}
+span.sub-topic {
+  margin:0 0;
+  padding:6px 6px;
+  font-size:12px;
+  font-weight:400;
+  display:block;
+  border-radius:0;
+  color:#8493a8;
+  overflow:hidden;
+  width:calc(100% - 12px);
+  white-space:nowrap;
+  text-overflow:ellipsis
+}
+span.sub-topic:hover {
+  background-color: $secondary-color;
+  color:#fff
+}
+
+
+
+
+
+
+/*---Card Content styles---*/
+
+.card-content {
+  padding: 8px 2% 10px;
+  width: 59%;
+  height: 165px;
+  float: left;
+  font-size: 1em;
+  position: relative;
+  line-height: 21px;
+  color: #5f6a72;
+  font-weight: 400;
+  background-color:#FFF;
+}
+
+.card-topics {
+  width:37%;
+  float:left;
+  background:#f9fafc;
+  height:100%;
+  border-radius:0;
+  overflow:auto;
+  text-align:right;
+  padding-top:10px;
+  box-shadow:5px -4px 0 -4px #ddd
+}
+
+.topic-content,a .topic-content {
+  padding:8px 10px 10px;
+  width:calc(63% - 21px);
+  height:165px;
+  float:left;
+  font-size:1em;
+  position:relative;
+  line-height:21px;
+  color:#5f6a72;
+  font-weight:400
+}
+h2.topic span {
+  max-width:90%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  display:block;
+  padding:3px 0
+}
+
+
+
+/*---News Card Content styles---*/
+
+.newsTile .topic-content {}.topic-content p {
+  font-size:1em;
+  font-weight:400
+}
+.newsTile h2.topic {
+  background:#005983;
+  color:#fff
+}
+.newsTile .card-topics {
+  background:#e3edf1
+}
+.subtopics-news {
+  background:#e3edf1
+}
+.newsTile .cardNewsPreview {}
+.listDisplay .cardNewsPreview .cardPreviewTitle {
+  margin-top:10%
+}
+.newsTile .cardPreview {
+  background-color:#f0fafc
+}
+.cardNewsPreview .cardPreviewTitle {
+  text-align:left;
+  white-space:normal;
+  padding:5px;
+  font-size:13px
+}
+.cardNewsPreview {
+  position:absolute;
+  display:inline-block;
+  overflow:hidden;
+  top:0;
+  padding:2.5%;
+  width:90%;
+  height:100%;
+  left:5px;
+  background-color:#fff
+}
+
+
+
+
+
+
+
+/*---Links Card Content styles---*/
+
+.linkCardPreview {
+  padding-top:12%;
+  padding-bottom:8%
+}
+.linkType {
+  position:absolute;
+  bottom:10px;
+  width:calc(100% - 20px);
+  text-align:center;
+  padding:4px 0;
+  background:#f7f9fb;
+  font-size:.75em
+}
+.listDisplay .linkType {
+  margin-top:0
+}
+.linkTypeCount {
+  font-size:2em;
+  font-weight:700
+}
+
+
+
+
+
+/*---Card Links styles---*/
+
+.eventType {
+  display:inline-block;
+  background:#f7f9fb;
+  padding:.75%;
+  margin:.75%;
+  width:46%;
+  height:30%;
+  text-align:center;
+  font-size:.75em;
+  margin-top:113px
+}
+.listDisplay .eventType {
+  margin-top:0
+}
+.eventTypeCount {
+  font-size:2em;
+  font-weight:700
+}
+.cardEventTitle {
+  margin-left:50px;
+  overflow:hidden;
+  text-overflow:ellipsis
+}
+
+
+
+
+/*---Card Preview styles---*/
+
+.cardPreview {
+  position:absolute;
+  display:inline-block;
+  overflow:hidden;
+  height:50px;
+  width:100%;
+  left:1px;
+  z-index:0;
+  top:0;
+  background-color:#fff
+}
+
+.cardPreviewContainer {
+  font-weight:700;
+  font-size:15px;
+  position:absolute;
+  background:#f7f9fb;
+  margin-top:3%;
+  margin-left:3%;
+  height:60%;
+  width:84%;
+  text-align:center;
+  padding:5%;
+  padding-top:10%;
+  left:0;
+  top:0
+}
+.cardPreviewTitleContainer {
+  display:inline-block;
+  text-align:center;
+  width:85%;
+  white-space:nowrap
+}
+.cardPreviewTitleRow {
+  margin:0 auto;
+  width:240px;
+  text-align:center
+}
+.cardPreviewTitle {
+  overflow:hidden;
+  font-weight:700;
+  font-size:15px;
+  text-overflow:ellipsis
+}
+.cardPreviewIcon {
+  display:inline-block;
+  float:left;
+  position:relative;
+  width:15%
+}
+.cardPreviewImage {
+  height:65px
+}
+.previewContent {
+  text-align:center;
+  margin:auto
+}
+.cardPreviewDescription {
+  overflow:hidden;
+  white-space:nowrap
+}
+
+
+
+
+
+
+
+
+
+/*---Event Card Content styles---*/
+
+.card .eventContentPreview {
+  position:absolute;
+  width:75px;
+  height:75px;
+  left:0;
+  top:-30px;
+  font-size:20px;
+  text-align:center;
+  font-weight:700;
+  line-height:75px;
+  background:url(/images/cal-event-bg.png) no-repeat center center
+}
+
+.card .eventMonthPreview {
+  position:absolute;
+  width:75px;
+  height:75px;
+  left:0;
+  top:-30px;
+  text-align:center;
+  line-height:145px;
+  font-size:14px;
+  font-weight:700
+}
+
+.mediaContainer {position:absolute}
+
+.belowCardPreview {margin-top:113px}
+
+.listDisplay .belowCardPreview {padding-top:0}
+
+.leftCardArrow {float:left}
+
+.rightCardArrow {float:right}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---Resource Card Content styles---*/
+.resourceType {
+  display:inline-block;
+  padding:.75%;
+  background:#f7f9fb;
+  width:30.5%;
+  color:#54657e;
+  text-align:center;
+  font-size:10.5px;
+  height:46px
+}
+.listDisplay .resourceType {
+  margin-top:0
+}
+.resourceTypeNumber {
+  font-size:2em;
+  font-weight:700
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---Card Gird styles---*/
+
+.tileContent {
+    float: left;
+    width:32%;
+    margin:0 0.5% 1%;
+    position:relative;
+}
+.tileContent:hover {
+  box-shadow:0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(2, 98, 194, .12);
+  outline:0;
+  color: #FFF;
+    background: #36424a;
+}
+
+.news:hover {
+  box-shadow:0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(2, 98, 194, .12);
+  outline:0;
+  color: #FFF;
+    background: #005983;
+}
+
+.promo:hover {
+  box-shadow:0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(2, 98, 194, .12);
+  outline:0;
+  color: #FFF;
+    background: #f68a1e;
+}
+
+.listDisplay .previewContent {
+  width:500px;
+  position:relative;
+  float:left
+}
+
+.list-display-only {display:none}
+
+
+.tileContent.listDisplay {
+  width:98%;
+  float:none;
+  height:auto;
+  min-height:100px;
+  display:block
+}
+.tileContent.listDisplay .card {
+    height:auto
+}
+.tileContent.listDisplay .resourceType {
+  padding:10px 5px;
+  margin:5px;
+  width:28%
+}
+.tileContent.listDisplay h2.topic {
+  padding:10px 1%;
+  width:98%
+}
+.tileContent.listDisplay span.subTopic {
+  display:none
+}
+.tileContent.listDisplay .card-topics {
+  display:none;
+  width:20%;
+  box-shadow:none;
+  border-right:1px solid #ccc;
+  float:none;
+  min-height:170px;
+  height:auto;
+  vertical-align:top
+}
+
+.tileContent.listDisplay .topic-content {
+  width:77%;
+  display:inline-block;
+  float:none;
+  padding:10px 1%;
+  vertical-align:middle;
+  height:auto;
+  min-height:35px
+}
+
+.tileContent.listDisplay iframe, .tileContent.listDisplay img {
+  display:none
+}
+
+.tileContent.listDisplay .internalLinksCardContainer,
+.tileContent.listDisplay .externalLinksCardContainer,
+.tileContent.listDisplay .resourcesCardContainer,
+.tileContent.listDisplay .eventsCardContainer,
+.tileContent.listDisplay .faqsCardContainer,
+.tileContent.listDisplay .pollsCardContainer,
+.tileContent.listDisplay .mediaCardContainer,
+.tileContent.listDisplay .contactCardContainer {
+  display:none
+}
+
+.tileContent.listDisplay .list-display-only {
+  display:block;
+  float:left
+}

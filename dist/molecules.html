@@ -1,0 +1,1263 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+	<!-- /toolkit styles -->
+
+</head>
+<body>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="f-menu">
+		
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="f-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="atoms.html" class="f-menu__heading">Atoms</a>
+					<ul>
+						<li>
+							<a href="atoms.html#blockquotes">Blockquotes</a>
+						</li>
+						<li>
+							<a href="atoms.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="atoms.html#checkboxes">Checkboxes</a>
+						</li>
+						<li>
+							<a href="atoms.html#inputs">Inputs</a>
+						</li>
+						<li>
+							<a href="atoms.html#lists">Lists</a>
+						</li>
+						<li>
+							<a href="atoms.html#loading">Loading</a>
+						</li>
+						<li>
+							<a href="atoms.html#paragraph">Paragraph</a>
+						</li>
+						<li>
+							<a href="atoms.html#radio">Radio</a>
+						</li>
+						<li>
+							<a href="atoms.html#select">Select</a>
+						</li>
+						<li>
+							<a href="atoms.html#switch">Switch</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="molecules.html" class="f-menu__heading">Molecules</a>
+					<ul>
+						<li>
+							<a href="molecules.html#home-cards">Home Cards</a>
+						</li>
+						<li>
+							<a href="molecules.html#modal">Modal</a>
+						</li>
+						<li>
+							<a href="molecules.html#slider">Slider</a>
+						</li>
+						<li>
+							<a href="molecules.html#table">Table</a>
+						</li>
+						<li>
+							<a href="molecules.html#tabs">Tabs</a>
+						</li>
+						<li>
+							<a href="molecules.html#toolboxes">Toolboxes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="organisms.html" class="f-menu__heading">Organisms</a>
+					<ul>
+						<li>
+							<a href="organisms.html#cards">Cards</a>
+						</li>
+						<li>
+							<a href="organisms.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="organisms.html#header">Header</a>
+						</li>
+						<li>
+							<a href="organisms.html#home-sidebar">Home Sidebar</a>
+						</li>
+						<li>
+							<a href="organisms.html#modals">Modals</a>
+						</li>
+						<li>
+							<a href="organisms.html#timeline">Timeline</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="pages.html" class="f-menu__heading">Pages</a>
+					<ul>
+						<li>
+							<a href="pages/home.html">Home</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#javascript">Javascript</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="f-container">
+			<div class="f-control-bar">
+				<div class="f-control f-menu-toggle">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+
+	<h1 data-f-toggle="labels">Molecules</h1>
+<p>In interfaces, molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.</p>
+
+
+<div class="f-item-group" id="home-cards">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Home Cards</h2>
+	</div>
+		<div class="f-item-group" id="home-cards.early-childhood">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Early Childhood</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div id="home" class="card item w1 earlyChildhood">
+	<h1>Early Childhood</h1>
+	<div class="home-link-box">
+		<a href=" ">Education in Alberta</a>
+		<a href=" ">Curriculum &amp; Resources</a>
+		<a href=" ">Student Advisories</a>
+		<a href=" ">First Nations Education</a>
+		<a href=" ">Safe and Caring Schools</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;home&quot; class=&quot;card item w1 earlyChildhood&quot;&gt;
+	&lt;h1&gt;Early Childhood&lt;/h1&gt;
+	&lt;div class=&quot;home-link-box&quot;&gt;
+		&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Curriculum &amp;amp; Resources&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Student Advisories&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;First Nations Education&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Safe and Caring Schools&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="home-cards.elementary">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Elementary</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div id="home" class="card item w1 elementary">
+	<h1>Elementary</h1>
+	<div class="home-link-box">
+		<a href=" ">Education in Alberta</a>
+		<a href=" ">Curriculum &amp; Resources</a>
+		<a href=" ">Student Advisories</a>
+		<a href=" ">First Nations Education</a>
+		<a href=" ">Safe and Caring Schools</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;home&quot; class=&quot;card item w1 elementary&quot;&gt;
+	&lt;h1&gt;Elementary&lt;/h1&gt;
+	&lt;div class=&quot;home-link-box&quot;&gt;
+		&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Curriculum &amp;amp; Resources&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Student Advisories&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;First Nations Education&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Safe and Caring Schools&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="home-cards.highschool">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Highschool</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div id="home" class="card item w1 highSchool">
+	<h1>Highschool</h1>
+	<div class="home-link-box">
+		<a href=" ">Education in Alberta</a>
+		<a href=" ">Curriculum &amp; Resources</a>
+		<a href=" ">Student Advisories</a>
+		<a href=" ">First Nations Education</a>
+		<a href=" ">Safe and Caring Schools</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;home&quot; class=&quot;card item w1 highSchool&quot;&gt;
+	&lt;h1&gt;Highschool&lt;/h1&gt;
+	&lt;div class=&quot;home-link-box&quot;&gt;
+		&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Curriculum &amp;amp; Resources&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Student Advisories&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;First Nations Education&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Safe and Caring Schools&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="home-cards.junior-high">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Junior High</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div id="home" class="card item w1 juniorHigh">
+	<h1>Junior High</h1>
+	<div class="home-link-box">
+		<a href=" ">Education in Alberta</a>
+		<a href=" ">Curriculum &amp; Resources</a>
+		<a href=" ">Student Advisories</a>
+		<a href=" ">First Nations Education</a>
+		<a href=" ">Safe and Caring Schools</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;home&quot; class=&quot;card item w1 juniorHigh&quot;&gt;
+	&lt;h1&gt;Junior High&lt;/h1&gt;
+	&lt;div class=&quot;home-link-box&quot;&gt;
+		&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Curriculum &amp;amp; Resources&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Student Advisories&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;First Nations Education&lt;/a&gt;
+		&lt;a href=&quot; &quot;&gt;Safe and Caring Schools&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="home-cards.ministry">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Ministry</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div id="home-sm" class="masonry home  item card postSecondary">
+	<h1>Ministry</h1>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;home-sm&quot; class=&quot;masonry home  item card postSecondary&quot;&gt;
+	&lt;h1&gt;Ministry&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="home-cards.school-administration">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">School Administration</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div id="home-sm" class="card item w2 administration">
+	<h1>School Administration</h1>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;home-sm&quot; class=&quot;card item w2 administration&quot;&gt;
+	&lt;h1&gt;School Administration&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="modal">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Modal</h2>
+	</div>
+		<div class="f-item-group" id="modal.content-faq">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Content Faq</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<h1 class="dialogTitle ng-binding">FAQs</h1>
+<div class="dialogDesc">
+	<span class="ng-binding">FAQs FAQs FAQs</span>
+</div>
+
+<div class="accordion">
+	<div class="accordionItem ng-scope">
+		<div class="accordionHeader ng-binding" id="18928question">
+			Item One
+			<span id="togglearrow" class="material-icons ng-scope" style="display: block; float: right; height: 20px; width: 20px;">arrow_drop_up</span>
+		</div>
+		<div class="accordionBody noDisplay" id="18928answer">
+			<span ng-bind-html="faq.Answer | html" class="ng-binding">
+          <p>Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One</p>
+          <p>Item One Item One Item One Item One Item One Item One</p></span>
+		</div>
+	</div>
+
+	<div class="accordionItem ng-scope">
+		<div class="accordionHeader ng-binding" id="18929question">
+			FAQ Item Two
+			<span id="togglearrow" class="material-icons ng-scope" style="display: block; float: right; height: 20px; width: 20px;">arrow_drop_up</span>
+			<!-- end ngIf: !selectedToolboxItem.AutoExpand -->
+		</div>
+		<div class="accordionBody noDisplay" id="18929answer">
+			<span ng-bind-html="faq.Answer | html" class="ng-binding">
+          <p>FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two</p>
+        </span>
+		</div>
+	</div>
+	<br style="clear: both">
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1 class=&quot;dialogTitle ng-binding&quot;&gt;FAQs&lt;/h1&gt;
+&lt;div class=&quot;dialogDesc&quot;&gt;
+	&lt;span class=&quot;ng-binding&quot;&gt;FAQs FAQs FAQs&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;accordion&quot;&gt;
+	&lt;div class=&quot;accordionItem ng-scope&quot;&gt;
+		&lt;div class=&quot;accordionHeader ng-binding&quot; id=&quot;18928question&quot;&gt;
+			Item One
+			&lt;span id=&quot;togglearrow&quot; class=&quot;material-icons ng-scope&quot; style=&quot;display: block; float: right; height: 20px; width: 20px;&quot;&gt;arrow_drop_up&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;accordionBody noDisplay&quot; id=&quot;18928answer&quot;&gt;
+			&lt;span ng-bind-html=&quot;faq.Answer | html&quot; class=&quot;ng-binding&quot;&gt;
+          &lt;p&gt;Item One Item One Item One Item One Item One Item One Item One Item One Item One Item One&lt;/p&gt;
+          &lt;p&gt;Item One Item One Item One Item One Item One Item One&lt;/p&gt;&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;accordionItem ng-scope&quot;&gt;
+		&lt;div class=&quot;accordionHeader ng-binding&quot; id=&quot;18929question&quot;&gt;
+			FAQ Item Two
+			&lt;span id=&quot;togglearrow&quot; class=&quot;material-icons ng-scope&quot; style=&quot;display: block; float: right; height: 20px; width: 20px;&quot;&gt;arrow_drop_up&lt;/span&gt;
+			&lt;!-- end ngIf: !selectedToolboxItem.AutoExpand --&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;accordionBody noDisplay&quot; id=&quot;18929answer&quot;&gt;
+			&lt;span ng-bind-html=&quot;faq.Answer | html&quot; class=&quot;ng-binding&quot;&gt;
+          &lt;p&gt;FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two FAQ Item Two&lt;/p&gt;
+        &lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;br style=&quot;clear: both&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="slider">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Slider</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Table atom.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="banner item w4">
+	<div class="flexslider">
+		<ul class="slides">
+			<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide"><img src="/assets/toolkit/images/back-to-school.png" alt="back to school toolkit" draggable="false"></li>
+			<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class=""><img src="/assets/toolkit/images/Grade-3.jpg" alt="Grade 3 - Student Learning Assessment Pilot" draggable="false"></li>
+		</ul>
+		<ol class="flex-control-nav flex-control-paging">
+			<li><a class="flex-active">1</a></li>
+			<li><a class="">2</a></li>
+		</ol>
+		<ul class="flex-direction-nav">
+			<li class="flex-nav-prev"><a class="flex-prev sliderPrev" href="#"><i class="material-icons">arrow_back</i></a></li>
+			<li class="flex-nav-next"><a class="flex-next sliderNext" href="#"><i class="material-icons">arrow_forward</i></a></li>
+		</ul>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;banner item w4&quot;&gt;
+	&lt;div class=&quot;flexslider&quot;&gt;
+		&lt;ul class=&quot;slides&quot;&gt;
+			&lt;li style=&quot;width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;&quot; class=&quot;flex-active-slide&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/back-to-school.png&quot; alt=&quot;back to school toolkit&quot; draggable=&quot;false&quot;&gt;&lt;/li&gt;
+			&lt;li style=&quot;width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;&quot; class=&quot;&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/Grade-3.jpg&quot; alt=&quot;Grade 3 - Student Learning Assessment Pilot&quot; draggable=&quot;false&quot;&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ol class=&quot;flex-control-nav flex-control-paging&quot;&gt;
+			&lt;li&gt;&lt;a class=&quot;flex-active&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a class=&quot;&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;/ol&gt;
+		&lt;ul class=&quot;flex-direction-nav&quot;&gt;
+			&lt;li class=&quot;flex-nav-prev&quot;&gt;&lt;a class=&quot;flex-prev sliderPrev&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;arrow_back&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;flex-nav-next&quot;&gt;&lt;a class=&quot;flex-next sliderNext&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;arrow_forward&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="table">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Table</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Table atom.</p>
+
+</div>
+<div class="f-item-preview">
+	<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+	<thead>
+		<tr>
+			<th class="mdl-data-table__cell--non-numeric">Material</th>
+			<th>Quantity</th>
+			<th>Unit price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+			<td>25</td>
+			<td>$2.90</td>
+		</tr>
+		<tr>
+			<td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+			<td>50</td>
+			<td>$1.25</td>
+		</tr>
+		<tr>
+			<td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+			<td>10</td>
+			<td>$2.35</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;table class=&quot;mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;mdl-data-table__cell--non-numeric&quot;&gt;Material&lt;/th&gt;
+			&lt;th&gt;Quantity&lt;/th&gt;
+			&lt;th&gt;Unit price&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;mdl-data-table__cell--non-numeric&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;
+			&lt;td&gt;$2.90&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;mdl-data-table__cell--non-numeric&quot;&gt;Plywood (Birch)&lt;/td&gt;
+			&lt;td&gt;50&lt;/td&gt;
+			&lt;td&gt;$1.25&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;mdl-data-table__cell--non-numeric&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+			&lt;td&gt;10&lt;/td&gt;
+			&lt;td&gt;$2.35&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="tabs">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Tabs</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="demo-tabs">
+	<div id="journey">
+		<div class="journey-dd">
+			<div class="dd-menu" ng-show="searchFilter.JourneyIds.length > 0">
+				<span class="ng-binding">Junior High</span>
+				<i style="float:right;" class="material-icons">swap_vert</i>
+			</div>
+			<div class="dd-droplist personaList">
+				<span class="earlyChildhoodTab">Early Childhood</span>
+				<span class="elementaryTab">Elementary</span>
+				<span class="juniorHighTab selected">Junior High</span>
+				< <span class="highSchoolTab">High School</span>
+					<span class="postSecondaryTab">Ministry</span>
+					<span class="administrationTab">School Administration</span>
+			</div>
+		</div>
+		<div class="journeyTab">
+			<a href="#" class="ng-scope earlyChildhoodTab">
+				<span class="languageItem English ng-binding">Early Childhood</span>
+			</a>
+			<a href="#" class="ng-scope elementaryTab">
+				<span class="languageItem English ng-binding">Elementary</span>
+			</a>
+			<a href="#" class="ng-scope juniorHighTab selected">
+				<span class="languageItem English ng-binding">Junior High</span>
+			</a>
+			<a href="#" class="ng-scope highSchoolTab">
+				<span class="languageItem English ng-binding">High School</span>
+			</a>
+			<a href="#" class="ng-scope postSecondaryTab">
+				<span class="languageItem English ng-binding">Ministry</span>
+			</a>
+			<a href="#" class="ng-scope administrationTab">
+				<span class="languageItem English ng-binding">School Administration</span>
+			</a>
+			<div style="clear:both;"></div>
+		</div>
+		<div class="refinements-container">
+			<div id="category-container" class="">
+				<ul>
+				</ul>
+			</div>
+			<div id="viewSelector">
+				<a href="javascript:void(0)"><i style="float:right;" class="material-icons tileView" id="tileView">apps</i></a>
+				<a href="javascript:void(0)"><i style="float:right;" class="material-icons listView" id="view-inactive">menu</i></a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;demo-tabs&quot;&gt;
+	&lt;div id=&quot;journey&quot;&gt;
+		&lt;div class=&quot;journey-dd&quot;&gt;
+			&lt;div class=&quot;dd-menu&quot; ng-show=&quot;searchFilter.JourneyIds.length &gt; 0&quot;&gt;
+				&lt;span class=&quot;ng-binding&quot;&gt;Junior High&lt;/span&gt;
+				&lt;i style=&quot;float:right;&quot; class=&quot;material-icons&quot;&gt;swap_vert&lt;/i&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;dd-droplist personaList&quot;&gt;
+				&lt;span class=&quot;earlyChildhoodTab&quot;&gt;Early Childhood&lt;/span&gt;
+				&lt;span class=&quot;elementaryTab&quot;&gt;Elementary&lt;/span&gt;
+				&lt;span class=&quot;juniorHighTab selected&quot;&gt;Junior High&lt;/span&gt;
+				&lt; &lt;span class=&quot;highSchoolTab&quot;&gt;High School&lt;/span&gt;
+					&lt;span class=&quot;postSecondaryTab&quot;&gt;Ministry&lt;/span&gt;
+					&lt;span class=&quot;administrationTab&quot;&gt;School Administration&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;journeyTab&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;ng-scope earlyChildhoodTab&quot;&gt;
+				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Early Childhood&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;a href=&quot;#&quot; class=&quot;ng-scope elementaryTab&quot;&gt;
+				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Elementary&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;a href=&quot;#&quot; class=&quot;ng-scope juniorHighTab selected&quot;&gt;
+				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Junior High&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;a href=&quot;#&quot; class=&quot;ng-scope highSchoolTab&quot;&gt;
+				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;High School&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;a href=&quot;#&quot; class=&quot;ng-scope postSecondaryTab&quot;&gt;
+				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Ministry&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;a href=&quot;#&quot; class=&quot;ng-scope administrationTab&quot;&gt;
+				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;School Administration&lt;/span&gt;
+			&lt;/a&gt;
+			&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;refinements-container&quot;&gt;
+			&lt;div id=&quot;category-container&quot; class=&quot;&quot;&gt;
+				&lt;ul&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div id=&quot;viewSelector&quot;&gt;
+				&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i style=&quot;float:right;&quot; class=&quot;material-icons tileView&quot; id=&quot;tileView&quot;&gt;apps&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i style=&quot;float:right;&quot; class=&quot;material-icons listView&quot; id=&quot;view-inactive&quot;&gt;menu&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="toolboxes">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Toolboxes</h2>
+	</div>
+		<div class="f-item-group" id="toolboxes.document">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Document</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="toolboxItem ng-scope">
+	<div>
+		<a href="#">
+			<div class="toolbox-resources ng-scope">
+				<span class="toolbox-title ng-binding" style="font-weight: bold">
+              <span class="tool"  title="Document">
+                <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+              </span> Documents
+				</span>
+				<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+			</div>
+		</a>
+	</div>
+</div>
+<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+	&lt;div&gt;
+		&lt;a href=&quot;#&quot;&gt;
+			&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+              &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+              &lt;/span&gt; Documents
+				&lt;/span&gt;
+				&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="toolboxes.event">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Event</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="toolboxItem ng-scope">
+	<div>
+		<a href="#">
+			<div class="toolbox-event ng-scope">
+				<span class="toolbox-title ng-binding" style="font-weight: bold">
+              <span class="tool"  title="Events">
+                <i class="material-icons mdl-badge"  data-badge="2">today</i>
+              </span> Calendar
+				</span>
+				<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+			</div>
+		</a>
+	</div>
+</div>
+<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+	&lt;div&gt;
+		&lt;a href=&quot;#&quot;&gt;
+			&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+              &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+              &lt;/span&gt; Calendar
+				&lt;/span&gt;
+				&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="toolboxes.faq">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Faq</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="toolboxItemContainer">
+	<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+	<div class="toolboxItem ng-scope">
+		<div class="selected">
+			<a href="#">
+				<div class="toolbox-faq ng-scope">
+					<span class="toolbox-title ng-binding" style="font-weight: bold">
+                <span class="tool" title="Faq">
+                  <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                </span> FAQs
+					</span>
+					<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+	&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+	&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+		&lt;div class=&quot;selected&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;
+				&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+					&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                  &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                &lt;/span&gt; FAQs
+					&lt;/span&gt;
+					&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+				&lt;/div&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="toolboxes.links">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Links</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Links toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="toolboxItem ng-scope">
+	<div>
+		<a href="#">
+			<div class="toolbox-poll ng-scope">
+				<span class="toolbox-title ng-binding" style="font-weight: bold">
+              <span class="tool"  title="Poll">
+                <i class="material-icons mdl-badge" >poll</i>
+              </span> Poll
+				</span>
+				<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+			</div>
+		</a>
+	</div>
+</div>
+<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+	&lt;div&gt;
+		&lt;a href=&quot;#&quot;&gt;
+			&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+              &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+              &lt;/span&gt; Poll
+				&lt;/span&gt;
+				&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="toolboxes.news">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">News</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<!-- ngIf: selectedTopic.News.length > 0 -->
+<div class="toolboxItem ng-scope">
+	<a href="#">
+		<div class="toolbox-news">
+			<span class="toolbox-title" style="font-weight: bold">
+                <span class="tool" title="News">
+                    <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                </span> News
+			</span>
+			<div class="toolbox-content toolbox-content-news">
+				<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
+				<div style="height: 100%" class="ng-scope">
+					<div class="toolbox-preview Preview1-18918" style="display: block;">
+						<div class="toolbox-news-details">
+							<span class="toolbox-news-headline ng-binding">
+                                Bulletin Three - Priority
+                                <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
+                            </span>
+							<div class="toolbox-news-description ng-binding">
+								Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+								<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
+								<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
+							</div>
+						</div>
+					</div>
+					<div class="toolbox-preview Preview0-18918" style="display: none;">
+						<div class="toolbox-news-details">
+							<span class="toolbox-news-headline ng-binding">
+                                As good as it gets
+                                <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
+                            </span>
+							<div class="toolbox-news-description ng-binding">
+								As good as it gets
+								<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
+			</div>
+		</div>
+	</a>
+</div>
+<!-- end ngIf: selectedTopic.News.length > 0 -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
+&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+	&lt;a href=&quot;#&quot;&gt;
+		&lt;div class=&quot;toolbox-news&quot;&gt;
+			&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                &lt;/span&gt; News
+			&lt;/span&gt;
+			&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+				&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+				&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+						&lt;div class=&quot;toolbox-news-details&quot;&gt;
+							&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                Bulletin Three - Priority
+                                &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
+                            &lt;/span&gt;
+							&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+								Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
+								&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
+								&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
+						&lt;div class=&quot;toolbox-news-details&quot;&gt;
+							&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
+                                As good as it gets
+                                &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
+                            &lt;/span&gt;
+							&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
+								As good as it gets
+								&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="toolboxes.polls">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Polls</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="toolboxItem ng-scope">
+	<a href="#">
+		<div class="toolbox-poll ng-scope">
+			<span class="toolbox-title ng-binding" style="font-weight: bold">
+        <span class="tool"  title="Poll">
+          <i class="material-icons mdl-badge" >poll</i>
+        </span> Poll
+			</span>
+			<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+		</div>
+	</a>
+</div>
+<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+	&lt;a href=&quot;#&quot;&gt;
+		&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+			&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+        &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+          &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+        &lt;/span&gt; Poll
+			&lt;/span&gt;
+			&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+		&lt;/div&gt;
+	&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="toolboxes.related">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Related</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Poll toolbox.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="toolboxItem ng-scope ng-hide">
+	<div>
+		<a href="#">
+			<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
+			<div class="toolbox-internallinks ng-scope">
+				<span class="toolbox-title ng-binding" style="font-weight: bold">
+                <span class="tool"  title="Internal Link">
+                  <i class="material-icons mdl-badge" >link</i>
+                </span> Related Content
+				</span>
+				<div class="toolbox-content toolbox-content-link">
+					<div class="toolbox-link-display">
+						<div class="toolbox-link-title">
+							<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
+	&lt;div&gt;
+		&lt;a href=&quot;#&quot;&gt;
+			&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
+			&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
+				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                  &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                &lt;/span&gt; Related Content
+				&lt;/span&gt;
+				&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+					&lt;div class=&quot;toolbox-link-display&quot;&gt;
+						&lt;div class=&quot;toolbox-link-title&quot;&gt;
+							&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js"></script>
+
+	<!-- toolkit scripts -->
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+
+		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
+		<script src="assets/toolkit/scripts/search.js"></script>
+	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
+
+		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+
+		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+
+		<script>
+		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+		    this.MaterialProgress.setProgress(44);
+		  });
+		</script>
+
+		<!--
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="assets/toolkit/scripts/forms.js"></script>
+
+	/toolkit scripts -->
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+notes: |
+  Header component.
+---
+  <header>
+    <div class="topBar">
+      <div class="logo">
+        <a href="#">
+          <img src="{{baseurl}}/assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
+        </a>
+      </div>
+      <div class="utility">
+        <div class="fr-eng-toggle">
+          <input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
+          <label class="fr-eng-switch-label" for="fr-eng-switch">
+            <span class="fr-eng-switch-inner"></span>
+            <span class="fr-eng-switch-switch"></span>
+          </label>
+        </div>
+        <div class="searchBar">
+        {{> inputs.search }}
+      </div>
+      </div>
+    </div>
+  </header>

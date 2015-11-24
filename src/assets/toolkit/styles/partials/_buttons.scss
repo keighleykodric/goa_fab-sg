@@ -1,0 +1,113 @@
+.btn {
+  position: relative;
+
+  display: block;
+  margin: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+
+
+  color: $primary-color;
+
+  transition: background-color .5s;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-big {
+  padding:20px;
+  max-width: 300px;
+  font-size:24px;
+}
+.btn-default {
+  padding:10px;
+  max-width: 200px;
+}
+.btn-sm {
+  padding:6px;
+  max-width: 100px;
+  font-size:10px
+}
+
+.btn:hover, .btn:focus {
+  background-color: $primary-color;
+  color:#fff;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+
+  border-radius: 100%;
+
+  background-color: rgba(236, 240, 241, .3);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width .1s ease-out, padding-top .1s ease-out;
+}
+
+
+.btn-primary {
+  background-color: $primary-color;
+  color: #ecf0f1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: $primary-color;
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: #ecf0f1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: $secondary-color;
+}
+
+.btn-card-share {
+  background-color: none;
+  color: #ecf0f1;
+  margin:0;
+  color:$primary-color;
+  height:36px;
+  width:36px;
+}
+
+.btn-card-share:hover, .btn-card-share:focus {
+  background-color: $primary-color;
+  border-radius:50%;
+}

@@ -1,0 +1,27 @@
+---
+notes: |
+  Poll toolbox.
+---
+<div  class="toolboxItem ng-scope ng-hide" >
+    <div >
+        <a href="#" >
+            <!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
+            <div  class="toolbox-internallinks ng-scope">
+              <span class="toolbox-title ng-binding" style="font-weight: bold">
+                <span class="tool"  title="Internal Link">
+                  <i class="material-icons mdl-badge" >link</i>
+                </span>
+                Related Content
+              </span>
+              <div class="toolbox-content toolbox-content-link">
+                <div class="toolbox-link-display">
+                  <div class="toolbox-link-title">
+                    <!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+    </div>
+</div>
+<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->

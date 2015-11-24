@@ -1,0 +1,40 @@
+colors:
+  base:
+    Primary: "#36424a"
+    Secondary: "#6d9324"
+
+  dusk:
+    dusk: "#d40072"
+    dusk-dark:  "#682145"
+    dusk-mid: "#a50069"
+    dusk-light: "#ef69b9"
+
+  pasture:
+    pasture: "#77b800"
+    pasture-dark:  "#545f1d"
+    pasture-mid: "#719500"
+    pasture-light: "#bed600"
+
+  prairie:
+    prairie: "#ebd700"
+    prairie-dark:  "#554217"
+    prairie-mid: "#a47700"
+    prairie-light: "#ebce7b"
+
+  sky:
+    sky: "#00aad2"
+    sky-dark:  "#005072"
+    sky-mid: "#0081ab"
+    sky-light: "#5fceea"
+
+  stone:
+    stone: "#5f6a72"
+    stone-dark:  "#35424a"
+    stone-mid: "#a5acb0"
+    stone-light: "#d1d4d3"
+
+  sunset:
+    sunset: "#ff7900"
+    sunset-dark:  "#703319"
+    sunset-mid: "#c05017"
+    sunset-light: "#fdc688"

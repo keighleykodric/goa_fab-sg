@@ -1,0 +1,28 @@
+/**
+ * Toolkit styles
+*/
+
+@import 'partials/variables';
+@import 'partials/color-chips';
+@import 'partials/filter';
+@import 'partials/select';
+@import 'partials/table';
+@import 'partials/mdl';
+@import 'partials/radio';
+@import 'partials/checkbox';
+@import 'partials/blockquotes';
+@import 'partials/home';/*
+@import 'partials/inputs'; */
+@import 'partials/layout';
+@import 'partials/menu';
+@import 'partials/modal';
+@import 'partials/cards';
+@import 'partials/footer';
+@import 'partials/header';
+@import 'partials/timeline';
+@import 'partials/tabs';/*
+@import 'partials/form'; */
+
+body {
+	font-family: Lato, sans-serif;
+}

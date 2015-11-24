@@ -1,0 +1,58 @@
+---
+notes: |
+  Modal template.
+---
+<div class="mdl-modal">
+  <div class="mdl-layout__header is-casting-shadow">
+    <div class="mdl-layout__header-row mdl-modal__title promo">
+      <h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+    </div>
+
+    <div class="dialogToolbox">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide" >
+        <span class="lang-toggle-fr" >FR</span>
+        <span class="lang-toggle-en ng-hide" >EN</span>
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+      </button>
+
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons white">share</i>
+      </button>
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons white">close</i>
+      </button>
+    </div>
+    <div class="templateFaqsContainer ng-scope" >
+      <div class="dialogTopics">
+        <div id="subTopics" class="ng-scope">
+          <a href="#" id="dialogSubTopic18920"  class="ng-binding subTopic selected promo">
+          Sample SubTopic
+          </a>
+        </div>
+
+        <div id="subTopics" class="ng-scope">
+          <a href="#" id="dialogSubTopic18956" class="ng-binding subTopic">
+          Sample Alternate SubTopic
+          </a>
+        </div>
+      </div>
+
+      <div class="dialogContent">
+
+      </div>
+      <div class="dialogTool">
+        <div class="toolboxItemContainer">
+          {{> toolboxes.faq}}
+          {{> toolboxes.document}}
+          {{> toolboxes.event}}
+          {{> toolboxes.polls}}
+          <div class="sideBottom">
+            {{> toolboxes.news}}
+            {{> toolboxes.related}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+  </div>
+</div>

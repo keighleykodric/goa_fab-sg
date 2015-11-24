@@ -1,0 +1,53 @@
+---
+notes: |
+  These are notes associated with this `button` component.
+---
+<div class="demo-tabs">
+  <div id="journey">
+    <div class="journey-dd">
+      <div class="dd-menu" ng-show="searchFilter.JourneyIds.length > 0">
+        <span class="ng-binding">Junior High</span>
+        <i style="float:right;" class="material-icons">swap_vert</i>
+      </div>
+      <div class="dd-droplist personaList">
+        <span class="earlyChildhoodTab">Early Childhood</span>
+        <span class="elementaryTab">Elementary</span>
+        <span class="juniorHighTab selected">Junior High</span><
+        <span class="highSchoolTab">High School</span>
+        <span class="postSecondaryTab">Ministry</span>
+        <span class="administrationTab">School Administration</span>
+      </div>
+    </div>
+    <div class="journeyTab">
+      <a href="#" class="ng-scope earlyChildhoodTab">
+        <span class="languageItem English ng-binding">Early Childhood</span>
+      </a>
+      <a href="#" class="ng-scope elementaryTab">
+        <span class="languageItem English ng-binding">Elementary</span>
+      </a>
+      <a href="#" class="ng-scope juniorHighTab selected">
+        <span class="languageItem English ng-binding">Junior High</span>
+      </a>
+      <a href="#" class="ng-scope highSchoolTab">
+        <span class="languageItem English ng-binding">High School</span>
+      </a>
+      <a href="#" class="ng-scope postSecondaryTab">
+        <span class="languageItem English ng-binding">Ministry</span>
+      </a>
+      <a href="#" class="ng-scope administrationTab">
+        <span class="languageItem English ng-binding">School Administration</span>
+      </a>
+      <div style="clear:both;"></div>
+    </div>
+    <div class="refinements-container">
+      <div id="category-container" class="">
+        <ul>
+        </ul>
+      </div>
+      <div id="viewSelector">
+        <a href="javascript:void(0)" ><i style="float:right;" class="material-icons tileView" id="tileView">apps</i></a>
+        <a href="javascript:void(0)" ><i style="float:right;" class="material-icons listView" id="view-inactive">menu</i></a>
+      </div>
+    </div>
+  </div>
+</div>

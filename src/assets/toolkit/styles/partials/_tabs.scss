@@ -1,0 +1,141 @@
+#viewSelector {
+    cursor: pointer;
+    right: 0px;
+    top: 0px;
+    display: inline-flex;
+    float:right;
+    padding:0px;
+}
+#viewSelector a{
+  padding:0;
+  margin-right:20px;
+}
+
+.refinements-container {
+    position: relative;
+    padding: 10px;
+    clear: both;
+    height: 50px;
+    background: #f7f7f7;
+}
+
+.journeyTab {
+    padding:0;
+    float:left;
+    background:#fff;
+    width:100%;
+    padding-top:10px;
+    border-bottom:1px solid #ccc
+}
+.journeyTab a {
+    display:inline-block;
+    margin:0 .5px;
+    padding:10px 7px;
+    font-weight:500;
+    width:14%;
+    text-align:center
+}
+.journeyTab a:first-child {
+    margin-left:20px
+}
+.earlyChildhoodTab {
+    border-bottom:2px solid #ec098c;
+    color:#ec098c;
+    background:url(/images/journey-color/early-childhood.png) no-repeat 5% center;
+    background-size:15%
+}
+.earlyChildhoodTab.selected {
+    background:url(/images/journey-color/early-childhood.png) no-repeat 5% center #f7f7f7;
+    border-top:4px solid #ec098c;
+    position:relative;
+    border-bottom:2px solid #f7f7f7;
+    top:1px;
+    background-size:15%
+}
+.elementaryTab.selected {
+    background:url(/images/journey-color/elementary.png) no-repeat 5% center #f7f7f7;
+    border-top:4px solid #00afdc;
+    border-bottom:2px solid #f7f7f7;
+    position:relative;
+    top:1px;
+    background-size:15%
+}
+.juniorHighTab.selected {
+    background:url(/images/journey-color/juniorhigh.png) no-repeat 5% center #f7f7f7;
+    border-top:4px solid #ffd400;
+    border-bottom:2px solid #f7f7f7;
+    position:relative;
+    top:1px;
+    background-size:15%
+}
+.highSchoolTab.selected {
+    background:url(/images/journey-color/highschool.png) no-repeat 5% center #f7f7f7;
+    border-top:4px solid #8cc63e;
+    border-bottom:2px solid #f7f7f7;
+    position:relative;
+    top:1px;
+    background-size:15%
+}
+.postSecondaryTab.selected {
+    background:url(/images/journey-color/ministry.png) no-repeat 5% center #f7f7f7;
+    border-top:4px solid #d06f19;
+    border-bottom:2px solid #f7f7f7;
+    position:relative;
+    top:1px;
+    background-size:15%
+}
+.administrationTab.selected {
+    background:url(/images/journey-color/school-system.png) no-repeat 5% center #f7f7f7;
+    border-top:4px solid #69737b;
+    border-bottom:2px solid #f7f7f7;
+    position:relative;
+    top:1px;
+    background-size:15%
+}
+.elementaryTab {
+    border-bottom:2px solid #00afdc;
+    color:#00afdc;
+    background:url(/images/journey-color/elementary.png) no-repeat 5% center;
+    background-size:15%
+}
+.juniorHighTab {
+    border-bottom:2px solid #ffd400;
+    color:#edb700;
+    background:url(/images/journey-color/juniorhigh.png) no-repeat 5% center;
+    background-size:15%
+}
+.highSchoolTab {
+    border-bottom:2px solid #8cc63e;
+    color:#8cc63e;
+    background:url(/images/journey-color/highschool.png) no-repeat 5% center;
+    background-size:15%
+}
+.postSecondaryTab {
+    border-bottom:2px solid #d06f19;
+    color:#d06f19;
+    background:url(/images/journey-color/ministry.png) no-repeat 5% center;
+    background-size:15%
+}
+.administrationTab {
+    border-bottom:2px solid #69737b;
+    color:#69737b;
+    background:url(/images/journey-color/school-system.png) no-repeat 5% center;
+    background-size:15%
+}
+.journey-dd .dd-droplist span {
+    background:none;
+    border-bottom-width:2px;
+    border-top:none;
+    padding:5px 10px
+}
+.journey-dd .dd-droplist span.selected {
+    border-bottom-width:4px;
+    border-color:initial;
+    background:#eee
+}
+.filterClose .filterSlide .refinements-container {
+    width:calc(100% - 20px)
+}
+.journey-dd {
+    display:none
+}

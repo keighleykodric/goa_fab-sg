@@ -1,0 +1,52 @@
+/* Filter Styles
+ ------------------------------------------------------------- */
+
+.toggleFilter {
+    padding:5px;
+    color:#333;
+    cursor:pointer;
+    float:right
+}
+.filterClose #slideout.filterStick {
+    left:-210px!important
+}
+.filterClose .toggleFilter span.filterTitle {
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg)
+}
+.filterClose .toggleFilter i {
+    -ms-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+}
+.filterClose #slideout .toggleFilter i {
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg)
+}
+.toggleFilter i {
+    border:1px solid;
+    border-radius:4px
+}
+#click {
+    right:0;
+    position:relative;
+    display:block!important;
+    overflow:visible
+}
+span.filterTitle {
+    display:none
+}
+.filterClose span.filterTitle {
+    position:absolute;
+    right:-197px;
+    top:250px;
+    padding-top:10px;
+    overflow:visible;
+    height:40px;
+    display:inline-block;
+    font-family:'Lato';
+    font-size:16px;
+    padding-right:400px
+}
