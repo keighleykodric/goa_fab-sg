@@ -1,6 +1,6 @@
-# fab
+# GoA UI Library
 
-The fab UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.
+To build the UI library we are using Fabricator. "The fab UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.""
 
 ## Getting Started
 
@@ -22,11 +22,20 @@ $ npm start
 
 ## Build
 
-**Build for release:**
+**Build for production:**
 
 ```
 $ npm run build
 ```
+# Watch
+
+
+**Start local environment and build for production:**
+
+```
+$ npm run start build
+```
+
 
 Fabricator builds both a static documentation site and optimized CSS and JS toolkit files.
 
