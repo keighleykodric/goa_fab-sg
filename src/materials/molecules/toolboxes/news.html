@@ -1,10 +1,10 @@
 ---
 notes: |
-  Poll toolbox.
+  News toolbox.
 ---
-<!-- ngIf: selectedTopic.News.length > 0 -->
-<div class="toolboxItem ng-scope" >
-    <a href="#" >
+
+<div class="toolboxItem " >
+  <div>
         <div class="toolbox-news">
             <span class="toolbox-title" style="font-weight: bold">
                 <span class="tool" title="News">
@@ -12,35 +12,21 @@ notes: |
                 </span>
                 News
             </span>
+              <a href="#" >
             <div class="toolbox-content toolbox-content-news">
-                <!-- ngIf: PreviewExists(selectedTopic.NodeId) --><div style="height: 100%" class="ng-scope">
+
                     <div class="toolbox-preview Preview1-18918" style="display: block;">
                         <div class="toolbox-news-details">
-                            <span class="toolbox-news-headline ng-binding">
+                            <span class="toolbox-news-headline ">
                                 Bulletin Three - Priority
-                                <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
-                            </span>
-                            <div class="toolbox-news-description ng-binding">
-                                Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-                                <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span  class="ng-scope"></span><!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
+                              </span>
+                            <div class="toolbox-news-description ">
+                                Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
                             </div>
                         </div>
                     </div>
-                    <div class="toolbox-preview Preview0-18918" style="display: none;">
-                        <div class="toolbox-news-details">
-                            <span class="toolbox-news-headline ng-binding">
-                                As good as it gets
-                                <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
-                            </span>
-                            <div class="toolbox-news-description ng-binding">
-                                As good as it gets
-                                <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
             </div>
+        </a>
         </div>
-    </a>
+  </div>
 </div>
-<!-- end ngIf: selectedTopic.News.length > 0 -->

@@ -7,10 +7,10 @@
 
 	<title></title>
 
-	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href=" assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
-	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href=" assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -213,7 +213,7 @@
 
 </div>
 <div class="f-item-preview">
-	<div class="card hover-card tileContent">
+	<div class="card tileContent">
 	<div class="card-title default">Default card
 		<div id="shareThis" class="card-share">
 			<!-- Icon button -->
@@ -249,7 +249,7 @@
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent&quot;&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;card tileContent&quot;&gt;
 	&lt;div class=&quot;card-title default&quot;&gt;Default card
 		&lt;div id=&quot;shareThis&quot; class=&quot;card-share&quot;&gt;
 			&lt;!-- Icon button --&gt;
@@ -306,7 +306,7 @@
 
 </div>
 <div class="f-item-preview">
-	<div class="card hover-card tileContent news">
+	<div class="card hover-card tileContent newsTile">
 	<div class="card-title">News card
 		<div id="shareThis" class="cardToolbox">
 			<!-- Icon button -->
@@ -342,7 +342,7 @@
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent news&quot;&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent newsTile&quot;&gt;
 	&lt;div class=&quot;card-title&quot;&gt;News card
 		&lt;div id=&quot;shareThis&quot; class=&quot;cardToolbox&quot;&gt;
 			&lt;!-- Icon button --&gt;
@@ -399,7 +399,7 @@
 
 </div>
 <div class="f-item-preview">
-	<div class="card hover-card tileContent promTile">
+	<div class="card hover-card tileContent promoTile">
 	<div class="card-title promo">Promo card
 		<div id="shareThis" class="cardToolbox">
 			<!-- Icon button -->
@@ -436,7 +436,7 @@
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent promTile&quot;&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;card hover-card tileContent promoTile&quot;&gt;
 	&lt;div class=&quot;card-title promo&quot;&gt;Promo card
 		&lt;div id=&quot;shareThis&quot; class=&quot;cardToolbox&quot;&gt;
 			&lt;!-- Icon button --&gt;
@@ -602,17 +602,10 @@
 	<div class="topBar">
 		<div class="logo">
 			<a href="#">
-				<img src="/assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
+				<img src="assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
 			</a>
 		</div>
 		<div class="utility">
-			<div class="fr-eng-toggle">
-				<input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
-				<label class="fr-eng-switch-label" for="fr-eng-switch">
-					<span class="fr-eng-switch-inner"></span>
-					<span class="fr-eng-switch-switch"></span>
-				</label>
-			</div>
 			<div class="searchBar">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 					<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
@@ -624,6 +617,22 @@
 					</div>
 				</div>
 			</div>
+			<div class="fr-eng-toggle">
+				<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" data-upgraded=",MaterialButton,MaterialRipple">
+					<span class="lang-toggle-fr English">FR</span>
+					<span class="lang-toggle-en French">EN</span>
+					<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 116.793px; height: 116.793px; transform: translate(-50%, -50%) translate(25px, 21px);"></span></span>
+				</button>
+			</div>
+			<!--
+                    <div class="fr-eng-toggle">
+                      <input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
+                      <label class="fr-eng-switch-label" for="fr-eng-switch">
+            <span class="fr-eng-switch-inner"></span>
+            <span class="fr-eng-switch-switch"></span>
+                      </label>
+                    </div> -->
+
 		</div>
 	</div>
 </header>
@@ -633,17 +642,10 @@
 	&lt;div class=&quot;topBar&quot;&gt;
 		&lt;div class=&quot;logo&quot;&gt;
 			&lt;a href=&quot;#&quot;&gt;
-				&lt;img src=&quot;/assets/toolkit/images/GoA-Education_logo-w.png&quot; height=&quot;30&quot; width=&quot;179&quot; alt=&quot;Government of Alberta&quot;&gt;
+				&lt;img src=&quot;assets/toolkit/images/GoA-Education_logo-w.png&quot; height=&quot;30&quot; width=&quot;179&quot; alt=&quot;Government of Alberta&quot;&gt;
 			&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;utility&quot;&gt;
-			&lt;div class=&quot;fr-eng-toggle&quot;&gt;
-				&lt;input type=&quot;checkbox&quot; name=&quot;fr-eng-switch&quot; class=&quot;fr-eng-switch-checkbox&quot; id=&quot;fr-eng-switch&quot; onchange=&quot;AlbertaEducationApp.ToggleLanguage(&#x27;fr-eng-switch&#x27;)&quot;&gt;
-				&lt;label class=&quot;fr-eng-switch-label&quot; for=&quot;fr-eng-switch&quot;&gt;
-					&lt;span class=&quot;fr-eng-switch-inner&quot;&gt;&lt;/span&gt;
-					&lt;span class=&quot;fr-eng-switch-switch&quot;&gt;&lt;/span&gt;
-				&lt;/label&gt;
-			&lt;/div&gt;
 			&lt;div class=&quot;searchBar&quot;&gt;
 				&lt;div class=&quot;mdl-textfield mdl-js-textfield mdl-textfield--expandable&quot;&gt;
 					&lt;label class=&quot;mdl-button mdl-js-button mdl-button--icon&quot; for=&quot;sample6&quot;&gt;
@@ -655,6 +657,22 @@
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
+			&lt;div class=&quot;fr-eng-toggle&quot;&gt;
+				&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect&quot; onclick=&quot;AlbertaEducationApp.ToggleLanguage(&#x27;&#x27;)&quot; data-upgraded=&quot;,MaterialButton,MaterialRipple&quot;&gt;
+					&lt;span class=&quot;lang-toggle-fr English&quot;&gt;FR&lt;/span&gt;
+					&lt;span class=&quot;lang-toggle-en French&quot;&gt;EN&lt;/span&gt;
+					&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple is-animating&quot; style=&quot;width: 116.793px; height: 116.793px; transform: translate(-50%, -50%) translate(25px, 21px);&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;!--
+                    &lt;div class=&quot;fr-eng-toggle&quot;&gt;
+                      &lt;input type=&quot;checkbox&quot; name=&quot;fr-eng-switch&quot; class=&quot;fr-eng-switch-checkbox&quot; id=&quot;fr-eng-switch&quot; onchange=&quot;AlbertaEducationApp.ToggleLanguage(&#x27;fr-eng-switch&#x27;)&quot;&gt;
+                      &lt;label class=&quot;fr-eng-switch-label&quot; for=&quot;fr-eng-switch&quot;&gt;
+            &lt;span class=&quot;fr-eng-switch-inner&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fr-eng-switch-switch&quot;&gt;&lt;/span&gt;
+                      &lt;/label&gt;
+                    &lt;/div&gt; --&gt;
+
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/header&gt;</code></pre>
@@ -688,7 +706,7 @@
 	<div class="rightSidebar">
 	<div class="welcome">
 		<a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
-			<div class="minister-image"><img src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+			<div class="minister-image"><img src=" assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
 			<div class="minister-title">
 				<p>
 					<span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
@@ -701,7 +719,6 @@
 
 
 		<h5>News</h5>
-		<a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
 		<div class="newsItem">
 			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
 				<h4 class="newsHeadline">Bulletin Two</h4>
@@ -721,6 +738,8 @@
 
 		</div>
 
+		<a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
+
 	</div>
 </div>
 </div>
@@ -728,7 +747,7 @@
 	<pre><code class="language-markup">&lt;div class=&quot;rightSidebar&quot;&gt;
 	&lt;div class=&quot;welcome&quot;&gt;
 		&lt;a href=&quot;http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;amp;rnumber=29&amp;amp;leg=29&quot; target=&quot;_blank&quot;&gt;
-			&lt;div class=&quot;minister-image&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;minister-image&quot;&gt;&lt;img src=&quot; assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
 			&lt;div class=&quot;minister-title&quot;&gt;
 				&lt;p&gt;
 					&lt;span style=&quot;font-weight:600; font-size:16px; display:block;&quot;&gt;Hon. David Eggen&lt;/span&gt;
@@ -741,7 +760,6 @@
 
 
 		&lt;h5&gt;News&lt;/h5&gt;
-		&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot; class=&quot;news-view-all-btn&quot;&gt;View All&lt;/a&gt;
 		&lt;div class=&quot;newsItem&quot;&gt;
 			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
 				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/h4&gt;
@@ -760,6 +778,8 @@
 			&lt;/a&gt;
 
 		&lt;/div&gt;
+
+		&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot; class=&quot;news-view-all-btn&quot;&gt;View All&lt;/a&gt;
 
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -834,125 +854,112 @@
 			</div>
 			<div class="dialogTool">
 				<div class="toolboxItemContainer">
-					<div class="toolboxItemContainer">
-						<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div class="selected">
-								<a href="#">
-									<div class="toolbox-faq ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
+					<div class="toolboxItem ng-scope">
+						<div class="selected">
+							<a href="#">
+								<div class="toolbox-faq ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
                           <span class="tool" title="Faq">
                             <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
                           </span> FAQs
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div>
-								<a href="#">
-									<div class="toolbox-resources ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
-                        <span class="tool"  title="Document">
-                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
-                        </span> Documents
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div>
-								<a href="#">
-									<div class="toolbox-event ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
-                        <span class="tool"  title="Events">
-                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
-                        </span> Calendar
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<a href="#">
-								<div class="toolbox-poll ng-scope">
-									<span class="toolbox-title ng-binding" style="font-weight: bold">
-                  <span class="tool"  title="Poll">
-                    <i class="material-icons mdl-badge" >poll</i>
-                  </span> Poll
 									</span>
 									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
 								</div>
 							</a>
 						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="sideBottom">
-							<!-- ngIf: selectedTopic.News.length > 0 -->
-							<div class="toolboxItem ng-scope">
-								<a href="#">
-									<div class="toolbox-news">
-										<span class="toolbox-title" style="font-weight: bold">
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-resources ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem  ng-hide">
+						<div class="toolbox-content toolbox-content-contacts">
+							<span class="toolbox-title  " style="font-weight: bold">
+                          <span class="tool"  title="Internal Link">
+                            <i class="material-icons mdl-badge" >contacts</i>
+                          </span> Contacts
+							</span>
+							<div class="toolbox-content toolbox-content-link">
+								<div class="toolbox-link-display">
+									<div class="toolbox-link-title">
+
+										<div class="toolbox-preview Preview1-18071">
+											<span class="tool toolbox-icon">
+                                      <i class="material-icons">perm_contact_calendar</i>
+                                  </span>
+											<a href="#" class=" ">Business Intelligence</a>
+										</div>
+										<!-- <div class="toolbox-preview Preview0-18071" style="display: block;">
+                                  <span class="toolbox-icon tool">
+                                      <i class="material-icons">link</i>
+                                  </span>
+                                  <a href="" class=" ">Field Services Zones</a>
+                              </div> -->
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-event ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<a href="#">
+							<div class="toolbox-poll ng-scope">
+								<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+								</span>
+								<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+							</div>
+						</a>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="sideBottom">
+						<div class="toolboxItem ">
+							<div>
+								<div class="toolbox-news">
+									<span class="toolbox-title" style="font-weight: bold">
                             <span class="tool" title="News">
                                 <i class="material-icons mdl-badge" data-badge="3">assignment</i>
                             </span> News
-										</span>
-										<div class="toolbox-content toolbox-content-news">
-											<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
-											<div style="height: 100%" class="ng-scope">
-												<div class="toolbox-preview Preview1-18918" style="display: block;">
-													<div class="toolbox-news-details">
-														<span class="toolbox-news-headline ng-binding">
-                                            Bulletin Three - Priority
-                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
-                                        </span>
-														<div class="toolbox-news-description ng-binding">
-															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
-															<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
-														</div>
-													</div>
-												</div>
-												<div class="toolbox-preview Preview0-18918" style="display: none;">
-													<div class="toolbox-news-details">
-														<span class="toolbox-news-headline ng-binding">
-                                            As good as it gets
-                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
-                                        </span>
-														<div class="toolbox-news-description ng-binding">
-															As good as it gets
-															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
-														</div>
-													</div>
-												</div>
-											</div>
-											<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
-										</div>
-									</div>
-								</a>
-							</div>
-							<!-- end ngIf: selectedTopic.News.length > 0 -->
-							<div class="toolboxItem ng-scope ng-hide">
-								<div>
+									</span>
 									<a href="#">
-										<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
-										<div class="toolbox-internallinks ng-scope">
-											<span class="toolbox-title ng-binding" style="font-weight: bold">
-                            <span class="tool"  title="Internal Link">
-                              <i class="material-icons mdl-badge" >link</i>
-                            </span> Related Content
-											</span>
-											<div class="toolbox-content toolbox-content-link">
-												<div class="toolbox-link-display">
-													<div class="toolbox-link-title">
-														<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+										<div class="toolbox-content toolbox-content-news">
+
+											<div class="toolbox-preview Preview1-18918" style="display: block;">
+												<div class="toolbox-news-details">
+													<span class="toolbox-news-headline ">
+                                            Bulletin Three - Priority
+                                          </span>
+													<div class="toolbox-news-description ">
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
 													</div>
 												</div>
 											</div>
@@ -960,14 +967,37 @@
 									</a>
 								</div>
 							</div>
-							<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						</div>
+						<div class="toolboxItem">
+							<div>
+								<div class="toolbox-internallinks ">
+									<span class="toolbox-title" style="font-weight: bold">
+                    <span class="tool"  title="Internal Link">
+                      <i class="material-icons mdl-badge" >link</i>
+                    </span> Related Content
+									</span>
+									<div class="toolbox-content toolbox-content-link">
+										<div class="toolbox-link-display">
+											<div class="toolbox-link-title">
+												<div class="toolbox-preview Preview1-18071">
+													<span class="tool toolbox-icon">
+                             <i class="material-icons">link</i>
+                            </span>
+													<a href="#" class="">Business Intelligence</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
 		</div>
+		<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
 	</div>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
@@ -1010,125 +1040,112 @@
 			&lt;/div&gt;
 			&lt;div class=&quot;dialogTool&quot;&gt;
 				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
-					&lt;div class=&quot;toolboxItemContainer&quot;&gt;
-						&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div class=&quot;selected&quot;&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div class=&quot;selected&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
                           &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
                             &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
                           &lt;/span&gt; FAQs
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
-                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
-                        &lt;/span&gt; Documents
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
-                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
-                        &lt;/span&gt; Calendar
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;a href=&quot;#&quot;&gt;
-								&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
-									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
-                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
-                  &lt;/span&gt; Poll
 									&lt;/span&gt;
 									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
 								&lt;/div&gt;
 							&lt;/a&gt;
 						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;sideBottom&quot;&gt;
-							&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
-							&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-news&quot;&gt;
-										&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem  ng-hide&quot;&gt;
+						&lt;div class=&quot;toolbox-content toolbox-content-contacts&quot;&gt;
+							&lt;span class=&quot;toolbox-title  &quot; style=&quot;font-weight: bold&quot;&gt;
+                          &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                            &lt;i class=&quot;material-icons mdl-badge&quot; &gt;contacts&lt;/i&gt;
+                          &lt;/span&gt; Contacts
+							&lt;/span&gt;
+							&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+								&lt;div class=&quot;toolbox-link-display&quot;&gt;
+									&lt;div class=&quot;toolbox-link-title&quot;&gt;
+
+										&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+											&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                                      &lt;i class=&quot;material-icons&quot;&gt;perm_contact_calendar&lt;/i&gt;
+                                  &lt;/span&gt;
+											&lt;a href=&quot;#&quot; class=&quot; &quot;&gt;Business Intelligence&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;!-- &lt;div class=&quot;toolbox-preview Preview0-18071&quot; style=&quot;display: block;&quot;&gt;
+                                  &lt;span class=&quot;toolbox-icon tool&quot;&gt;
+                                      &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                                  &lt;/span&gt;
+                                  &lt;a href=&quot;&quot; class=&quot; &quot;&gt;Field Services Zones&lt;/a&gt;
+                              &lt;/div&gt; --&gt;
+
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;
+							&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+								&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+								&lt;/span&gt;
+								&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;sideBottom&quot;&gt;
+						&lt;div class=&quot;toolboxItem &quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-news&quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
                             &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
                                 &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
                             &lt;/span&gt; News
-										&lt;/span&gt;
-										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
-											&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
-											&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
-												&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
-													&lt;div class=&quot;toolbox-news-details&quot;&gt;
-														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
-                                            Bulletin Three - Priority
-                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
-                                        &lt;/span&gt;
-														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
-															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
-															&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
-														&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-												&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
-													&lt;div class=&quot;toolbox-news-details&quot;&gt;
-														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
-                                            As good as it gets
-                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
-                                        &lt;/span&gt;
-														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
-															As good as it gets
-															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
-														&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/div&gt;
-											&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
-										&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;
-							&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
-								&lt;div&gt;
+									&lt;/span&gt;
 									&lt;a href=&quot;#&quot;&gt;
-										&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
-										&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
-											&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                            &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
-                              &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
-                            &lt;/span&gt; Related Content
-											&lt;/span&gt;
-											&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
-												&lt;div class=&quot;toolbox-link-display&quot;&gt;
-													&lt;div class=&quot;toolbox-link-title&quot;&gt;
-														&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+
+											&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+												&lt;div class=&quot;toolbox-news-details&quot;&gt;
+													&lt;span class=&quot;toolbox-news-headline &quot;&gt;
+                                            Bulletin Three - Priority
+                                          &lt;/span&gt;
+													&lt;div class=&quot;toolbox-news-description &quot;&gt;
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
 													&lt;/div&gt;
 												&lt;/div&gt;
 											&lt;/div&gt;
@@ -1136,14 +1153,37 @@
 									&lt;/a&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
-							&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;toolboxItem&quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-internallinks &quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                    &lt;/span&gt; Related Content
+									&lt;/span&gt;
+									&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+										&lt;div class=&quot;toolbox-link-display&quot;&gt;
+											&lt;div class=&quot;toolbox-link-title&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+													&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                             &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                            &lt;/span&gt;
+													&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Business Intelligence&lt;/a&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
-			&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
 		&lt;/div&gt;
-	&lt;/div&gt;</code></pre>
+		&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
@@ -1169,14 +1209,14 @@
 <div class="f-item-preview">
 	<div class="mdl-modal">
 	<div class="mdl-layout__header is-casting-shadow">
-		<div class="mdl-layout__header-row mdl-modal__title news">
+		<div class="mdl-layout__header-row mdl-modal__title newsDialog">
 			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
 		</div>
 
 		<div class="dialogToolbox">
-			<button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide">
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect  ">
 				<span class="lang-toggle-fr">FR</span>
-				<span class="lang-toggle-en ng-hide">EN</span>
+				<span class="lang-toggle-en  ">EN</span>
 				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
 			</button>
 
@@ -1187,16 +1227,16 @@
 				<i class="material-icons white">close</i>
 			</button>
 		</div>
-		<div class="templateFaqsContainer ng-scope">
-			<div class="dialogTopics">
-				<div id="subTopics" class="ng-scope">
-					<a href="#" id="dialogSubTopic18920" class="ng-binding subTopic selected news">
+		<div class="templateFaqsContainer  ">
+			<div class="dialogTopics newsDialog">
+				<div id="subTopics" class=" ">
+					<a href="#" id="dialogSubTopic" class=" subTopic selected newsDialog">
           Sample SubTopic
           </a>
 				</div>
 
-				<div id="subTopics" class="ng-scope">
-					<a href="#" id="dialogSubTopic18956" class="ng-binding subTopic">
+				<div id="subTopics" class=" ">
+					<a href="#" id="dialogSubTopic18956" class=" subTopic">
           Sample Alternate SubTopic
           </a>
 				</div>
@@ -1207,125 +1247,83 @@
 			</div>
 			<div class="dialogTool">
 				<div class="toolboxItemContainer">
-					<div class="toolboxItemContainer">
-						<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div class="selected">
-								<a href="#">
-									<div class="toolbox-faq ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
+					<div class="toolboxItem ng-scope">
+						<div class="selected">
+							<a href="#">
+								<div class="toolbox-faq ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
                           <span class="tool" title="Faq">
                             <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
                           </span> FAQs
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div>
-								<a href="#">
-									<div class="toolbox-resources ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
-                        <span class="tool"  title="Document">
-                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
-                        </span> Documents
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div>
-								<a href="#">
-									<div class="toolbox-event ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
-                        <span class="tool"  title="Events">
-                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
-                        </span> Calendar
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<a href="#">
-								<div class="toolbox-poll ng-scope">
-									<span class="toolbox-title ng-binding" style="font-weight: bold">
-                  <span class="tool"  title="Poll">
-                    <i class="material-icons mdl-badge" >poll</i>
-                  </span> Poll
 									</span>
 									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
 								</div>
 							</a>
 						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="sideBottom">
-							<!-- ngIf: selectedTopic.News.length > 0 -->
-							<div class="toolboxItem ng-scope">
-								<a href="#">
-									<div class="toolbox-news">
-										<span class="toolbox-title" style="font-weight: bold">
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-resources ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-event ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<a href="#">
+							<div class="toolbox-poll ng-scope">
+								<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+								</span>
+								<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+							</div>
+						</a>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="sideBottom">
+						<div class="toolboxItem ">
+							<div>
+								<div class="toolbox-news">
+									<span class="toolbox-title" style="font-weight: bold">
                             <span class="tool" title="News">
                                 <i class="material-icons mdl-badge" data-badge="3">assignment</i>
                             </span> News
-										</span>
-										<div class="toolbox-content toolbox-content-news">
-											<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
-											<div style="height: 100%" class="ng-scope">
-												<div class="toolbox-preview Preview1-18918" style="display: block;">
-													<div class="toolbox-news-details">
-														<span class="toolbox-news-headline ng-binding">
-                                            Bulletin Three - Priority
-                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
-                                        </span>
-														<div class="toolbox-news-description ng-binding">
-															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
-															<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
-														</div>
-													</div>
-												</div>
-												<div class="toolbox-preview Preview0-18918" style="display: none;">
-													<div class="toolbox-news-details">
-														<span class="toolbox-news-headline ng-binding">
-                                            As good as it gets
-                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
-                                        </span>
-														<div class="toolbox-news-description ng-binding">
-															As good as it gets
-															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
-														</div>
-													</div>
-												</div>
-											</div>
-											<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
-										</div>
-									</div>
-								</a>
-							</div>
-							<!-- end ngIf: selectedTopic.News.length > 0 -->
-							<div class="toolboxItem ng-scope ng-hide">
-								<div>
+									</span>
 									<a href="#">
-										<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
-										<div class="toolbox-internallinks ng-scope">
-											<span class="toolbox-title ng-binding" style="font-weight: bold">
-                            <span class="tool"  title="Internal Link">
-                              <i class="material-icons mdl-badge" >link</i>
-                            </span> Related Content
-											</span>
-											<div class="toolbox-content toolbox-content-link">
-												<div class="toolbox-link-display">
-													<div class="toolbox-link-title">
-														<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+										<div class="toolbox-content toolbox-content-news">
+
+											<div class="toolbox-preview Preview1-18918" style="display: block;">
+												<div class="toolbox-news-details">
+													<span class="toolbox-news-headline ">
+                                            Bulletin Three - Priority
+                                          </span>
+													<div class="toolbox-news-description ">
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
 													</div>
 												</div>
 											</div>
@@ -1333,26 +1331,49 @@
 									</a>
 								</div>
 							</div>
-							<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						</div>
+						<div class="toolboxItem">
+							<div>
+								<div class="toolbox-internallinks ">
+									<span class="toolbox-title" style="font-weight: bold">
+                    <span class="tool"  title="Internal Link">
+                      <i class="material-icons mdl-badge" >link</i>
+                    </span> Related Content
+									</span>
+									<div class="toolbox-content toolbox-content-link">
+										<div class="toolbox-link-display">
+											<div class="toolbox-link-title">
+												<div class="toolbox-preview Preview1-18071">
+													<span class="tool toolbox-icon">
+                             <i class="material-icons">link</i>
+                            </span>
+													<a href="#" class="">Business Intelligence</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
 		</div>
+		<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
 	</div>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
 	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
-		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title news&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title newsDialog&quot;&gt;
 			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
 		&lt;/div&gt;
 
 		&lt;div class=&quot;dialogToolbox&quot;&gt;
-			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect ng-hide&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect  &quot;&gt;
 				&lt;span class=&quot;lang-toggle-fr&quot;&gt;FR&lt;/span&gt;
-				&lt;span class=&quot;lang-toggle-en ng-hide&quot;&gt;EN&lt;/span&gt;
+				&lt;span class=&quot;lang-toggle-en  &quot;&gt;EN&lt;/span&gt;
 				&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
 			&lt;/button&gt;
 
@@ -1363,16 +1384,16 @@
 				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
 			&lt;/button&gt;
 		&lt;/div&gt;
-		&lt;div class=&quot;templateFaqsContainer ng-scope&quot;&gt;
-			&lt;div class=&quot;dialogTopics&quot;&gt;
-				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
-					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18920&quot; class=&quot;ng-binding subTopic selected news&quot;&gt;
+		&lt;div class=&quot;templateFaqsContainer  &quot;&gt;
+			&lt;div class=&quot;dialogTopics newsDialog&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot; &quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic&quot; class=&quot; subTopic selected newsDialog&quot;&gt;
           Sample SubTopic
           &lt;/a&gt;
 				&lt;/div&gt;
 
-				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
-					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18956&quot; class=&quot;ng-binding subTopic&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot; &quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18956&quot; class=&quot; subTopic&quot;&gt;
           Sample Alternate SubTopic
           &lt;/a&gt;
 				&lt;/div&gt;
@@ -1383,125 +1404,83 @@
 			&lt;/div&gt;
 			&lt;div class=&quot;dialogTool&quot;&gt;
 				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
-					&lt;div class=&quot;toolboxItemContainer&quot;&gt;
-						&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div class=&quot;selected&quot;&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div class=&quot;selected&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
                           &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
                             &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
                           &lt;/span&gt; FAQs
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
-                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
-                        &lt;/span&gt; Documents
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
-                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
-                        &lt;/span&gt; Calendar
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;a href=&quot;#&quot;&gt;
-								&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
-									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
-                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
-                  &lt;/span&gt; Poll
 									&lt;/span&gt;
 									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
 								&lt;/div&gt;
 							&lt;/a&gt;
 						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;sideBottom&quot;&gt;
-							&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
-							&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-news&quot;&gt;
-										&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;
+							&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+								&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+								&lt;/span&gt;
+								&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;sideBottom&quot;&gt;
+						&lt;div class=&quot;toolboxItem &quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-news&quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
                             &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
                                 &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
                             &lt;/span&gt; News
-										&lt;/span&gt;
-										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
-											&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
-											&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
-												&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
-													&lt;div class=&quot;toolbox-news-details&quot;&gt;
-														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
-                                            Bulletin Three - Priority
-                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
-                                        &lt;/span&gt;
-														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
-															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
-															&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
-														&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-												&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
-													&lt;div class=&quot;toolbox-news-details&quot;&gt;
-														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
-                                            As good as it gets
-                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
-                                        &lt;/span&gt;
-														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
-															As good as it gets
-															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
-														&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/div&gt;
-											&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
-										&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;
-							&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
-								&lt;div&gt;
+									&lt;/span&gt;
 									&lt;a href=&quot;#&quot;&gt;
-										&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
-										&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
-											&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                            &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
-                              &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
-                            &lt;/span&gt; Related Content
-											&lt;/span&gt;
-											&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
-												&lt;div class=&quot;toolbox-link-display&quot;&gt;
-													&lt;div class=&quot;toolbox-link-title&quot;&gt;
-														&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+
+											&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+												&lt;div class=&quot;toolbox-news-details&quot;&gt;
+													&lt;span class=&quot;toolbox-news-headline &quot;&gt;
+                                            Bulletin Three - Priority
+                                          &lt;/span&gt;
+													&lt;div class=&quot;toolbox-news-description &quot;&gt;
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
 													&lt;/div&gt;
 												&lt;/div&gt;
 											&lt;/div&gt;
@@ -1509,14 +1488,37 @@
 									&lt;/a&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
-							&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;toolboxItem&quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-internallinks &quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                    &lt;/span&gt; Related Content
+									&lt;/span&gt;
+									&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+										&lt;div class=&quot;toolbox-link-display&quot;&gt;
+											&lt;div class=&quot;toolbox-link-title&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+													&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                             &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                            &lt;/span&gt;
+													&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Business Intelligence&lt;/a&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
-			&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
 		&lt;/div&gt;
-	&lt;/div&gt;</code></pre>
+		&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
@@ -1580,125 +1582,83 @@
 			</div>
 			<div class="dialogTool">
 				<div class="toolboxItemContainer">
-					<div class="toolboxItemContainer">
-						<!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div class="selected">
-								<a href="#">
-									<div class="toolbox-faq ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
+					<div class="toolboxItem ng-scope">
+						<div class="selected">
+							<a href="#">
+								<div class="toolbox-faq ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
                           <span class="tool" title="Faq">
                             <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
                           </span> FAQs
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div>
-								<a href="#">
-									<div class="toolbox-resources ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
-                        <span class="tool"  title="Document">
-                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
-                        </span> Documents
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<div>
-								<a href="#">
-									<div class="toolbox-event ng-scope">
-										<span class="toolbox-title ng-binding" style="font-weight: bold">
-                        <span class="tool"  title="Events">
-                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
-                        </span> Calendar
-										</span>
-										<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
-									</div>
-								</a>
-							</div>
-						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="toolboxItem ng-scope">
-							<a href="#">
-								<div class="toolbox-poll ng-scope">
-									<span class="toolbox-title ng-binding" style="font-weight: bold">
-                  <span class="tool"  title="Poll">
-                    <i class="material-icons mdl-badge" >poll</i>
-                  </span> Poll
 									</span>
 									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
 								</div>
 							</a>
 						</div>
-						<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
-						<div class="sideBottom">
-							<!-- ngIf: selectedTopic.News.length > 0 -->
-							<div class="toolboxItem ng-scope">
-								<a href="#">
-									<div class="toolbox-news">
-										<span class="toolbox-title" style="font-weight: bold">
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-resources ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-event ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+									</span>
+									<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="toolboxItem ng-scope">
+						<a href="#">
+							<div class="toolbox-poll ng-scope">
+								<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+								</span>
+								<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
+							</div>
+						</a>
+					</div>
+					<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+					<div class="sideBottom">
+						<div class="toolboxItem ">
+							<div>
+								<div class="toolbox-news">
+									<span class="toolbox-title" style="font-weight: bold">
                             <span class="tool" title="News">
                                 <i class="material-icons mdl-badge" data-badge="3">assignment</i>
                             </span> News
-										</span>
-										<div class="toolbox-content toolbox-content-news">
-											<!-- ngIf: PreviewExists(selectedTopic.NodeId) -->
-											<div style="height: 100%" class="ng-scope">
-												<div class="toolbox-preview Preview1-18918" style="display: block;">
-													<div class="toolbox-news-details">
-														<span class="toolbox-news-headline ng-binding">
-                                            Bulletin Three - Priority
-                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length > 65 -->
-                                        </span>
-														<div class="toolbox-news-description ng-binding">
-															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 --><span class="ng-scope"></span>
-															<!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length > 65 -->
-														</div>
-													</div>
-												</div>
-												<div class="toolbox-preview Preview0-18918" style="display: none;">
-													<div class="toolbox-news-details">
-														<span class="toolbox-news-headline ng-binding">
-                                            As good as it gets
-                                            <!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length > 65 -->
-                                        </span>
-														<div class="toolbox-news-description ng-binding">
-															As good as it gets
-															<!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length > 65 -->
-														</div>
-													</div>
-												</div>
-											</div>
-											<!-- end ngIf: PreviewExists(selectedTopic.NodeId) -->
-										</div>
-									</div>
-								</a>
-							</div>
-							<!-- end ngIf: selectedTopic.News.length > 0 -->
-							<div class="toolboxItem ng-scope ng-hide">
-								<div>
+									</span>
 									<a href="#">
-										<!-- ngIf: toolboxItem.NodeTypeAlias == 'internalLinks' -->
-										<div class="toolbox-internallinks ng-scope">
-											<span class="toolbox-title ng-binding" style="font-weight: bold">
-                            <span class="tool"  title="Internal Link">
-                              <i class="material-icons mdl-badge" >link</i>
-                            </span> Related Content
-											</span>
-											<div class="toolbox-content toolbox-content-link">
-												<div class="toolbox-link-display">
-													<div class="toolbox-link-title">
-														<!-- ngIf: PreviewExists(toolboxItem.NodeId) -->
+										<div class="toolbox-content toolbox-content-news">
+
+											<div class="toolbox-preview Preview1-18918" style="display: block;">
+												<div class="toolbox-news-details">
+													<span class="toolbox-news-headline ">
+                                            Bulletin Three - Priority
+                                          </span>
+													<div class="toolbox-news-description ">
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
 													</div>
 												</div>
 											</div>
@@ -1706,14 +1666,37 @@
 									</a>
 								</div>
 							</div>
-							<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
+						</div>
+						<div class="toolboxItem">
+							<div>
+								<div class="toolbox-internallinks ">
+									<span class="toolbox-title" style="font-weight: bold">
+                    <span class="tool"  title="Internal Link">
+                      <i class="material-icons mdl-badge" >link</i>
+                    </span> Related Content
+									</span>
+									<div class="toolbox-content toolbox-content-link">
+										<div class="toolbox-link-display">
+											<div class="toolbox-link-title">
+												<div class="toolbox-preview Preview1-18071">
+													<span class="tool toolbox-icon">
+                             <i class="material-icons">link</i>
+                            </span>
+													<a href="#" class="">Business Intelligence</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
 		</div>
+		<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
 	</div>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
@@ -1756,125 +1739,83 @@
 			&lt;/div&gt;
 			&lt;div class=&quot;dialogTool&quot;&gt;
 				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
-					&lt;div class=&quot;toolboxItemContainer&quot;&gt;
-						&lt;!-- ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div class=&quot;selected&quot;&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div class=&quot;selected&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
                           &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
                             &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
                           &lt;/span&gt; FAQs
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
-                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
-                        &lt;/span&gt; Documents
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;div&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
-										&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
-                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
-                        &lt;/span&gt; Calendar
-										&lt;/span&gt;
-										&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-							&lt;a href=&quot;#&quot;&gt;
-								&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
-									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
-                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
-                  &lt;/span&gt; Poll
 									&lt;/span&gt;
 									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
 								&lt;/div&gt;
 							&lt;/a&gt;
 						&lt;/div&gt;
-						&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
-						&lt;div class=&quot;sideBottom&quot;&gt;
-							&lt;!-- ngIf: selectedTopic.News.length &gt; 0 --&gt;
-							&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
-								&lt;a href=&quot;#&quot;&gt;
-									&lt;div class=&quot;toolbox-news&quot;&gt;
-										&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+									&lt;/span&gt;
+									&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;
+							&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+								&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+								&lt;/span&gt;
+								&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+					&lt;div class=&quot;sideBottom&quot;&gt;
+						&lt;div class=&quot;toolboxItem &quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-news&quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
                             &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
                                 &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
                             &lt;/span&gt; News
-										&lt;/span&gt;
-										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
-											&lt;!-- ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
-											&lt;div style=&quot;height: 100%&quot; class=&quot;ng-scope&quot;&gt;
-												&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
-													&lt;div class=&quot;toolbox-news-details&quot;&gt;
-														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
-                                            Bulletin Three - Priority
-                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Headline.length &gt; 65 --&gt;
-                                        &lt;/span&gt;
-														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
-															Bulletin Three - Priority Bulletin Three - Priority Bulletin Thre
-															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;&lt;span class=&quot;ng-scope&quot;&gt;&lt;/span&gt;
-															&lt;!-- end ngIf: GetPreviewItem(selectedTopic.NodeId, 1).Description.length &gt; 65 --&gt;
-														&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-												&lt;div class=&quot;toolbox-preview Preview0-18918&quot; style=&quot;display: none;&quot;&gt;
-													&lt;div class=&quot;toolbox-news-details&quot;&gt;
-														&lt;span class=&quot;toolbox-news-headline ng-binding&quot;&gt;
-                                            As good as it gets
-                                            &lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Headline.length &gt; 65 --&gt;
-                                        &lt;/span&gt;
-														&lt;div class=&quot;toolbox-news-description ng-binding&quot;&gt;
-															As good as it gets
-															&lt;!-- ngIf: GetPreviewItem(selectedTopic.NodeId, 0).Description.length &gt; 65 --&gt;
-														&lt;/div&gt;
-													&lt;/div&gt;
-												&lt;/div&gt;
-											&lt;/div&gt;
-											&lt;!-- end ngIf: PreviewExists(selectedTopic.NodeId) --&gt;
-										&lt;/div&gt;
-									&lt;/div&gt;
-								&lt;/a&gt;
-							&lt;/div&gt;
-							&lt;!-- end ngIf: selectedTopic.News.length &gt; 0 --&gt;
-							&lt;div class=&quot;toolboxItem ng-scope ng-hide&quot;&gt;
-								&lt;div&gt;
+									&lt;/span&gt;
 									&lt;a href=&quot;#&quot;&gt;
-										&lt;!-- ngIf: toolboxItem.NodeTypeAlias == &#x27;internalLinks&#x27; --&gt;
-										&lt;div class=&quot;toolbox-internallinks ng-scope&quot;&gt;
-											&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
-                            &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
-                              &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
-                            &lt;/span&gt; Related Content
-											&lt;/span&gt;
-											&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
-												&lt;div class=&quot;toolbox-link-display&quot;&gt;
-													&lt;div class=&quot;toolbox-link-title&quot;&gt;
-														&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) --&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+
+											&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+												&lt;div class=&quot;toolbox-news-details&quot;&gt;
+													&lt;span class=&quot;toolbox-news-headline &quot;&gt;
+                                            Bulletin Three - Priority
+                                          &lt;/span&gt;
+													&lt;div class=&quot;toolbox-news-description &quot;&gt;
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
 													&lt;/div&gt;
 												&lt;/div&gt;
 											&lt;/div&gt;
@@ -1882,14 +1823,37 @@
 									&lt;/a&gt;
 								&lt;/div&gt;
 							&lt;/div&gt;
-							&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;toolboxItem&quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-internallinks &quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                    &lt;/span&gt; Related Content
+									&lt;/span&gt;
+									&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+										&lt;div class=&quot;toolbox-link-display&quot;&gt;
+											&lt;div class=&quot;toolbox-link-title&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+													&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                             &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                            &lt;/span&gt;
+													&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Business Intelligence&lt;/a&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
-			&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
 		&lt;/div&gt;
-	&lt;/div&gt;</code></pre>
+		&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
@@ -2817,10 +2781,10 @@
 
 
 		</div>
-	<script src="/assets/fabricator/scripts/f.js"></script>
+	<script src=" assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
-	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<script src=" assets/toolkit/scripts/toolkit.js"></script>
 
 		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
 		<script src="assets/toolkit/scripts/search.js"></script>

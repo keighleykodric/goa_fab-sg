@@ -1,14 +1,27 @@
-h2.topic span.featured{display:none;position:absolute;font-size:10px;top:-5px}
+h2.topic {
+  padding:10px 2%;
+  color:$white;
+  font-size:16px;
+  margin:0;
+  font-weight:500;
+  width:96%;
+  line-height:28px
+}
+h2.topic span.featured{
+  display:none;
+  position:absolute;
+  font-size:10px;
+  top:-5px
+}
 h2.topic span.ministryNews, h2.topic span.featured {
     display: none;
     position: absolute;
     font-size: 10px;
     top: -5px;
 }
-div#shareThis {
-    top: 0px;
-    display: inline-block;
-    float: right;
+
+.mdl-modal h2.topic {
+  padding:0
 }
 h5.category {
   font-size:.7em;
@@ -20,20 +33,13 @@ h5.category {
   padding:0 5px;
   border-radius:3px
 }
-h2.topic {
-  padding:10px 2%;
-  color:$white;
-  font-size:16px;
-  margin:0;
-  font-weight:500;
-  width:96%;
-  line-height:28px
-}
-.mdl-modal h2.topic {
-  padding:0
-}
 .filterClose .tileContent {
   width:24%;
+}
+div#shareThis {
+    top: 0px;
+    display: inline-block;
+    float: right;
 }
 
 
@@ -54,16 +60,13 @@ h2.topic {
   border-radius: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-.card:hover{
-  color: #FFF;
-  background: $primary-color;
-}
+
 a.card-share {
   float:right;
   padding: 0px 10px;
   margin-right: 10px;
 }
-.hover-card a.card {
+a.card {
   transition:all .1s
 }
 .card a{
@@ -119,7 +122,7 @@ a.card-share {
     background: #f68a1e;
     color: #fff;
 }
-.promoTile .card-topics {
+.promoTile .card-subtopics {
   background:#faf4ee
 }
 
@@ -130,12 +133,54 @@ a.card-share {
 
 
 /*---News Card styles---*/
-.news{
+.newsTile {
   background: #005983 !important;
   color: #fff;
 }
 
+.newsTile span.sub-topic:hover{
+  background: #005983 !important;
+  color: #fff;
+}
+.newsTile .card-subtopics {
+  background:#e3edf1
+}
 
+/*---News Card Content styles---*/
+
+.newsTile .topic-content {}.topic-content p {
+  font-size:1em;
+  font-weight:400
+}
+.newsTile h2.topic {
+  background:#005983;
+  color:#fff
+}
+
+.subtopics-news {
+  background:#e3edf1
+}
+.newsTile .cardNewsPreview {}
+.listDisplay .cardNewsPreview .cardPreviewTitle {
+  margin-top:10%
+}
+.cardNewsPreview .cardPreviewTitle {
+  text-align:left;
+  white-space:normal;
+  padding:5px;
+  font-size:13px
+}
+.cardNewsPreview {
+  position:absolute;
+  display:inline-block;
+  overflow:hidden;
+  top:0;
+  padding:2.5%;
+  width:90%;
+  height:100%;
+  left:5px;
+  background-color:#fff
+}
 
 
 
@@ -262,46 +307,6 @@ h2.topic span {
 
 
 
-/*---News Card Content styles---*/
-
-.newsTile .topic-content {}.topic-content p {
-  font-size:1em;
-  font-weight:400
-}
-.newsTile h2.topic {
-  background:#005983;
-  color:#fff
-}
-.newsTile .card-topics {
-  background:#e3edf1
-}
-.subtopics-news {
-  background:#e3edf1
-}
-.newsTile .cardNewsPreview {}
-.listDisplay .cardNewsPreview .cardPreviewTitle {
-  margin-top:10%
-}
-.newsTile .cardPreview {
-  background-color:#f0fafc
-}
-.cardNewsPreview .cardPreviewTitle {
-  text-align:left;
-  white-space:normal;
-  padding:5px;
-  font-size:13px
-}
-.cardNewsPreview {
-  position:absolute;
-  display:inline-block;
-  overflow:hidden;
-  top:0;
-  padding:2.5%;
-  width:90%;
-  height:100%;
-  left:5px;
-  background-color:#fff
-}
 
 
 
@@ -531,19 +536,6 @@ h2.topic span {
     background: #36424a;
 }
 
-.news:hover {
-  box-shadow:0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(2, 98, 194, .12);
-  outline:0;
-  color: #FFF;
-    background: #005983;
-}
-
-.promo:hover {
-  box-shadow:0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(2, 98, 194, .12);
-  outline:0;
-  color: #FFF;
-    background: #f68a1e;
-}
 
 .listDisplay .previewContent {
   width:500px;

@@ -10,7 +10,7 @@
 	
 
 	<!-- toolkit styles -->
-	<link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href=" assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -29,17 +29,10 @@
 	    <div class="topBar">
 	      <div class="logo">
 	        <a href="#">
-	          <img src="../assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
+	          <img src="assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
 	        </a>
 	      </div>
 	      <div class="utility">
-	        <div class="fr-eng-toggle">
-	          <input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
-	          <label class="fr-eng-switch-label" for="fr-eng-switch">
-	            <span class="fr-eng-switch-inner"></span>
-	            <span class="fr-eng-switch-switch"></span>
-	          </label>
-	        </div>
 	        <div class="searchBar">
 	        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
 	          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
@@ -50,16 +43,42 @@
 	            <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
 	          </div>
 	        </div>      </div>
+	        <div class="fr-eng-toggle">
+	                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" data-upgraded=",MaterialButton,MaterialRipple">
+	                    <span class="lang-toggle-fr English">FR</span>
+	                    <span class="lang-toggle-en French">EN</span>
+	                <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 116.793px; height: 116.793px; transform: translate(-50%, -50%) translate(25px, 21px);"></span></span></button>
+	            </div><!--
+	                    <div class="fr-eng-toggle">
+	                      <input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
+	                      <label class="fr-eng-switch-label" for="fr-eng-switch">
+	            <span class="fr-eng-switch-inner"></span>
+	            <span class="fr-eng-switch-switch"></span>
+	                      </label>
+	                    </div> -->
+	
 	      </div>
 	    </div>
 	  </header><div class="masGrid">
 <div class="banner item w4">
             <div class="flexslider">
                 <ul class="slides">
-                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide"><img src="../assets/toolkit/images/back-to-school.png" alt="back to school toolkit" draggable="false"></li>
-                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class=""><img src="../assets/toolkit/images/Grade-3.jpg" alt="Grade 3 - Student Learning Assessment Pilot" draggable="false"></li>
+                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide"><img src="assets/toolkit/images/back-to-school.png" alt="back to school toolkit" draggable="false"></li>
+                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class=""><img src="assets/toolkit/images/Grade-3.jpg" alt="Grade 3 - Student Learning Assessment Pilot" draggable="false"></li>
                 </ul>
-            <ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a class="">2</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev sliderPrev" href="#"><i class="material-icons">arrow_back</i></a></li><li class="flex-nav-next"><a class="flex-next sliderNext" href="#"><i class="material-icons">arrow_forward</i></a></li></ul></div>
+            <ol class="flex-control-nav flex-control-paging">
+              <li><a class="flex-active">1</a></li>
+              <li><a class="">2</a></li>
+            </ol>
+              <ul class="flex-direction-nav">
+                <li class="flex-nav-prev">
+                  <a class="flex-prev sliderPrev" href="#">
+              <i class="material-icons">arrow_back</i></a></li>
+              <li class="flex-nav-next"><a class="flex-next sliderNext" href="#">
+                <i class="material-icons">arrow_forward</i></a>
+              </li>
+            </ul>
+          </div>
         </div><div id="home" class="card item w1 earlyChildhood" >
   <h1>Early Childhood</h1>
   <div class="home-link-box">
@@ -103,7 +122,7 @@
 </div><div class="rightSidebar">
         <div class="welcome">
             <a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
-                <div class="minister-image"><img src="../assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+                <div class="minister-image"><img src=" assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
                 <div class="minister-title">
                     <p>
                         <span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
@@ -116,7 +135,6 @@
 
 
     <h5>News</h5>
-    <a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
         <div class="newsItem">
             <a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
                 <h4 class="newsHeadline">Bulletin Two</h4>
@@ -136,6 +154,8 @@
 
         </div>
 
+        <a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
+
         </div>
     </div></div>
 <div>
@@ -147,7 +167,7 @@
 
 
 	<!-- toolkit scripts -->
-	<script src="../assets/toolkit/scripts/toolkit.js"></script>
+	<script src=" assets/toolkit/scripts/toolkit.js"></script>
 
 		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
 		<script src="assets/toolkit/scripts/search.js"></script>
