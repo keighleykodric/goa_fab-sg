@@ -797,18 +797,18 @@
 					</span>
 				</div>
 			</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>Contacts toolbox.</p>
+	<p>Calendar toolbox.</p>
 
 </div>
 <div class="f-item-preview">
 	<div class="toolboxItem  ">
-	<div class="toolbox-content toolbox-content-contacts">
+	<div class="toolbox-content">
 		<span class="toolbox-title  " style="font-weight: bold">
                 <span class="tool"  title="Internal Link">
                   <i class="material-icons mdl-badge" >today</i>
                 </span> Calendar
 		</span>
-		<div class="toolbox-content toolbox-content-event">
+		<div class="toolbox-content toolbox-content-calendar">
 
 			<div class="toolbox-preview Preview1-18071">
 				<div class="toolbox-event-details">
@@ -832,13 +832,13 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem  &quot;&gt;
-	&lt;div class=&quot;toolbox-content toolbox-content-contacts&quot;&gt;
+	&lt;div class=&quot;toolbox-content&quot;&gt;
 		&lt;span class=&quot;toolbox-title  &quot; style=&quot;font-weight: bold&quot;&gt;
                 &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
                   &lt;i class=&quot;material-icons mdl-badge&quot; &gt;today&lt;/i&gt;
                 &lt;/span&gt; Calendar
 		&lt;/span&gt;
-		&lt;div class=&quot;toolbox-content toolbox-content-event&quot;&gt;
+		&lt;div class=&quot;toolbox-content toolbox-content-calendar&quot;&gt;
 
 			&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
 				&lt;div class=&quot;toolbox-event-details&quot;&gt;
@@ -883,13 +883,13 @@
 </div>
 <div class="f-item-preview">
 	<div class="toolboxItem  ng-hide">
-	<div class="toolbox-content toolbox-content-contacts">
+	<div class="toolbox-content ">
 		<span class="toolbox-title  " style="font-weight: bold">
                 <span class="tool"  title="Internal Link">
                   <i class="material-icons mdl-badge" >contacts</i>
                 </span> Contacts
 		</span>
-		<div class="toolbox-content toolbox-content-link">
+		<div class="toolbox-content toolbox-content-contact">
 			<div class="toolbox-link-display">
 				<div class="toolbox-link-title">
 
@@ -914,13 +914,13 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem  ng-hide&quot;&gt;
-	&lt;div class=&quot;toolbox-content toolbox-content-contacts&quot;&gt;
+	&lt;div class=&quot;toolbox-content &quot;&gt;
 		&lt;span class=&quot;toolbox-title  &quot; style=&quot;font-weight: bold&quot;&gt;
                 &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
                   &lt;i class=&quot;material-icons mdl-badge&quot; &gt;contacts&lt;/i&gt;
                 &lt;/span&gt; Contacts
 		&lt;/span&gt;
-		&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+		&lt;div class=&quot;toolbox-content toolbox-content-contact&quot;&gt;
 			&lt;div class=&quot;toolbox-link-display&quot;&gt;
 				&lt;div class=&quot;toolbox-link-title&quot;&gt;
 
@@ -1139,12 +1139,10 @@
                 <i class="material-icons mdl-badge" >open_in_new</i>
               </span> Links
 				</span>
-				<!-- ngIf: PreviewExists(toolboxItem.NodeId) && selectedSubTopic.ToolboxItems.length <= 4 -->
 			</div>
 		</a>
 	</div>
 </div>
-<!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems -->
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
@@ -1156,12 +1154,10 @@
                 &lt;i class=&quot;material-icons mdl-badge&quot; &gt;open_in_new&lt;/i&gt;
               &lt;/span&gt; Links
 				&lt;/span&gt;
-				&lt;!-- ngIf: PreviewExists(toolboxItem.NodeId) &amp;&amp; selectedSubTopic.ToolboxItems.length &lt;= 4 --&gt;
 			&lt;/div&gt;
 		&lt;/a&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- end ngRepeat: toolboxItem in selectedSubTopic.ToolboxItems --&gt;</code></pre>
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>

@@ -931,7 +931,6 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
 .toolbox-content {
     position:relative;
     display:block;
-    height:70px;
     margin-bottom:12px;
     overflow:hidden;
     padding:0 10px;
@@ -1065,13 +1064,25 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
 }
 
 
-.toolbox-content {
-    background: transparent;
+.toolbox-content-news, .toolbox-content-link {
+    background: transparent !important;
+  }
+
+
+.toolbox-content-event, .toolbox-content-contact, .toolbox-content-document,
+.toolbox-content-faqs, .toolbox-content-link, .toolbox-content-calendar
+.toolbox-content-poll {
+    background: #fff;
 }
 
+.toolbox-content-event, .toolbox-content-calendar{
+  height: 80px;
+}
 
-
-
+.toolbox-content-news, .toolbox-content-link,
+.toolbox-content-contact, .toolbox-content-document {
+  height: 60px;
+}
 
 
 
