@@ -87,8 +87,8 @@
 
 
     .card.earlyChildhood {
-        background:#ec098c;
-        margin-left:30px
+        background:#ec098c;/*
+        margin-left:30px */
     }
     .card.earlyChildhood h1 {
         background:url(../images/early-childhood.png) no-repeat center 20px;
@@ -109,8 +109,8 @@
         background-size:30%
     }
     .card.highSchool {
-        background:#8cc63e;
-        margin-left:30px
+        background:#8cc63e;/*
+        margin-left:30px */
     }
     .card.highSchool h1 {
         background:url(../images/highschool.png) no-repeat center 20px;
@@ -420,10 +420,6 @@ font-weight: 600;
     }
     .list-display-only {
         display:none
-    }
-    .card.earlyChildhood {
-        background:#ec098c;
-        margin-left:30px
     }
 
 
