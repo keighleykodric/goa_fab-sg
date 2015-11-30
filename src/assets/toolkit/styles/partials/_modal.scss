@@ -1,3 +1,13 @@
+/*-----
+Modal Styles
+-----*/
+
+
+
+
+
+
+
 .questionItem {
     clear:both;
     margin-bottom:15px;
@@ -14,23 +24,32 @@
 }
 
 
-/*-----Modal Styles-----*/
- /* Styles for dialog window */
-      .dialogBox {
-        background: #F9FAFC;
-        text-align: left;
-        width: 1200px;
-        margin: 40px auto;
-        position: relative;
-		height:700px;
-      }
-	.dialogBox h5.category {margin:20px 0 0 20px; font-size:0.8em; color:#ccc;}
-	.dialogBox h2.topic {
-        margin: 0;
-        position: relative;
-	    font-size: 1em;
-        max-width:75%;
-    }
+
+
+
+/*-----Base Modal Styles-----*/
+
+
+.dialogBox {
+  background: #F9FAFC;
+  text-align: left;
+  width: 1200px;
+  margin: 40px auto;
+  position: relative;
+	height:700px;
+}
+.dialogBox h5.category {
+  margin:20px 0 0 20px;
+  font-size:0.8em;
+  color:#ccc;
+}
+
+.dialogBox h2.topic {
+  margin: 0;
+  position: relative;
+	font-size: 1em;
+  max-width:75%;
+}
 
 
 
@@ -55,7 +74,7 @@
 
 
 
-
+/*-----News Modal Styles-----*/
 
 .newsDialog .subTopic:hover{
   color:#005983;
@@ -85,10 +104,14 @@
     background-color: #E3EDF1;
 }
 
+.dialogNewsContent{
+  width: 76%;
+}
 
 
 
 
+/*-----Promo Modal Styles-----*/
 
 .promoDialog {
   background-color:#f68a1e !important;
@@ -125,167 +148,11 @@
 
 
 
+/*-----Modal Content Styles-----*/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	.dialogTopics {width:20%; float:left; background:#F9FAFC; display:table-cell;}
-	.dialogContent { width:56%; padding:2%; float:left; background:#fff; display:table-cell; height: 587px; overflow-y:auto; overflow-x:hidden;line-height: 21px;}
-	.dialogTool {width:20%; float:left; background:#F9FAFC; display:table-cell;}
-    .dialogNewsContent{ width: 76%;}
-    .dialogDesc {
-        color: #8493A8;
-        font-style:italic;
-        margin-bottom: 10px;
-    }
-    .dialogTitle {
-        margin-top: 0;
-        margin-bottom: 12px;
-    }
-
-    /*----Resource modal styles-----*/
-	.dialogFind {
-        padding: 0px 20px;
-        background: #FAFAFA;
-        margin: 20px 0;
-    }
-    .dialogFind select {
-        border: 0;
-        border-bottom: 1px solid #8493A8;
-        background: #FAFAFA;
-        color:#8493A8;
-        padding: 4px;
-        margin-left:10px;
-        outline: none;
-    }
-    select.personaList {
-        border: 0;
-        border-bottom: 1px solid #8493A8;
-        background: transparent;
-        color: #8493A8;
-        padding: 5px 0;
-        width: 100%;
-        margin-left: 0;
-        outline: none;
-    }
-	.table {display:table; width:100%;}
-    .dialogSortRow { display: table-header-group; width: 100%;}
-    .folderItem { display: table-row-group; width: 100%;}
-	.dialogSort, .listItem {display:table-row; width:100%;}
-    .table .listItem:hover {background:#E5F6FA;}
-    .resourceFolder {
-        border:1px solid #eee;
-        margin-bottom: 10px;
-    }
-    /*------- hide table headers -------------*/
-    .dialogSort {display:none;}
-		.sortItem, .sortType, .sortSize, .sortDate, .itemName, .itemType, .itemSize, .itemDate {display:table-cell;}
-            .sortItem {background:#ccc; width:250px; padding:5px; margin:0 1px; text-align:left; border-right:1px solid #fff;}
-			.sortType, .sortSize, .sortDate {background:#ccc; padding:5px; margin:0 1px; text-align:center; border-right:1px solid #fff;}
-			.itemDate, .itemType, .itemSize {text-align:center; padding:5px;}
-			.itemName {text-align:left; padding:5px;}
-
-    .folderName {
-        background: #eee;
-        padding: 5px;
-        color:#005883;
-        font-weight:bold;
-    }
-
-
-
-    .dialogToolbox,
-    .toolboxItemContainer {
-        margin:20px 10px 20px 20px
-    }
-    .dialogToolbox {
-        margin-bottom:0;
-        position:absolute;
-        top:6px;
-        z-index:3;
-        right:10px;
-        margin-top:10px
-    }
-    .cardToolbox img,
-    .dialogToolbox img {
-        cursor:pointer
-    }
-
-
-
-
-
-
-
-
-      /* start state */
-      .my-mfp-zoom-in .zoom-anim-dialog {
-        opacity: 0;
-
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-
-
-
-        -webkit-transform: scale(0.6);
-        -moz-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        -o-transform: scale(0.6);
-        transform: scale(0.6);
-      }
-      /* animate in */
-      .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
-        opacity: 1;
-
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-      }
-      /* animate out */
-      .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-        -webkit-transform: scale(0.6);
-        -moz-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        -o-transform: scale(0.6);
-        transform: scale(0.6);
-
-        opacity: 0;
-      }
-      /* Dark overlay, start state */
-      .my-mfp-zoom-in.mfp-bg {
-        opacity: 0;
-        -webkit-transition: opacity 0.3s ease-out;
-        -moz-transition: opacity 0.3s ease-out;
-        -o-transition: opacity 0.3s ease-out;
-        transition: opacity 0.3s ease-out;
-      }
-      /* animate in */
-      .my-mfp-zoom-in.mfp-ready.mfp-bg {
-        opacity: 0.6;
-      }
-      /* animate out */
-      .my-mfp-zoom-in.mfp-removing.mfp-bg {
-        opacity: 0;
-      }
 
 .dialogBox .subtopicInfo
 {
@@ -299,30 +166,79 @@
 .relativePosition {
     position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sideBottom {
-    position:relative;
-    bottom:10px;
-    margin-top: 70%;
-    padding: 0 10px;
+.dialogTopics {
+  width:20%;
+  float:left;
+  background:#F9FAFC;
+  display:table-cell;
 }
+.dialogContent {
+  width:56%;
+  padding:2%;
+  float:left;
+  background:#fff;
+  display:table-cell;
+  height: 587px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  line-height: 21px;
+}
+.dialogTool {
+  width:20%;
+  float:left;
+  background:#F9FAFC;
+  display:table-cell;
+}
+.dialogDesc {
+  color: #8493A8;
+  font-style:italic;
+  margin-bottom: 10px;
+}
+.dialogTitle {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/*----Resource modal styles-----*/
+.dialogFind {
+  padding: 0px 20px;
+  background: #FAFAFA;
+  margin: 20px 0;
+}
+.dialogFind select {
+  border: 0;
+  border-bottom: 1px solid #8493A8;
+  background: #FAFAFA;
+  color:#8493A8;
+  padding: 4px;
+  margin-left:10px;
+  outline: none;
+}
+select.personaList {
+  border: 0;
+  border-bottom: 1px solid #8493A8;
+  background: transparent;
+  color: #8493A8;
+  padding: 5px 0;
+  width: 100%;
+  margin-left: 0;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .dialogBox {
     background:#f8f9fb;
     text-align:left;
@@ -496,47 +412,10 @@ select.personaList {
     color:#005883;
     font-weight:700
 }
-.my-mfp-zoom-in .zoom-anim-dialog {
-    opacity:0;
-    -webkit-transition:all .2s ease-in-out;
-    -moz-transition:all .2s ease-in-out;
-    -o-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
-    -webkit-transform:scale(.6);
-    -moz-transform:scale(.6);
-    -ms-transform:scale(.6);
-    -o-transform:scale(.6);
-    transform:scale(.6)
-}
-.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
-    opacity:1;
-    -webkit-transform:scale(1);
-    -moz-transform:scale(1);
-    -ms-transform:scale(1);
-    -o-transform:scale(1);
-    transform:scale(1)
-}
-.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-    -webkit-transform:scale(.6);
-    -moz-transform:scale(.6);
-    -ms-transform:scale(.6);
-    -o-transform:scale(.6);
-    transform:scale(.6);
-    opacity:0
-}
-.my-mfp-zoom-in.mfp-bg {
-    opacity:0;
-    -webkit-transition:opacity .3s ease-out;
-    -moz-transition:opacity .3s ease-out;
-    -o-transition:opacity .3s ease-out;
-    transition:opacity .3s ease-out
-}
-.my-mfp-zoom-in.mfp-ready.mfp-bg {
-    opacity:.6
-}
-.my-mfp-zoom-in.mfp-removing.mfp-bg {
-    opacity:0
-}
+
+
+
+
 .dialogBox .subtopicInfo {
     display:none
 }
@@ -871,11 +750,102 @@ select.personaList {
 
 
 
+.table {
+  display:table;
+  width:100%;
+}
+.dialogSortRow {
+  display: table-header-group;
+  width: 100%;
+}
+.folderItem {
+  display: table-row-group;
+  width: 100%;
+}
+
+.dialogSort, .listItem {
+  display:table-row;
+  width:100%;
+}
+
+.table .listItem:hover {
+  background:#E5F6FA;
+}
+
+.resourceFolder {
+  border:1px solid #eee;
+  margin-bottom: 10px;
+}
 
 
 
+/*------- hide table headers -------------*/
+.dialogSort {
+  display:none;
+}
+.sortItem, .sortType, .sortSize, .sortDate, .itemName, .itemType,
+.itemSize, .itemDate {
+  display:table-cell;
+}
+.sortItem {
+  background:#ccc;
+  width:250px;
+  padding:5px;
+  margin:0 1px;
+  text-align:left;
+  border-right:1px solid #fff;
+}
+.sortType, .sortSize, .sortDate {
+  background:#ccc;
+  padding:5px;
+  margin:0 1px;
+  text-align:center;
+  border-right:1px solid #fff;
+}
+.itemDate, .itemType, .itemSize {
+  text-align:center;
+  padding:5px;
+}
+.itemName {
+  text-align:left;
+  padding:5px;
+}
+
+.folderName {
+  background: #eee;
+  padding: 5px;
+  color:#005883;
+  font-weight:bold;
+}
 
 
+
+/*-----Modal Toolboxes Styles-----*/
+
+
+
+.dialogToolbox, .toolboxItemContainer {
+  margin:20px 10px 20px 20px
+}
+.dialogToolbox {
+  margin-bottom:0;
+  position:absolute;
+  top:6px;
+  z-index:3;
+  right:10px;
+  margin-top:10px
+}
+
+.cardToolbox img, .dialogToolbox img {
+  cursor:pointer
+}
+
+.sideBottom {
+    position:relative;
+    bottom:10px;
+    margin-top: 70%;
+    padding: 0 10px;
+}
 .toolboxItemContainer {
     margin:0;
     padding:10px
@@ -1129,6 +1099,157 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
 .toolbox-content-contact, .toolbox-content-document {
   height: 60px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+
+
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+
+  opacity: 0;
+}
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.6;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.my-mfp-zoom-in .zoom-anim-dialog {
+    opacity:0;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    -webkit-transform:scale(.6);
+    -moz-transform:scale(.6);
+    -ms-transform:scale(.6);
+    -o-transform:scale(.6);
+    transform:scale(.6)
+}
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+    opacity:1;
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1)
+}
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+    -webkit-transform:scale(.6);
+    -moz-transform:scale(.6);
+    -ms-transform:scale(.6);
+    -o-transform:scale(.6);
+    transform:scale(.6);
+    opacity:0
+}
+.my-mfp-zoom-in.mfp-bg {
+    opacity:0;
+    -webkit-transition:opacity .3s ease-out;
+    -moz-transition:opacity .3s ease-out;
+    -o-transition:opacity .3s ease-out;
+    transition:opacity .3s ease-out
+}
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity:.6
+}
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity:0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
