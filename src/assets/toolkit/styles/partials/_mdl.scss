@@ -254,7 +254,7 @@ a,
     background-color: #fff!important
 }
 .mdl-color-text--primary {
-    color: #29b6f6!important
+    color: $primary-color !important
 }
 .mdl-color-text--primary-contrast {
     color: #fff!important
@@ -391,7 +391,7 @@ a,
 }
 .mdl-button:hover,
 .close-button:hover {
-    background-color: 207, 216, 220
+    background-color: $primary-color
 }
 .mdl-button:focus:not(:active),
 .close-button:focus:not(:active) {

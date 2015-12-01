@@ -134,6 +134,9 @@
 							<a href="organisms.html#cards">Cards</a>
 						</li>
 						<li>
+							<a href="organisms.html#filters">Filters</a>
+						</li>
+						<li>
 							<a href="organisms.html#footer">Footer</a>
 						</li>
 						<li>
@@ -156,6 +159,9 @@
 					<ul>
 						<li>
 							<a href="pages/home.html">Home</a>
+						</li>
+						<li>
+							<a href="pages/journey.html">Journey</a>
 						</li>
 					</ul>
 				</li>
@@ -478,6 +484,437 @@
 </div>
 
 
+<div class="f-item-group" id="filters">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Filters</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Filter component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div id="slideout" style="left: 0px;">
+	<div id="containclickme">
+		<div class="toggleFilter material-icons" id="click" ng-click="ToggleSideFilters()" style="display: none;">
+			<i class="material-icons">arrow_back</i>
+			<span class="filterTitle">FILTER</span>
+		</div>
+	</div>
+	<div class="leftContent">
+
+
+		<script>
+			$(document).ready(function() {
+				$('.dd-menu').click(function() {
+					$(this).toggleClass("dd-open");
+				});
+			});
+		</script>
+
+		<style>
+			.dd-selected {
+				background-color: #00ADD8;
+				color: white;
+			}
+		</style>
+		<div class="slide-out-div">
+			<div class="persona-dd">
+
+				<span class="languageItem English" style="display: block;">Personalize</span>
+				<span class="languageItem French" style="display: none;">Personnaliser</span>
+
+				<select class="personaList ng-pristine ng-untouched ng-valid" ng-model="searchFilter.Persona" ng-disabled="!filterToggle" ng-options="persona.Name as (persona.DisplayName + &quot; (&quot; + persona.Count  + &quot;)&quot;) for persona in personaList" ng-change="TogglePersona()">
+					<option value="0" selected="selected" label="Everyone (6)">Everyone (6)</option>
+					<option value="1" label="Parent (3)">Parent (3)</option>
+					<option value="2" label="Student (1)">Student (1)</option>
+					<option value="3" label="Teacher (1)">Teacher (1)</option>
+					<option value="4" label="School Administrator (3)">School Administrator (3)</option>
+				</select>
+			</div>
+
+
+			<span class="languageItem English" style="display: block;">Categories</span>
+			<span class="languageItem French" style="display: none;">Catégories</span>
+			<span class="clear-filters"><a href="javascript:void(0)" ng-click="ClearCategoryFilter()">clear filters</a></span>
+			<div class="filterCategories">
+				<ul class="categories">
+
+					<!-- ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="5"></span>
+						<span class="category-title ng-binding">
+                    Curriculum
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Curriculum" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="3"></span>
+						<span class="category-title ng-binding">
+                    Diploma Exams
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Diploma Exams" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="1"></span>
+						<span class="category-title ng-binding">
+                    French Education
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_French Education" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="3"></span>
+						<span class="category-title ng-binding">
+                    International Education
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_International Education" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="1"></span>
+						<span class="category-title ng-binding">
+                    Legislation
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Legislation" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="1"></span>
+						<span class="category-title ng-binding">
+                    Ministry Initiatives
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Ministry Initiatives" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="1"></span>
+						<span class="category-title ng-binding">
+                    PAT/SLA
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_PAT/SLA" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="1"></span>
+						<span class="category-title ng-binding">
+                    Standards &amp; Policy
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Standards &amp; Policy" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+					<li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
+						<span class="mdl-badge" data-badge="1"></span>
+						<span class="category-title ng-binding">
+                    Teaching
+                </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Teaching" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+				</ul>
+			</div>
+
+
+
+		</div>
+
+
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;slideout&quot; style=&quot;left: 0px;&quot;&gt;
+	&lt;div id=&quot;containclickme&quot;&gt;
+		&lt;div class=&quot;toggleFilter material-icons&quot; id=&quot;click&quot; ng-click=&quot;ToggleSideFilters()&quot; style=&quot;display: none;&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;arrow_back&lt;/i&gt;
+			&lt;span class=&quot;filterTitle&quot;&gt;FILTER&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;leftContent&quot;&gt;
+
+
+		&lt;script&gt;
+			$(document).ready(function() {
+				$(&#x27;.dd-menu&#x27;).click(function() {
+					$(this).toggleClass(&quot;dd-open&quot;);
+				});
+			});
+		&lt;/script&gt;
+
+		&lt;style&gt;
+			.dd-selected {
+				background-color: #00ADD8;
+				color: white;
+			}
+		&lt;/style&gt;
+		&lt;div class=&quot;slide-out-div&quot;&gt;
+			&lt;div class=&quot;persona-dd&quot;&gt;
+
+				&lt;span class=&quot;languageItem English&quot; style=&quot;display: block;&quot;&gt;Personalize&lt;/span&gt;
+				&lt;span class=&quot;languageItem French&quot; style=&quot;display: none;&quot;&gt;Personnaliser&lt;/span&gt;
+
+				&lt;select class=&quot;personaList ng-pristine ng-untouched ng-valid&quot; ng-model=&quot;searchFilter.Persona&quot; ng-disabled=&quot;!filterToggle&quot; ng-options=&quot;persona.Name as (persona.DisplayName + &amp;quot; (&amp;quot; + persona.Count  + &amp;quot;)&amp;quot;) for persona in personaList&quot; ng-change=&quot;TogglePersona()&quot;&gt;
+					&lt;option value=&quot;0&quot; selected=&quot;selected&quot; label=&quot;Everyone (6)&quot;&gt;Everyone (6)&lt;/option&gt;
+					&lt;option value=&quot;1&quot; label=&quot;Parent (3)&quot;&gt;Parent (3)&lt;/option&gt;
+					&lt;option value=&quot;2&quot; label=&quot;Student (1)&quot;&gt;Student (1)&lt;/option&gt;
+					&lt;option value=&quot;3&quot; label=&quot;Teacher (1)&quot;&gt;Teacher (1)&lt;/option&gt;
+					&lt;option value=&quot;4&quot; label=&quot;School Administrator (3)&quot;&gt;School Administrator (3)&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+
+
+			&lt;span class=&quot;languageItem English&quot; style=&quot;display: block;&quot;&gt;Categories&lt;/span&gt;
+			&lt;span class=&quot;languageItem French&quot; style=&quot;display: none;&quot;&gt;Catégories&lt;/span&gt;
+			&lt;span class=&quot;clear-filters&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot; ng-click=&quot;ClearCategoryFilter()&quot;&gt;clear filters&lt;/a&gt;&lt;/span&gt;
+			&lt;div class=&quot;filterCategories&quot;&gt;
+				&lt;ul class=&quot;categories&quot;&gt;
+
+					&lt;!-- ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;5&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    Curriculum
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Curriculum&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;3&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    Diploma Exams
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Diploma Exams&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;1&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    French Education
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_French Education&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;3&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    International Education
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_International Education&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;1&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    Legislation
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Legislation&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;1&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    Ministry Initiatives
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Ministry Initiatives&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;1&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    PAT/SLA
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_PAT/SLA&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;1&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    Standards &amp;amp; Policy
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Standards &amp;amp; Policy&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot; ng-repeat=&quot;category in categoryList&quot; ng-click=&quot;ToggleCategory()&quot; ng-class=&quot;{selected: isCategorySelected()==true}&quot;&gt;
+						&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;1&quot;&gt;&lt;/span&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+                    Teaching
+                &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Teaching&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+
+
+
+		&lt;/div&gt;
+
+
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 <div class="f-item-group" id="footer">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
@@ -706,7 +1143,8 @@
 	<div class="rightSidebar">
 	<div class="welcome">
 		<a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
-			<div class="minister-image"><img src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+			<div class="minister-image">
+				<img src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
 			<div class="minister-title">
 				<p>
 					<span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
@@ -716,30 +1154,23 @@
 		</a>
 	</div>
 	<div class="news">
-
-
 		<h5>News</h5>
 		<div class="newsItem">
 			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
 				<h4 class="newsHeadline">Bulletin Two</h4>
 			</a>
-
 		</div>
 		<div class="newsItem">
 			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18936">
 				<h4 class="newsHeadline">Bulletin Three - Priority</h4>
 			</a>
-
 		</div>
 		<div class="newsItem">
 			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=14313">
 				<h4 class="newsHeadline">As good as it gets</h4>
 			</a>
-
 		</div>
-
 		<a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
-
 	</div>
 </div>
 </div>
@@ -747,7 +1178,8 @@
 	<pre><code class="language-markup">&lt;div class=&quot;rightSidebar&quot;&gt;
 	&lt;div class=&quot;welcome&quot;&gt;
 		&lt;a href=&quot;http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;amp;rnumber=29&amp;amp;leg=29&quot; target=&quot;_blank&quot;&gt;
-			&lt;div class=&quot;minister-image&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;minister-image&quot;&gt;
+				&lt;img src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
 			&lt;div class=&quot;minister-title&quot;&gt;
 				&lt;p&gt;
 					&lt;span style=&quot;font-weight:600; font-size:16px; display:block;&quot;&gt;Hon. David Eggen&lt;/span&gt;
@@ -757,30 +1189,23 @@
 		&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;news&quot;&gt;
-
-
 		&lt;h5&gt;News&lt;/h5&gt;
 		&lt;div class=&quot;newsItem&quot;&gt;
 			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
 				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/h4&gt;
 			&lt;/a&gt;
-
 		&lt;/div&gt;
 		&lt;div class=&quot;newsItem&quot;&gt;
 			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18936&quot;&gt;
 				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Three - Priority&lt;/h4&gt;
 			&lt;/a&gt;
-
 		&lt;/div&gt;
 		&lt;div class=&quot;newsItem&quot;&gt;
 			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=14313&quot;&gt;
 				&lt;h4 class=&quot;newsHeadline&quot;&gt;As good as it gets&lt;/h4&gt;
 			&lt;/a&gt;
-
 		&lt;/div&gt;
-
 		&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot; class=&quot;news-view-all-btn&quot;&gt;View All&lt;/a&gt;
-
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
@@ -823,15 +1248,15 @@
 		<div class="dialogToolbox">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide">
 				<span class="lang-toggle-fr">FR</span>
-				<span class="lang-toggle-en ng-hide">EN</span>
+				<!-- <span class="lang-toggle-en ng-hide" >EN</span> -->
 				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
 			</button>
 
 			<button class="mdl-button mdl-js-button mdl-button--icon">
 				<i class="material-icons white">share</i>
 			</button>
-			<button class="mdl-button mdl-js-button mdl-button--icon">
-				<i class="material-icons white">close</i>
+			<button class="close-button mdl-js-button mdl-button--icon">
+				<i class="material-icons">close</i>
 			</button>
 		</div>
 		<div class="templateFaqsContainer ng-scope">
@@ -993,15 +1418,15 @@
 		&lt;div class=&quot;dialogToolbox&quot;&gt;
 			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect ng-hide&quot;&gt;
 				&lt;span class=&quot;lang-toggle-fr&quot;&gt;FR&lt;/span&gt;
-				&lt;span class=&quot;lang-toggle-en ng-hide&quot;&gt;EN&lt;/span&gt;
+				&lt;!-- &lt;span class=&quot;lang-toggle-en ng-hide&quot; &gt;EN&lt;/span&gt; --&gt;
 				&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
 			&lt;/button&gt;
 
 			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
 				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
 			&lt;/button&gt;
-			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
-				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
+			&lt;button class=&quot;close-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
 			&lt;/button&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;templateFaqsContainer ng-scope&quot;&gt;

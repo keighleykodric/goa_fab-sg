@@ -1,15 +1,19 @@
 {{> header}}
-<div class="masGrid">
-{{> slider}}
-{{> home-cards.early-childhood}}
-{{> home-cards.elementary}}
-{{> home-cards.junior-high}}
-{{> home-cards.highschool}}
-{{> home-cards.ministry}}
-{{> home-cards.school-administration}}
-{{> home-sidebar}}
-</div>
-<div>
+<div id="container" class="masonry home">
+  <div class="mainContent resizeable">
+    <article>
+      <div class="masGrid">
+        {{> slider}}
 
-
+        {{> home-cards.early-childhood}}
+        {{> home-cards.elementary}}
+        {{> home-cards.junior-high}}
+        {{> home-cards.highschool}}
+        {{> home-cards.ministry}}
+        {{> home-cards.school-administration}}
+      </div>
+      {{> home-sidebar}}
+    </article>
+  </div>
 </div>
+{{> footer}}

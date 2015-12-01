@@ -58,7 +58,7 @@ header .mdl-textfield__input {
     float:left;
     vertical-align:top;
     position:relative;
-    top:-4px
+    top:-6px
 }
 .search,
 #fontSize {
@@ -111,7 +111,7 @@ span.lang-toggle-en {
     -moz-user-select:none;
     -ms-user-select:none;
     float:left;
-    margin:15px
+    margin:9px
 }
 .fr-eng-switch-checkbox {
     display:none
@@ -178,6 +178,23 @@ span.lang-toggle-en {
     right:0;
     background-color:#8091a5
 }
+
+.lang-toggle-fr.English {
+    display: inline;
+}
+header span.lang-toggle-fr, header span.lang-toggle-en, .promoDialog span.lang-toggle-fr, .promoDialog span.lang-toggle-en {
+    color: #fff;
+}
+span.lang-toggle-fr, span.lang-toggle-en {
+    color: #fff;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 4px;
+}
+.English {
+    display: inline-block;
+}
+
 
 
 /* Sign In
