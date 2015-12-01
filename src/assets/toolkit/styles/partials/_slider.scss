@@ -135,7 +135,8 @@ html[xmlns] .flexslider .slides {
 .sliderPrev {
     background:#333;
     border-radius:50%;
-    border:2px solid #fff
+    border:2px solid #fff;
+    padding: 0;
 }
 .sliderNext .material-icons,
 .sliderPrev .material-icons {
@@ -241,7 +242,8 @@ html[xmlns] .flexslider .slides {
     .3);
     -webkit-border-radius:20px;
     -moz-border-radius:20px;
-    border-radius:20px
+    border-radius:20px;
+    padding: 0px;
 }
 .flex-control-paging li a:hover {
     background:#333;

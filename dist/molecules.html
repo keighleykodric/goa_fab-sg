@@ -674,103 +674,99 @@
 
 </div>
 <div class="f-item-preview">
-	<div class="demo-tabs">
 	<div id="journey">
-		<div class="journey-dd">
-			<div class="dd-menu" ng-show="searchFilter.JourneyIds.length > 0">
-				<span class="ng-binding">Junior High</span>
-				<i style="float:right;" class="material-icons">swap_vert</i>
-			</div>
-			<div class="dd-droplist personaList">
-				<span class="earlyChildhoodTab">Early Childhood</span>
-				<span class="elementaryTab">Elementary</span>
-				<span class="juniorHighTab selected">Junior High</span>
-				< <span class="highSchoolTab">High School</span>
-					<span class="postSecondaryTab">Ministry</span>
-					<span class="administrationTab">School Administration</span>
-			</div>
+	<div class="journey-dd">
+		<div class="dd-menu" ng-show="searchFilter.JourneyIds.length > 0">
+			<span class="ng-binding">Junior High</span>
+			<i style="float:right;" class="material-icons">swap_vert</i>
 		</div>
-		<div class="journeyTab">
-			<a href="#" class="ng-scope earlyChildhoodTab">
-				<span class="languageItem English ng-binding">Early Childhood</span>
-			</a>
-			<a href="#" class="ng-scope elementaryTab">
-				<span class="languageItem English ng-binding">Elementary</span>
-			</a>
-			<a href="#" class="ng-scope juniorHighTab selected">
-				<span class="languageItem English ng-binding">Junior High</span>
-			</a>
-			<a href="#" class="ng-scope highSchoolTab">
-				<span class="languageItem English ng-binding">High School</span>
-			</a>
-			<a href="#" class="ng-scope postSecondaryTab">
-				<span class="languageItem English ng-binding">Ministry</span>
-			</a>
-			<a href="#" class="ng-scope administrationTab">
-				<span class="languageItem English ng-binding">School Administration</span>
-			</a>
-			<div style="clear:both;"></div>
+		<div class="dd-droplist personaList">
+			<span class="earlyChildhoodTab">Early Childhood</span>
+			<span class="elementaryTab">Elementary</span>
+			<span class="juniorHighTab selected">Junior High</span>
+			< <span class="highSchoolTab">High School</span>
+				<span class="postSecondaryTab">Ministry</span>
+				<span class="administrationTab">School Administration</span>
 		</div>
-		<div class="refinements-container">
-			<div id="category-container" class="">
-				<ul>
-				</ul>
-			</div>
-			<div id="viewSelector">
-				<a href="javascript:void(0)"><i style="float:right;" class="material-icons tileView" id="tileView">apps</i></a>
-				<a href="javascript:void(0)"><i style="float:right;" class="material-icons listView" id="view-inactive">menu</i></a>
-			</div>
+	</div>
+	<div class="journeyTab">
+		<a href="#" class="ng-scope earlyChildhoodTab">
+			<span class="languageItem English ng-binding">Early Childhood</span>
+		</a>
+		<a href="#" class="ng-scope elementaryTab">
+			<span class="languageItem English ng-binding">Elementary</span>
+		</a>
+		<a href="#" class="ng-scope juniorHighTab selected">
+			<span class="languageItem English ng-binding">Junior High</span>
+		</a>
+		<a href="#" class="ng-scope highSchoolTab">
+			<span class="languageItem English ng-binding">High School</span>
+		</a>
+		<a href="#" class="ng-scope postSecondaryTab">
+			<span class="languageItem English ng-binding">Ministry</span>
+		</a>
+		<a href="#" class="ng-scope administrationTab">
+			<span class="languageItem English ng-binding">School Administration</span>
+		</a>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="refinements-container">
+		<div id="category-container" class="">
+			<ul>
+			</ul>
+		</div>
+		<div id="viewSelector">
+			<a href="javascript:void(0)"><i style="float:right;" class="material-icons tileView" id="tileView">apps</i></a>
+			<a href="javascript:void(0)"><i style="float:right;" class="material-icons listView" id="view-inactive">menu</i></a>
 		</div>
 	</div>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;demo-tabs&quot;&gt;
-	&lt;div id=&quot;journey&quot;&gt;
-		&lt;div class=&quot;journey-dd&quot;&gt;
-			&lt;div class=&quot;dd-menu&quot; ng-show=&quot;searchFilter.JourneyIds.length &gt; 0&quot;&gt;
-				&lt;span class=&quot;ng-binding&quot;&gt;Junior High&lt;/span&gt;
-				&lt;i style=&quot;float:right;&quot; class=&quot;material-icons&quot;&gt;swap_vert&lt;/i&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;dd-droplist personaList&quot;&gt;
-				&lt;span class=&quot;earlyChildhoodTab&quot;&gt;Early Childhood&lt;/span&gt;
-				&lt;span class=&quot;elementaryTab&quot;&gt;Elementary&lt;/span&gt;
-				&lt;span class=&quot;juniorHighTab selected&quot;&gt;Junior High&lt;/span&gt;
-				&lt; &lt;span class=&quot;highSchoolTab&quot;&gt;High School&lt;/span&gt;
-					&lt;span class=&quot;postSecondaryTab&quot;&gt;Ministry&lt;/span&gt;
-					&lt;span class=&quot;administrationTab&quot;&gt;School Administration&lt;/span&gt;
-			&lt;/div&gt;
+	<pre><code class="language-markup">&lt;div id=&quot;journey&quot;&gt;
+	&lt;div class=&quot;journey-dd&quot;&gt;
+		&lt;div class=&quot;dd-menu&quot; ng-show=&quot;searchFilter.JourneyIds.length &gt; 0&quot;&gt;
+			&lt;span class=&quot;ng-binding&quot;&gt;Junior High&lt;/span&gt;
+			&lt;i style=&quot;float:right;&quot; class=&quot;material-icons&quot;&gt;swap_vert&lt;/i&gt;
 		&lt;/div&gt;
-		&lt;div class=&quot;journeyTab&quot;&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ng-scope earlyChildhoodTab&quot;&gt;
-				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Early Childhood&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ng-scope elementaryTab&quot;&gt;
-				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Elementary&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ng-scope juniorHighTab selected&quot;&gt;
-				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Junior High&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ng-scope highSchoolTab&quot;&gt;
-				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;High School&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ng-scope postSecondaryTab&quot;&gt;
-				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Ministry&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ng-scope administrationTab&quot;&gt;
-				&lt;span class=&quot;languageItem English ng-binding&quot;&gt;School Administration&lt;/span&gt;
-			&lt;/a&gt;
-			&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;dd-droplist personaList&quot;&gt;
+			&lt;span class=&quot;earlyChildhoodTab&quot;&gt;Early Childhood&lt;/span&gt;
+			&lt;span class=&quot;elementaryTab&quot;&gt;Elementary&lt;/span&gt;
+			&lt;span class=&quot;juniorHighTab selected&quot;&gt;Junior High&lt;/span&gt;
+			&lt; &lt;span class=&quot;highSchoolTab&quot;&gt;High School&lt;/span&gt;
+				&lt;span class=&quot;postSecondaryTab&quot;&gt;Ministry&lt;/span&gt;
+				&lt;span class=&quot;administrationTab&quot;&gt;School Administration&lt;/span&gt;
 		&lt;/div&gt;
-		&lt;div class=&quot;refinements-container&quot;&gt;
-			&lt;div id=&quot;category-container&quot; class=&quot;&quot;&gt;
-				&lt;ul&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-			&lt;div id=&quot;viewSelector&quot;&gt;
-				&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i style=&quot;float:right;&quot; class=&quot;material-icons tileView&quot; id=&quot;tileView&quot;&gt;apps&lt;/i&gt;&lt;/a&gt;
-				&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i style=&quot;float:right;&quot; class=&quot;material-icons listView&quot; id=&quot;view-inactive&quot;&gt;menu&lt;/i&gt;&lt;/a&gt;
-			&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;journeyTab&quot;&gt;
+		&lt;a href=&quot;#&quot; class=&quot;ng-scope earlyChildhoodTab&quot;&gt;
+			&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Early Childhood&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;ng-scope elementaryTab&quot;&gt;
+			&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Elementary&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;ng-scope juniorHighTab selected&quot;&gt;
+			&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Junior High&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;ng-scope highSchoolTab&quot;&gt;
+			&lt;span class=&quot;languageItem English ng-binding&quot;&gt;High School&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;ng-scope postSecondaryTab&quot;&gt;
+			&lt;span class=&quot;languageItem English ng-binding&quot;&gt;Ministry&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;a href=&quot;#&quot; class=&quot;ng-scope administrationTab&quot;&gt;
+			&lt;span class=&quot;languageItem English ng-binding&quot;&gt;School Administration&lt;/span&gt;
+		&lt;/a&gt;
+		&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;refinements-container&quot;&gt;
+		&lt;div id=&quot;category-container&quot; class=&quot;&quot;&gt;
+			&lt;ul&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+		&lt;div id=&quot;viewSelector&quot;&gt;
+			&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i style=&quot;float:right;&quot; class=&quot;material-icons tileView&quot; id=&quot;tileView&quot;&gt;apps&lt;/i&gt;&lt;/a&gt;
+			&lt;a href=&quot;javascript:void(0)&quot;&gt;&lt;i style=&quot;float:right;&quot; class=&quot;material-icons listView&quot; id=&quot;view-inactive&quot;&gt;menu&lt;/i&gt;&lt;/a&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>

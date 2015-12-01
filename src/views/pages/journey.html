@@ -2,11 +2,11 @@
 <div id="container" class="resizeable masonry js-masonry mainArea">
   {{> timeline}}
 </div>
-  <div class="mainContent resizeable">
+  <div class="subContent" id="sildeContainer">
     <article>
       <div class="rightContent">
 
-
+        {{> filters}}
         {{> tabs}}
       </div>
       {{> cards.main}}
