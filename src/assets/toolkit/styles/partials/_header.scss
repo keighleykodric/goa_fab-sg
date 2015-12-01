@@ -68,7 +68,7 @@ header .mdl-textfield__input {
 }
 .search input[type="text"] {
     padding:10px 10px 10px 40px;
-    background-image:url(/images/searchIcon.png);
+    background-image: url({{baseurl}}/images/searchIcon.png);
     background-repeat:no-repeat;
     border:0;
     background-position:5px center;
