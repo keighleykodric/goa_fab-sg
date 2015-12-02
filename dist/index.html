@@ -1,23 +1,23 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
 
 	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Overview | Fabricator</title>
 
 	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- /toolkit styles -->
 
 </head>
@@ -85,10 +85,13 @@
 							<a href="atoms.html#inputs">Inputs</a>
 						</li>
 						<li>
-							<a href="atoms.html#lists">Lists</a>
+							<a href="atoms.html#list-items">List Items</a>
 						</li>
 						<li>
 							<a href="atoms.html#loading">Loading</a>
+						</li>
+						<li>
+							<a href="atoms.html#modal-description">Modal Description</a>
 						</li>
 						<li>
 							<a href="atoms.html#paragraph">Paragraph</a>
@@ -108,7 +111,16 @@
 					<a href="molecules.html" class="f-menu__heading">Molecules</a>
 					<ul>
 						<li>
+							<a href="molecules.html#accordian">Accordian</a>
+						</li>
+						<li>
+							<a href="molecules.html#forms">Forms</a>
+						</li>
+						<li>
 							<a href="molecules.html#home-cards">Home Cards</a>
+						</li>
+						<li>
+							<a href="molecules.html#lists">Lists</a>
 						</li>
 						<li>
 							<a href="molecules.html#modal">Modal</a>
@@ -342,23 +354,19 @@
 
 		</div>
 	<script src="/assets/fabricator/scripts/f.js"></script>
+	<script src="assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
 	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+	<script>
+		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+			this.MaterialProgress.setProgress(44);
+		});
+	</script>
+	<!-- /toolkit scripts -->
 
-		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
-		<script src="assets/toolkit/scripts/search.js"></script>
-	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
-
-		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-
-		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-
-		<script>
-		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-		    this.MaterialProgress.setProgress(44);
-		  });
-		</script>
 </body>
 </html>

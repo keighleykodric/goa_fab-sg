@@ -6,7 +6,7 @@ notes: |
   <div class="welcome">
     <a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
       <div class="minister-image">
-        <img src="{{baseurl}}/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+        <img src="assets/toolkit/images/david-eggen.png" src="{{baseurl}}/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
         <div class="minister-title">
         <p>
           <span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
@@ -17,21 +17,15 @@ notes: |
   </div>
   <div class="news">
     <h5>News</h5>
-    <div class="newsItem">
-      <a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
-        <h4 class="newsHeadline">Bulletin Two</h4>
-      </a>
-    </div>
-    <div class="newsItem">
-      <a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18936">
-        <h4 class="newsHeadline">Bulletin Three - Priority</h4>
-      </a>
-    </div>
-    <div class="newsItem">
-      <a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=14313">
-        <h4 class="newsHeadline">As good as it gets</h4>
-      </a>
-    </div>
+    {{#each news-list.links}}
+      {{#each this}}
+      <div class="newsItem">
+      	<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+      		<h4 class="newsHeadline">{{this}}</h4>
+      	</a>
+      </div>
+      {{/each}}
+    {{/each}}
     <a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
   </div>
 </div>

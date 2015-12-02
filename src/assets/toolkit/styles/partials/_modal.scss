@@ -433,12 +433,14 @@ select.personaList {
     position:relative;
     padding:5px;
     background:#f9f9f9;
-    background:#f9f9f9;
     margin-bottom:1px;
     cursor:pointer
 }
+.newsListing a {
+  padding: 5px;
+}
 .newsListing:hover {
-    background-color:#00a8d8;
+    background-color:#005981;
     color:#fff
 }
 .newsListing:hover .newsDetails,
@@ -476,6 +478,10 @@ select.personaList {
     z-index:5;
     background:#fff
 }
+
+
+
+
 .eventList {
     display:block;
     position:absolute;
@@ -562,6 +568,9 @@ select.personaList {
     overflow-y:auto;
     height:340px
 }
+
+
+
 .closedPollChoice {}.closedPollOption {
     padding:2px 0
 }
@@ -583,6 +592,9 @@ select.personaList {
     float:left;
     margin-right:10px
 }
+
+
+
 .linkItem {
     position:relative;
     padding:5px 15px;
@@ -630,6 +642,10 @@ select.personaList {
     background-color:#e4e4e4;
     padding-top:7px
 }
+
+
+
+
 .resourceItem {
     position:relative;
     padding:5px 15px;

@@ -1,23 +1,23 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
 
 	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
 
 	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- /toolkit styles -->
 
 </head>
@@ -85,10 +85,13 @@
 							<a href="atoms.html#inputs">Inputs</a>
 						</li>
 						<li>
-							<a href="atoms.html#lists">Lists</a>
+							<a href="atoms.html#list-items">List Items</a>
 						</li>
 						<li>
 							<a href="atoms.html#loading">Loading</a>
+						</li>
+						<li>
+							<a href="atoms.html#modal-description">Modal Description</a>
 						</li>
 						<li>
 							<a href="atoms.html#paragraph">Paragraph</a>
@@ -108,7 +111,16 @@
 					<a href="molecules.html" class="f-menu__heading">Molecules</a>
 					<ul>
 						<li>
+							<a href="molecules.html#accordian">Accordian</a>
+						</li>
+						<li>
+							<a href="molecules.html#forms">Forms</a>
+						</li>
+						<li>
 							<a href="molecules.html#home-cards">Home Cards</a>
+						</li>
+						<li>
+							<a href="molecules.html#lists">Lists</a>
 						</li>
 						<li>
 							<a href="molecules.html#modal">Modal</a>
@@ -620,14 +632,14 @@
 </div>
 
 
-<div class="f-item-group" id="lists">
+<div class="f-item-group" id="list-items">
 
 	<div class="f-item-heading-group">
-		<h2 class="f-item-heading" data-f-toggle="labels">Lists</h2>
+		<h2 class="f-item-heading" data-f-toggle="labels">List Items</h2>
 	</div>
-		<div class="f-item-group" id="lists.links">
+		<div class="f-item-group" id="list-items.home-sidebar-news">
 			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Links</h3>
+				<h3 class="f-item-heading">Home Sidebar News</h3>
 				<div class="f-item-controls">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
@@ -638,56 +650,51 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<div class="home-link-box">
-	<a href=" ">Education in Alberta</a>
-	<a href=" ">Curriculum &amp; Resources</a>
-	<a href=" ">Student Advisories</a>
-	<a href=" ">First Nations Education</a>
-	<a href=" ">Safe and Caring Schools</a>
+	<div class="newsItem">
+	<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+		<h4 class="newsHeadline">Bulletin Two</h4>
+	</a>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;home-link-box&quot;&gt;
-	&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;
-	&lt;a href=&quot; &quot;&gt;Curriculum &amp;amp; Resources&lt;/a&gt;
-	&lt;a href=&quot; &quot;&gt;Student Advisories&lt;/a&gt;
-	&lt;a href=&quot; &quot;&gt;First Nations Education&lt;/a&gt;
-	&lt;a href=&quot; &quot;&gt;Safe and Caring Schools&lt;/a&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;newsItem&quot;&gt;
+	&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+		&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/h4&gt;
+	&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
 		</div>
-		<div class="f-item-group" id="lists.ordered">
+		<div class="f-item-group" id="list-items.links">
 			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Ordered</h3>
+				<h3 class="f-item-heading">Links</h3>
 				<div class="f-item-controls">
-					
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Used in home cards</p>
+
+</div>
 <div class="f-item-preview">
-	<ol>
-	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	<li>Aliquam tincidunt mauris eu risus.</li>
-	<li>Vestibulum auctor dapibus neque.</li>
-</ol>
+	<a href=" ">Education in Alberta</a>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;ol&gt;
-	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-	&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
+	<pre><code class="language-markup">&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;</code></pre>
 </div>
 
 		</div>
-		<div class="f-item-group" id="lists.unordered">
+		<div class="f-item-group" id="list-items.modal-documents">
 			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Unordered</h3>
+				<h3 class="f-item-heading">Modal Documents</h3>
 				<div class="f-item-controls">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
@@ -698,18 +705,140 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<ul>
-	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	<li>Aliquam tincidunt mauris eu risus.</li>
-	<li>Vestibulum auctor dapibus neque.</li>
-</ul>
+	<a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+	<div class="resourceIcon tool" title="Document">
+		<i class="material-icons ">picture_as_pdf</i>
+	</div>
+	<div class="resourceDetails">
+		<span class="linkTitle ">A School-Wide Approach<!-- ngIf: resource.Title.length > 65 --></span>
+		<span class="resourceSize ">(2,059 KB)</span>
+		<div class="resource-description ">
+			Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+		</div>
+		<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+	</div>
+	<span class="material-icons downloadIcon">file_download</span>
+</a>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;ul&gt;
-	&lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/li&gt;
-	&lt;li&gt;Aliquam tincidunt mauris eu risus.&lt;/li&gt;
-	&lt;li&gt;Vestibulum auctor dapibus neque.&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+	<pre><code class="language-markup">&lt;a class=&quot;resourceItem &quot; target=&quot;_blank&quot; href=&quot;/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf&quot;&gt;
+	&lt;div class=&quot;resourceIcon tool&quot; title=&quot;Document&quot;&gt;
+		&lt;i class=&quot;material-icons &quot;&gt;picture_as_pdf&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;resourceDetails&quot;&gt;
+		&lt;span class=&quot;linkTitle &quot;&gt;A School-Wide Approach&lt;!-- ngIf: resource.Title.length &gt; 65 --&gt;&lt;/span&gt;
+		&lt;span class=&quot;resourceSize &quot;&gt;(2,059 KB)&lt;/span&gt;
+		&lt;div class=&quot;resource-description &quot;&gt;
+			Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa&lt;span class=&quot;&quot;&gt;...&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;last-updated &quot;&gt;Last Updated: Oct 19th 2015 2:30 pm&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;material-icons downloadIcon&quot;&gt;file_download&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="list-items.modal-links">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Modal Links</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<a target="_blank" class="linkItem">
+	<div class="linkIcon tool" title="External Link">
+		<i class="material-icons">open_in_new</i>
+	</div>
+	<span class="linkTitle ng-binding">W3C Accessibility Guide</span>
+	<div class="externalLinkIcon"><i class="material-icons">link</i>
+	</div>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a target=&quot;_blank&quot; class=&quot;linkItem&quot;&gt;
+	&lt;div class=&quot;linkIcon tool&quot; title=&quot;External Link&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;open_in_new&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;linkTitle ng-binding&quot;&gt;W3C Accessibility Guide&lt;/span&gt;
+	&lt;div class=&quot;externalLinkIcon&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="list-items.modal-related-links">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Modal Related Links</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<a target="_self" class="linkItem ">
+	<div class="linkIcon tool" title="Internal Link">
+		<i class="material-icons">link</i>
+	</div>
+	<span class="linkTitle ng-binding">School Act</span>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a target=&quot;_self&quot; class=&quot;linkItem &quot;&gt;
+	&lt;div class=&quot;linkIcon tool&quot; title=&quot;Internal Link&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;linkTitle ng-binding&quot;&gt;School Act&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="list-items.news-modal-news">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">News Modal News</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="newsListing">
+	<a class=" ">
+		<span class="tool newsTool" title="News">
+			<span class="material-icons newsIcon">format_align_justify</span>
+		</span>
+		<div class="newsDetails">
+			<div class="newsDate">November 07, 2015</div>
+			<div class="newsHeadline">Bulletin Two</div>
+		</div>
+	</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;newsListing&quot;&gt;
+	&lt;a class=&quot; &quot;&gt;
+		&lt;span class=&quot;tool newsTool&quot; title=&quot;News&quot;&gt;
+			&lt;span class=&quot;material-icons newsIcon&quot;&gt;format_align_justify&lt;/span&gt;
+		&lt;/span&gt;
+		&lt;div class=&quot;newsDetails&quot;&gt;
+			&lt;div class=&quot;newsDate&quot;&gt;November 07, 2015&lt;/div&gt;
+			&lt;div class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/a&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
@@ -737,6 +866,38 @@
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;!-- Simple MDL Progress Bar --&gt;
 &lt;div id=&quot;p1&quot; class=&quot;mdl-progress mdl-js-progress&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="modal-description">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Modal Description</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="dialogDesc">
+	<span class=" ">
+    Positive behaviour supports is a school-wide collaborative effort to design and implement strategies, practices and interventions for promoting positive social and communication skills, while reducing and preventing problem behaviours
+  </span>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;dialogDesc&quot;&gt;
+	&lt;span class=&quot; &quot;&gt;
+    Positive behaviour supports is a school-wide collaborative effort to design and implement strategies, practices and interventions for promoting positive social and communication skills, while reducing and preventing problem behaviours
+  &lt;/span&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 
@@ -910,23 +1071,19 @@
 
 		</div>
 	<script src="/assets/fabricator/scripts/f.js"></script>
+	<script src="assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
 	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+	<script>
+		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+			this.MaterialProgress.setProgress(44);
+		});
+	</script>
+	<!-- /toolkit scripts -->
 
-		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
-		<script src="assets/toolkit/scripts/search.js"></script>
-	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
-
-		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-
-		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-
-		<script>
-		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-		    this.MaterialProgress.setProgress(44);
-		  });
-		</script>
 </body>
 </html>

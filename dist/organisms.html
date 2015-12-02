@@ -1,23 +1,23 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
 
 	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
 
 	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- /toolkit styles -->
 
 </head>
@@ -85,10 +85,13 @@
 							<a href="atoms.html#inputs">Inputs</a>
 						</li>
 						<li>
-							<a href="atoms.html#lists">Lists</a>
+							<a href="atoms.html#list-items">List Items</a>
 						</li>
 						<li>
 							<a href="atoms.html#loading">Loading</a>
+						</li>
+						<li>
+							<a href="atoms.html#modal-description">Modal Description</a>
 						</li>
 						<li>
 							<a href="atoms.html#paragraph">Paragraph</a>
@@ -108,7 +111,16 @@
 					<a href="molecules.html" class="f-menu__heading">Molecules</a>
 					<ul>
 						<li>
+							<a href="molecules.html#accordian">Accordian</a>
+						</li>
+						<li>
+							<a href="molecules.html#forms">Forms</a>
+						</li>
+						<li>
 							<a href="molecules.html#home-cards">Home Cards</a>
+						</li>
+						<li>
+							<a href="molecules.html#lists">Lists</a>
 						</li>
 						<li>
 							<a href="molecules.html#modal">Modal</a>
@@ -1144,7 +1156,7 @@
 	<div class="welcome">
 		<a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
 			<div class="minister-image">
-				<img src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+				<img src="assets/toolkit/images/david-eggen.png" src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
 			<div class="minister-title">
 				<p>
 					<span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
@@ -1161,12 +1173,17 @@
 			</a>
 		</div>
 		<div class="newsItem">
-			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18936">
+			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
 				<h4 class="newsHeadline">Bulletin Three - Priority</h4>
 			</a>
 		</div>
 		<div class="newsItem">
-			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=14313">
+			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+				<h4 class="newsHeadline">Bulletin Four</h4>
+			</a>
+		</div>
+		<div class="newsItem">
+			<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
 				<h4 class="newsHeadline">As good as it gets</h4>
 			</a>
 		</div>
@@ -1179,7 +1196,7 @@
 	&lt;div class=&quot;welcome&quot;&gt;
 		&lt;a href=&quot;http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;amp;rnumber=29&amp;amp;leg=29&quot; target=&quot;_blank&quot;&gt;
 			&lt;div class=&quot;minister-image&quot;&gt;
-				&lt;img src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
+				&lt;img src=&quot;assets/toolkit/images/david-eggen.png&quot; src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
 			&lt;div class=&quot;minister-title&quot;&gt;
 				&lt;p&gt;
 					&lt;span style=&quot;font-weight:600; font-size:16px; display:block;&quot;&gt;Hon. David Eggen&lt;/span&gt;
@@ -1196,12 +1213,17 @@
 			&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;newsItem&quot;&gt;
-			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18936&quot;&gt;
+			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
 				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Three - Priority&lt;/h4&gt;
 			&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;newsItem&quot;&gt;
-			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=14313&quot;&gt;
+			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+				&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Four&lt;/h4&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;newsItem&quot;&gt;
+			&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
 				&lt;h4 class=&quot;newsHeadline&quot;&gt;As good as it gets&lt;/h4&gt;
 			&lt;/a&gt;
 		&lt;/div&gt;
@@ -2282,6 +2304,7 @@
 						</div>
 						<div class="tl-slide-background"></div>
 					</div>
+
 					<div class="tl-slide tl-slide-text-only" id="test-item-2div-classnodeid-hidden19051-div" style="left: 10524px; top: 0px;">
 						<div class="tl-slide-scrollable-container">
 							<div class="tl-slide-content-container">
@@ -2728,6 +2751,7 @@
 						&lt;/div&gt;
 						&lt;div class=&quot;tl-slide-background&quot;&gt;&lt;/div&gt;
 					&lt;/div&gt;
+
 					&lt;div class=&quot;tl-slide tl-slide-text-only&quot; id=&quot;test-item-2div-classnodeid-hidden19051-div&quot; style=&quot;left: 10524px; top: 0px;&quot;&gt;
 						&lt;div class=&quot;tl-slide-scrollable-container&quot;&gt;
 							&lt;div class=&quot;tl-slide-content-container&quot;&gt;
@@ -3123,23 +3147,19 @@
 
 		</div>
 	<script src="/assets/fabricator/scripts/f.js"></script>
+	<script src="assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
 	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+	<script>
+		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+			this.MaterialProgress.setProgress(44);
+		});
+	</script>
+	<!-- /toolkit scripts -->
 
-		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
-		<script src="assets/toolkit/scripts/search.js"></script>
-	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
-
-		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-
-		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-
-		<script>
-		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-		    this.MaterialProgress.setProgress(44);
-		  });
-		</script>
 </body>
 </html>

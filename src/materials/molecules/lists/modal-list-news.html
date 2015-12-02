@@ -1,0 +1,18 @@
+ <div class="newsContent">
+	<div class="newsList">
+    {{#each news-list.links}}
+      {{#each this}}<div class="newsListing">
+      	<a class=" ">
+      		<span class="tool newsTool" title="News">
+      			<span class="material-icons newsIcon">format_align_justify</span>
+      		</span>
+      		<div class="newsDetails">
+      			<div class="newsDate" >November 07, 2015</div>
+      			<div class="newsHeadline">{{this}}</div>
+      		</div>
+      	</a>
+      </div>
+      {{/each}}
+    {{/each}}
+	</div>
+</div>

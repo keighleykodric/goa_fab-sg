@@ -1,0 +1,13 @@
+
+    {{#each news-list.links}}
+      {{#each this}}
+      <a target="_blank" class="linkItem">
+      	<div class="linkIcon tool" title="External Link">
+      		<i class="material-icons">open_in_new</i>
+      	</div>
+      	<span class="linkTitle ng-binding">{{this}}</span>
+        	<div class="externalLinkIcon"><i class="material-icons">link</i>
+        	</div>
+        </a>
+      {{/each}}
+    {{/each}}

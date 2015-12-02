@@ -1,23 +1,23 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
 
 	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
 
 	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href="assets/fabricator/styles/f.css">
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- /toolkit styles -->
 
 </head>
@@ -85,10 +85,13 @@
 							<a href="atoms.html#inputs">Inputs</a>
 						</li>
 						<li>
-							<a href="atoms.html#lists">Lists</a>
+							<a href="atoms.html#list-items">List Items</a>
 						</li>
 						<li>
 							<a href="atoms.html#loading">Loading</a>
+						</li>
+						<li>
+							<a href="atoms.html#modal-description">Modal Description</a>
 						</li>
 						<li>
 							<a href="atoms.html#paragraph">Paragraph</a>
@@ -108,7 +111,16 @@
 					<a href="molecules.html" class="f-menu__heading">Molecules</a>
 					<ul>
 						<li>
+							<a href="molecules.html#accordian">Accordian</a>
+						</li>
+						<li>
+							<a href="molecules.html#forms">Forms</a>
+						</li>
+						<li>
 							<a href="molecules.html#home-cards">Home Cards</a>
+						</li>
+						<li>
+							<a href="molecules.html#lists">Lists</a>
 						</li>
 						<li>
 							<a href="molecules.html#modal">Modal</a>
@@ -192,6 +204,129 @@
 
 	<h1 data-f-toggle="labels">Molecules</h1>
 <p>In interfaces, molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.</p>
+
+
+<div class="f-item-group" id="accordian">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Accordian</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="accordionItem ">
+	<div class="accordionHeader ng-binding selectedAccordionHeader">
+		What does this mean for students?
+		<span id="togglearrow" class="material-icons " style="display: block; float: right; height: 20px; width: 20px;" ng-if="!selectedToolboxItem.AutoExpand">arrow_drop_down</span>
+	</div>
+	<div class="accordionBody noDisplay" style="display: block;">
+		<span class="ng-binding"><p>Students have the responsibility to</p>
+<ul>
+  <li>
+    <p>ensure their conduct contributes to a welcoming, caring, respectful and safe learning environment that respects diversity and fosters a sense of belonging;</p>
+  </li>
+  <li>
+    <p>refrain from, report and not tolerate bullying* or bullying behaviour directed toward others in the school, whether or not it occurs within the school building, during the school day or by electronic means (see section 12(h); and</p>
+  </li>
+  <li>
+    <p>contribute positively to their school and community</p>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p>*Bullying is defined in the amended legislation as: repeated and hostile or demeaning behavior by an individual in the school community where the behavior is intended to cause harm, fear or distress to one or more individuals in the school community, including psychological harm, or harm to an individual’s reputation.</p>
+<p>&nbsp;</p>
+<p>Students also have the right to establish a voluntary student organization, or to lead an activity that promotes equality and non-discrimination. This may include, but is not limited to, organizations such as gay-straight alliances, diversity clubs, anti-racism clubs and anti-bullying clubs. Students may select a respectful and inclusive name for the organization, including the name “gay-straight alliance” or “queer-straight alliance”, after consulting with the principal.</p></span>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;accordionItem &quot;&gt;
+	&lt;div class=&quot;accordionHeader ng-binding selectedAccordionHeader&quot;&gt;
+		What does this mean for students?
+		&lt;span id=&quot;togglearrow&quot; class=&quot;material-icons &quot; style=&quot;display: block; float: right; height: 20px; width: 20px;&quot; ng-if=&quot;!selectedToolboxItem.AutoExpand&quot;&gt;arrow_drop_down&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;accordionBody noDisplay&quot; style=&quot;display: block;&quot;&gt;
+		&lt;span class=&quot;ng-binding&quot;&gt;&lt;p&gt;Students have the responsibility to&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ensure their conduct contributes to a welcoming, caring, respectful and safe learning environment that respects diversity and fosters a sense of belonging;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;refrain from, report and not tolerate bullying* or bullying behaviour directed toward others in the school, whether or not it occurs within the school building, during the school day or by electronic means (see section 12(h); and&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;contribute positively to their school and community&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;*Bullying is defined in the amended legislation as: repeated and hostile or demeaning behavior by an individual in the school community where the behavior is intended to cause harm, fear or distress to one or more individuals in the school community, including psychological harm, or harm to an individual’s reputation.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Students also have the right to establish a voluntary student organization, or to lead an activity that promotes equality and non-discrimination. This may include, but is not limited to, organizations such as gay-straight alliances, diversity clubs, anti-racism clubs and anti-bullying clubs. Students may select a respectful and inclusive name for the organization, including the name “gay-straight alliance” or “queer-straight alliance”, after consulting with the principal.&lt;/p&gt;&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="forms">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Forms</h2>
+	</div>
+		<div class="f-item-group" id="forms.modal-search">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Modal Search</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="dialogFind">
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		<input class="mdl-textfield__input" type="text" id="sample3">
+		<label class="mdl-textfield__label" for="sample3">Find</label>
+	</div>
+	<select class="ng-pristine">
+		<option value="">All Documents</option>
+		<option value="Image">Image</option>
+		<option value="File">File</option>
+	</select>
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Find</button>
+	<div style="clear:both;"></div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;dialogFind&quot;&gt;
+	&lt;div class=&quot;mdl-textfield mdl-js-textfield mdl-textfield--floating-label&quot;&gt;
+		&lt;input class=&quot;mdl-textfield__input&quot; type=&quot;text&quot; id=&quot;sample3&quot;&gt;
+		&lt;label class=&quot;mdl-textfield__label&quot; for=&quot;sample3&quot;&gt;Find&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;select class=&quot;ng-pristine&quot;&gt;
+		&lt;option value=&quot;&quot;&gt;All Documents&lt;/option&gt;
+		&lt;option value=&quot;Image&quot;&gt;Image&lt;/option&gt;
+		&lt;option value=&quot;File&quot;&gt;File&lt;/option&gt;
+	&lt;/select&gt;
+	&lt;button class=&quot;mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored&quot;&gt;Find&lt;/button&gt;
+	&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
 
 
 <div class="f-item-group" id="home-cards">
@@ -403,6 +538,431 @@
 </div>
 
 
+<div class="f-item-group" id="lists">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Lists</h2>
+	</div>
+		<div class="f-item-group" id="lists.home-box-list">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Home Box List</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="home-link-box">
+	<a href=" ">Education in Alberta</a>
+	<a href=" ">Curriculum &amp; Resources</a>
+	<a href=" ">Student Advisories</a>
+	<a href=" ">First Nations Education</a>
+	<a href=" ">Safe and Caring Schools</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;home-link-box&quot;&gt;
+	&lt;a href=&quot; &quot;&gt;Education in Alberta&lt;/a&gt;
+	&lt;a href=&quot; &quot;&gt;Curriculum &amp;amp; Resources&lt;/a&gt;
+	&lt;a href=&quot; &quot;&gt;Student Advisories&lt;/a&gt;
+	&lt;a href=&quot; &quot;&gt;First Nations Education&lt;/a&gt;
+	&lt;a href=&quot; &quot;&gt;Safe and Caring Schools&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="lists.modal-list-documents">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Modal List Documents</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="accordian">
+	<div class="resourceFolder ">
+		<div class="accordionItem">
+			<div class="accordionHeader folderName selectedAccordionHeader">
+				Teachers and Administrators (10)
+				<span id="togglearrow" class="material-icons" style="display:block; float:right;">arrow_drop_down</span>
+			</div>
+			<div class="accordionBody noDisplay" style="display: block;">
+				<a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+					<div class="resourceIcon tool" title="Document">
+						<i class="material-icons ">picture_as_pdf</i>
+					</div>
+					<div class="resourceDetails">
+						<span class="linkTitle ">A School-Wide Approach<!-- ngIf: resource.Title.length > 65 --></span>
+						<span class="resourceSize ">(2,059 KB)</span>
+						<div class="resource-description ">
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+						</div>
+						<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+					</div>
+					<span class="material-icons downloadIcon">file_download</span>
+				</a>
+				<a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+					<div class="resourceIcon tool" title="Document">
+						<i class="material-icons ">picture_as_pdf</i>
+					</div>
+					<div class="resourceDetails">
+						<span class="linkTitle ">Bulletin Two</span>
+						<span class="resourceSize ">(2,059 KB)</span>
+						<div class="resource-description ">
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+						</div>
+						<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+					</div>
+					<span class="material-icons downloadIcon">file_download</span>
+				</a>
+				<a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+					<div class="resourceIcon tool" title="Document">
+						<i class="material-icons ">picture_as_pdf</i>
+					</div>
+					<div class="resourceDetails">
+						<span class="linkTitle ">Bulletin Three - Priority</span>
+						<span class="resourceSize ">(2,059 KB)</span>
+						<div class="resource-description ">
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+						</div>
+						<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+					</div>
+					<span class="material-icons downloadIcon">file_download</span>
+				</a>
+				<a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+					<div class="resourceIcon tool" title="Document">
+						<i class="material-icons ">picture_as_pdf</i>
+					</div>
+					<div class="resourceDetails">
+						<span class="linkTitle ">Bulletin Four</span>
+						<span class="resourceSize ">(2,059 KB)</span>
+						<div class="resource-description ">
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+						</div>
+						<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+					</div>
+					<span class="material-icons downloadIcon">file_download</span>
+				</a>
+				<a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+					<div class="resourceIcon tool" title="Document">
+						<i class="material-icons ">picture_as_pdf</i>
+					</div>
+					<div class="resourceDetails">
+						<span class="linkTitle ">As good as it gets</span>
+						<span class="resourceSize ">(2,059 KB)</span>
+						<div class="resource-description ">
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+						</div>
+						<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+					</div>
+					<span class="material-icons downloadIcon">file_download</span>
+				</a>
+
+
+			</div>
+		</div>
+	</div>
+	<div class=" "></div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;accordian&quot;&gt;
+	&lt;div class=&quot;resourceFolder &quot;&gt;
+		&lt;div class=&quot;accordionItem&quot;&gt;
+			&lt;div class=&quot;accordionHeader folderName selectedAccordionHeader&quot;&gt;
+				Teachers and Administrators (10)
+				&lt;span id=&quot;togglearrow&quot; class=&quot;material-icons&quot; style=&quot;display:block; float:right;&quot;&gt;arrow_drop_down&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;accordionBody noDisplay&quot; style=&quot;display: block;&quot;&gt;
+				&lt;a class=&quot;resourceItem &quot; target=&quot;_blank&quot; href=&quot;/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf&quot;&gt;
+					&lt;div class=&quot;resourceIcon tool&quot; title=&quot;Document&quot;&gt;
+						&lt;i class=&quot;material-icons &quot;&gt;picture_as_pdf&lt;/i&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;resourceDetails&quot;&gt;
+						&lt;span class=&quot;linkTitle &quot;&gt;A School-Wide Approach&lt;!-- ngIf: resource.Title.length &gt; 65 --&gt;&lt;/span&gt;
+						&lt;span class=&quot;resourceSize &quot;&gt;(2,059 KB)&lt;/span&gt;
+						&lt;div class=&quot;resource-description &quot;&gt;
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa&lt;span class=&quot;&quot;&gt;...&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;last-updated &quot;&gt;Last Updated: Oct 19th 2015 2:30 pm&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;span class=&quot;material-icons downloadIcon&quot;&gt;file_download&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;a class=&quot;resourceItem &quot; target=&quot;_blank&quot; href=&quot;/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf&quot;&gt;
+					&lt;div class=&quot;resourceIcon tool&quot; title=&quot;Document&quot;&gt;
+						&lt;i class=&quot;material-icons &quot;&gt;picture_as_pdf&lt;/i&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;resourceDetails&quot;&gt;
+						&lt;span class=&quot;linkTitle &quot;&gt;Bulletin Two&lt;/span&gt;
+						&lt;span class=&quot;resourceSize &quot;&gt;(2,059 KB)&lt;/span&gt;
+						&lt;div class=&quot;resource-description &quot;&gt;
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa&lt;span class=&quot;&quot;&gt;...&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;last-updated &quot;&gt;Last Updated: Oct 19th 2015 2:30 pm&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;span class=&quot;material-icons downloadIcon&quot;&gt;file_download&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;a class=&quot;resourceItem &quot; target=&quot;_blank&quot; href=&quot;/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf&quot;&gt;
+					&lt;div class=&quot;resourceIcon tool&quot; title=&quot;Document&quot;&gt;
+						&lt;i class=&quot;material-icons &quot;&gt;picture_as_pdf&lt;/i&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;resourceDetails&quot;&gt;
+						&lt;span class=&quot;linkTitle &quot;&gt;Bulletin Three - Priority&lt;/span&gt;
+						&lt;span class=&quot;resourceSize &quot;&gt;(2,059 KB)&lt;/span&gt;
+						&lt;div class=&quot;resource-description &quot;&gt;
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa&lt;span class=&quot;&quot;&gt;...&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;last-updated &quot;&gt;Last Updated: Oct 19th 2015 2:30 pm&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;span class=&quot;material-icons downloadIcon&quot;&gt;file_download&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;a class=&quot;resourceItem &quot; target=&quot;_blank&quot; href=&quot;/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf&quot;&gt;
+					&lt;div class=&quot;resourceIcon tool&quot; title=&quot;Document&quot;&gt;
+						&lt;i class=&quot;material-icons &quot;&gt;picture_as_pdf&lt;/i&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;resourceDetails&quot;&gt;
+						&lt;span class=&quot;linkTitle &quot;&gt;Bulletin Four&lt;/span&gt;
+						&lt;span class=&quot;resourceSize &quot;&gt;(2,059 KB)&lt;/span&gt;
+						&lt;div class=&quot;resource-description &quot;&gt;
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa&lt;span class=&quot;&quot;&gt;...&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;last-updated &quot;&gt;Last Updated: Oct 19th 2015 2:30 pm&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;span class=&quot;material-icons downloadIcon&quot;&gt;file_download&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;a class=&quot;resourceItem &quot; target=&quot;_blank&quot; href=&quot;/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf&quot;&gt;
+					&lt;div class=&quot;resourceIcon tool&quot; title=&quot;Document&quot;&gt;
+						&lt;i class=&quot;material-icons &quot;&gt;picture_as_pdf&lt;/i&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;resourceDetails&quot;&gt;
+						&lt;span class=&quot;linkTitle &quot;&gt;As good as it gets&lt;/span&gt;
+						&lt;span class=&quot;resourceSize &quot;&gt;(2,059 KB)&lt;/span&gt;
+						&lt;div class=&quot;resource-description &quot;&gt;
+							Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa&lt;span class=&quot;&quot;&gt;...&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;last-updated &quot;&gt;Last Updated: Oct 19th 2015 2:30 pm&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;span class=&quot;material-icons downloadIcon&quot;&gt;file_download&lt;/span&gt;
+				&lt;/a&gt;
+
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot; &quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="lists.modal-list-links">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Modal List Links</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<a target="_blank" class="linkItem">
+	<div class="linkIcon tool" title="External Link">
+		<i class="material-icons">open_in_new</i>
+	</div>
+	<span class="linkTitle ng-binding">Bulletin Two</span>
+	<div class="externalLinkIcon"><i class="material-icons">link</i>
+	</div>
+</a>
+<a target="_blank" class="linkItem">
+	<div class="linkIcon tool" title="External Link">
+		<i class="material-icons">open_in_new</i>
+	</div>
+	<span class="linkTitle ng-binding">Bulletin Three - Priority</span>
+	<div class="externalLinkIcon"><i class="material-icons">link</i>
+	</div>
+</a>
+<a target="_blank" class="linkItem">
+	<div class="linkIcon tool" title="External Link">
+		<i class="material-icons">open_in_new</i>
+	</div>
+	<span class="linkTitle ng-binding">Bulletin Four</span>
+	<div class="externalLinkIcon"><i class="material-icons">link</i>
+	</div>
+</a>
+<a target="_blank" class="linkItem">
+	<div class="linkIcon tool" title="External Link">
+		<i class="material-icons">open_in_new</i>
+	</div>
+	<span class="linkTitle ng-binding">As good as it gets</span>
+	<div class="externalLinkIcon"><i class="material-icons">link</i>
+	</div>
+</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a target=&quot;_blank&quot; class=&quot;linkItem&quot;&gt;
+	&lt;div class=&quot;linkIcon tool&quot; title=&quot;External Link&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;open_in_new&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;linkTitle ng-binding&quot;&gt;Bulletin Two&lt;/span&gt;
+	&lt;div class=&quot;externalLinkIcon&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;linkItem&quot;&gt;
+	&lt;div class=&quot;linkIcon tool&quot; title=&quot;External Link&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;open_in_new&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;linkTitle ng-binding&quot;&gt;Bulletin Three - Priority&lt;/span&gt;
+	&lt;div class=&quot;externalLinkIcon&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;linkItem&quot;&gt;
+	&lt;div class=&quot;linkIcon tool&quot; title=&quot;External Link&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;open_in_new&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;linkTitle ng-binding&quot;&gt;Bulletin Four&lt;/span&gt;
+	&lt;div class=&quot;externalLinkIcon&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;linkItem&quot;&gt;
+	&lt;div class=&quot;linkIcon tool&quot; title=&quot;External Link&quot;&gt;
+		&lt;i class=&quot;material-icons&quot;&gt;open_in_new&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;span class=&quot;linkTitle ng-binding&quot;&gt;As good as it gets&lt;/span&gt;
+	&lt;div class=&quot;externalLinkIcon&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="lists.modal-list-news">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Modal List News</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="newsContent">
+	<div class="newsList">
+		<div class="newsListing">
+			<a class=" ">
+				<span class="tool newsTool" title="News">
+      			<span class="material-icons newsIcon">format_align_justify</span>
+				</span>
+				<div class="newsDetails">
+					<div class="newsDate">November 07, 2015</div>
+					<div class="newsHeadline">Bulletin Two</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsListing">
+			<a class=" ">
+				<span class="tool newsTool" title="News">
+      			<span class="material-icons newsIcon">format_align_justify</span>
+				</span>
+				<div class="newsDetails">
+					<div class="newsDate">November 07, 2015</div>
+					<div class="newsHeadline">Bulletin Three - Priority</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsListing">
+			<a class=" ">
+				<span class="tool newsTool" title="News">
+      			<span class="material-icons newsIcon">format_align_justify</span>
+				</span>
+				<div class="newsDetails">
+					<div class="newsDate">November 07, 2015</div>
+					<div class="newsHeadline">Bulletin Four</div>
+				</div>
+			</a>
+		</div>
+		<div class="newsListing">
+			<a class=" ">
+				<span class="tool newsTool" title="News">
+      			<span class="material-icons newsIcon">format_align_justify</span>
+				</span>
+				<div class="newsDetails">
+					<div class="newsDate">November 07, 2015</div>
+					<div class="newsHeadline">As good as it gets</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;newsContent&quot;&gt;
+	&lt;div class=&quot;newsList&quot;&gt;
+		&lt;div class=&quot;newsListing&quot;&gt;
+			&lt;a class=&quot; &quot;&gt;
+				&lt;span class=&quot;tool newsTool&quot; title=&quot;News&quot;&gt;
+      			&lt;span class=&quot;material-icons newsIcon&quot;&gt;format_align_justify&lt;/span&gt;
+				&lt;/span&gt;
+				&lt;div class=&quot;newsDetails&quot;&gt;
+					&lt;div class=&quot;newsDate&quot;&gt;November 07, 2015&lt;/div&gt;
+					&lt;div class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;newsListing&quot;&gt;
+			&lt;a class=&quot; &quot;&gt;
+				&lt;span class=&quot;tool newsTool&quot; title=&quot;News&quot;&gt;
+      			&lt;span class=&quot;material-icons newsIcon&quot;&gt;format_align_justify&lt;/span&gt;
+				&lt;/span&gt;
+				&lt;div class=&quot;newsDetails&quot;&gt;
+					&lt;div class=&quot;newsDate&quot;&gt;November 07, 2015&lt;/div&gt;
+					&lt;div class=&quot;newsHeadline&quot;&gt;Bulletin Three - Priority&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;newsListing&quot;&gt;
+			&lt;a class=&quot; &quot;&gt;
+				&lt;span class=&quot;tool newsTool&quot; title=&quot;News&quot;&gt;
+      			&lt;span class=&quot;material-icons newsIcon&quot;&gt;format_align_justify&lt;/span&gt;
+				&lt;/span&gt;
+				&lt;div class=&quot;newsDetails&quot;&gt;
+					&lt;div class=&quot;newsDate&quot;&gt;November 07, 2015&lt;/div&gt;
+					&lt;div class=&quot;newsHeadline&quot;&gt;Bulletin Four&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;newsListing&quot;&gt;
+			&lt;a class=&quot; &quot;&gt;
+				&lt;span class=&quot;tool newsTool&quot; title=&quot;News&quot;&gt;
+      			&lt;span class=&quot;material-icons newsIcon&quot;&gt;format_align_justify&lt;/span&gt;
+				&lt;/span&gt;
+				&lt;div class=&quot;newsDetails&quot;&gt;
+					&lt;div class=&quot;newsDate&quot;&gt;November 07, 2015&lt;/div&gt;
+					&lt;div class=&quot;newsHeadline&quot;&gt;As good as it gets&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
 <div class="f-item-group" id="modal">
 
 	<div class="f-item-heading-group">
@@ -525,8 +1085,12 @@
 	<div class="banner item w4">
 	<div class="flexslider">
 		<ul class="slides">
-			<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide"><img src="/assets/toolkit/images/back-to-school.png" alt="back to school toolkit" draggable="false"></li>
-			<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class=""><img src="/assets/toolkit/images/Grade-3.jpg" alt="Grade 3 - Student Learning Assessment Pilot" draggable="false"></li>
+			<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
+				<img src="assets/toolkit/images/back-to-school.png" alt="back to school toolkit" draggable="false">
+			</li>
+			<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class=" ">
+				<img src="assets/toolkit/images/Grade-3.jpg" alt="Grade 3 - Student Learning Assessment Pilot" draggable="false">
+			</li>
 		</ul>
 		<ol class="flex-control-nav flex-control-paging">
 			<li><a class="flex-active">1</a></li>
@@ -548,8 +1112,12 @@
 	<pre><code class="language-markup">&lt;div class=&quot;banner item w4&quot;&gt;
 	&lt;div class=&quot;flexslider&quot;&gt;
 		&lt;ul class=&quot;slides&quot;&gt;
-			&lt;li style=&quot;width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;&quot; class=&quot;flex-active-slide&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/back-to-school.png&quot; alt=&quot;back to school toolkit&quot; draggable=&quot;false&quot;&gt;&lt;/li&gt;
-			&lt;li style=&quot;width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;&quot; class=&quot;&quot;&gt;&lt;img src=&quot;/assets/toolkit/images/Grade-3.jpg&quot; alt=&quot;Grade 3 - Student Learning Assessment Pilot&quot; draggable=&quot;false&quot;&gt;&lt;/li&gt;
+			&lt;li style=&quot;width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;&quot; class=&quot;flex-active-slide&quot;&gt;
+				&lt;img src=&quot;assets/toolkit/images/back-to-school.png&quot; alt=&quot;back to school toolkit&quot; draggable=&quot;false&quot;&gt;
+			&lt;/li&gt;
+			&lt;li style=&quot;width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;&quot; class=&quot; &quot;&gt;
+				&lt;img src=&quot;assets/toolkit/images/Grade-3.jpg&quot; alt=&quot;Grade 3 - Student Learning Assessment Pilot&quot; draggable=&quot;false&quot;&gt;
+			&lt;/li&gt;
 		&lt;/ul&gt;
 		&lt;ol class=&quot;flex-control-nav flex-control-paging&quot;&gt;
 			&lt;li&gt;&lt;a class=&quot;flex-active&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -1273,23 +1841,19 @@
 
 		</div>
 	<script src="/assets/fabricator/scripts/f.js"></script>
+	<script src="assets/fabricator/scripts/f.js"></script>
 
 	<!-- toolkit scripts -->
 	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+	<script>
+		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+			this.MaterialProgress.setProgress(44);
+		});
+	</script>
+	<!-- /toolkit scripts -->
 
-		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
-		<script src="assets/toolkit/scripts/search.js"></script>
-	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
-
-		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-
-		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-
-		<script>
-		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-		    this.MaterialProgress.setProgress(44);
-		  });
-		</script>
 </body>
 </html>

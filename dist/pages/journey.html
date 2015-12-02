@@ -1,23 +1,21 @@
 <!doctype html>
-<html>
+<html lang="">
 <head>
 
 	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title></title>
 
-	
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<!-- /toolkit styles -->
 
 </head>
@@ -93,20 +91,22 @@
   <div class="tl-slide-background"></div>
   </div>
   <div class="tl-slide tl-slide-text-only" id="test-item-3div-classnodeid-hidden19052-div" style="left: 7016px; top: 0px;">
-    <div class="tl-slide-scrollable-container"><div class="tl-slide-content-container">
-      <div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
-        <div class="tl-text" id="tl-fqmun"><div class="tl-text-content-container">
-          <h3 class="tl-headline-date">November 5, 2015 — November 28, 2015</h3>
-          <h2 class="tl-headline">Test item #3<div class="nodeId hidden">19052</div></h2>
-          <div class="tl-text-content"><p>Test item #3</p>
+    <div class="tl-slide-scrollable-container">
+      <div class="tl-slide-content-container">
+        <div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
+          <div class="tl-text" id="tl-fqmun">
+            <div class="tl-text-content-container">
+              <h3 class="tl-headline-date">November 5, 2015 — November 28, 2015</h3>
+              <h2 class="tl-headline">Test item #3<div class="nodeId hidden">19052</div></h2>
+              <div class="tl-text-content"><p>Test item #3</p></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="tl-slide-background"></div>
   </div>
-  </div>
-  <div class="tl-slide-background"></div>
-  </div>
+  
   <div class="tl-slide tl-slide-text-only" id="test-item-2div-classnodeid-hidden19051-div" style="left: 10524px; top: 0px;">
     <div class="tl-slide-scrollable-container"><div class="tl-slide-content-container">
       <div class="tl-slide-content" style="padding-left: 100px; padding-right: 100px; width: 1554px;">
@@ -838,20 +838,15 @@
 
 	<!-- toolkit scripts -->
 	<script src="../assets/toolkit/scripts/toolkit.js"></script>
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
+	<script>
+		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+			this.MaterialProgress.setProgress(44);
+		});
+	</script>
+	<!-- /toolkit scripts -->
 
-		<!-- 	<script src="assets/toolkit/scripts/input.js"></script>
-		<script src="assets/toolkit/scripts/search.js"></script>
-	 <script src="http://albertaeducation.iomer.com/bundles/educationScripts?v=UsGjiMz1rt80YLy1nTw-aPM6Vx9SaKiNYTswLpbxf-01"></script> -->
-
-		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-
-		<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-
-		<script>
-		  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-		    this.MaterialProgress.setProgress(44);
-		  });
-		</script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<div class="accordian">
+  <div class="resourceFolder " >
+    <div class="accordionItem">
+      <div class="accordionHeader folderName selectedAccordionHeader">
+        Teachers and Administrators (10)
+        <span id="togglearrow" class="material-icons" style="display:block; float:right;">arrow_drop_down</span>
+      </div>
+      <div class="accordionBody noDisplay" style="display: block;">
+        {{> list-items.modal-documents}}
+        {{#each news-list.links}}
+          {{#each this}}
+          <a class="resourceItem " target="_blank" href="/media/142772/supporting_positive_behaviour_a_school_wide_approach.pdf">
+          	<div class="resourceIcon tool" title="Document">
+          		<i class="material-icons " >picture_as_pdf</i>
+          	</div>
+          	<div class="resourceDetails">
+          		<span class="linkTitle ">{{this}}</span>
+          		<span class="resourceSize ">(2,059 KB)</span>
+          		<div class="resource-description ">
+          			Supporting Positive Behaviour in Alberta Schools: A School-Wide Approa<span class="">...</span>
+          		</div>
+          		<div class="last-updated ">Last Updated: Oct 19th 2015 2:30 pm</div>
+          	</div>
+          	<span class="material-icons downloadIcon">file_download</span>
+          </a>
+          {{/each}}
+        {{/each}}
+
+
+      </div>
+    </div>
+  </div>
+  <div class=" "></div>
+</div>
