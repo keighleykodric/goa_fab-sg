@@ -3270,15 +3270,45 @@ _:-ms-input-placeholder,
     border-color: #de3226;
     box-shadow: none
 }
+
+
+
 .mdl-textfield.is-required .mdl-textfield__input {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: $sunset;
+    color: $sunset;
     box-shadow: none
 }
-.mdl-textfield__label.is-required {
-    color: $secondary-color;
+.mdl-textfield.is-required .mdl-textfield__label:after{
+    color: $sunset;
+    font-size: 12px;
+    background-color: $sunset;
+}
+.mdl-textfield--floating-label.is-required .mdl-textfield__label {
+    color: $sunset !important;
     font-size: 12px;
 }
+
+
+
+
+.mdl-textfield.is-optional .mdl-textfield__input {
+    border-color: $stone;
+    color: $stone;
+    box-shadow: none;
+}
+.mdl-textfield.is-optional .mdl-textfield__label:after{
+    color: $stone;
+    font-size: 12px;
+    background-color: $stone
+}
+.mdl-textfield--floating-label.is-optional .mdl-textfield__label {
+    color: $stone !important;
+    font-size: 12px;
+}
+
+
+
+
 .mdl-textfield.is-disabled .mdl-textfield__input {
     background-color: transparent;
     border-bottom: 1px dotted rgba(0, 0, 0, .12);
@@ -3336,9 +3366,7 @@ _:-ms-input-placeholder,
     height: 2px;
     left: 45%;
     position: absolute;
-    -webkit-transition-duration: .2s;
     transition-duration: .2s;
-    -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     visibility: hidden;
     width: 10px
