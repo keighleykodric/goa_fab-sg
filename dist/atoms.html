@@ -73,6 +73,12 @@
 					<a href="atoms.html" class="f-menu__heading">Atoms</a>
 					<ul>
 						<li>
+							<a href="atoms.html#badge-filters">Badge Filters</a>
+						</li>
+						<li>
+							<a href="atoms.html#badge-toolboxes">Badge Toolboxes</a>
+						</li>
+						<li>
 							<a href="atoms.html#blockquotes">Blockquotes</a>
 						</li>
 						<li>
@@ -104,6 +110,12 @@
 						</li>
 						<li>
 							<a href="atoms.html#switch">Switch</a>
+						</li>
+						<li>
+							<a href="atoms.html#tags">Tags</a>
+						</li>
+						<li>
+							<a href="atoms.html#toggle-switch">Toggle Switch</a>
 						</li>
 					</ul>
 				</li>
@@ -204,6 +216,62 @@
 
 	<h1 data-f-toggle="labels">Atoms</h1>
 <p>Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.</p>
+
+
+<div class="f-item-group" id="badge-filters">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Badge Filters</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<ul class="categories">
+	<li class="toggleBtn ng-scope">
+		<span class="mdl-badge" data-badge="5"></span>
+	</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class=&quot;categories&quot;&gt;
+	&lt;li class=&quot;toggleBtn ng-scope&quot;&gt;
+		&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;5&quot;&gt;&lt;/span&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="badge-toolboxes">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Badge Toolboxes</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<span class="mdl-badge" data-badge="5"></span>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;span class=&quot;mdl-badge&quot; data-badge=&quot;5&quot;&gt;&lt;/span&gt;</code></pre>
+</div>
+
+
+</div>
 
 
 <div class="f-item-group" id="blockquotes">
@@ -591,6 +659,72 @@
 	<pre><code class="language-markup">&lt;div class=&quot;mdl-textfield mdl-js-textfield mdl-textfield--floating-label&quot;&gt;
 	&lt;textarea class=&quot;mdl-textfield__input&quot; type=&quot;text&quot; rows=&quot;3&quot; id=&quot;sample5&quot;&gt;&lt;/textarea&gt;
 	&lt;label class=&quot;mdl-textfield__label&quot; for=&quot;sample5&quot;&gt;Text lines...&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="inputs.textfield-error">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Textfield Error</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Error Text Field Input atom.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-textfield is-invalid mdl-js-textfield mdl-textfield--floating-label">
+	<input class="mdl-textfield__input" type="text" id="sample3">
+	<label class="mdl-textfield__label is-required" for="sample3">Error Textfield...</label>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-textfield is-invalid mdl-js-textfield mdl-textfield--floating-label&quot;&gt;
+	&lt;input class=&quot;mdl-textfield__input&quot; type=&quot;text&quot; id=&quot;sample3&quot;&gt;
+	&lt;label class=&quot;mdl-textfield__label is-required&quot; for=&quot;sample3&quot;&gt;Error Textfield...&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="inputs.textfield-required">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Textfield Required</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Required Text Field Input atom.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-textfield is-required mdl-js-textfield mdl-textfield--floating-label">
+	<input class="mdl-textfield__input" type="text" id="sample3">
+	<label class="mdl-textfield__label is-required" for="sample3">Required Textfield...</label>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-textfield is-required mdl-js-textfield mdl-textfield--floating-label&quot;&gt;
+	&lt;input class=&quot;mdl-textfield__input&quot; type=&quot;text&quot; id=&quot;sample3&quot;&gt;
+	&lt;label class=&quot;mdl-textfield__label is-required&quot; for=&quot;sample3&quot;&gt;Required Textfield...&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -1061,6 +1195,95 @@
 	&lt;input type=&quot;checkbox&quot; id=&quot;switch-1&quot; class=&quot;mdl-switch__input&quot; checked&gt;
 	&lt;span class=&quot;mdl-switch__label&quot;&gt;&lt;/span&gt;
 &lt;/label&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="tags">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Tags</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Filter tag atom.</p>
+
+</div>
+<div class="f-item-preview">
+	<div id="category-container" class=" ">
+	<ul>
+		<li class=" ">
+			<div class="category-filter">
+				<span class="category-title">Tag Name</span>
+				<i class="material-icons category-close">clear</i>
+			</div>
+		</li>
+	</ul>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;category-container&quot; class=&quot; &quot;&gt;
+	&lt;ul&gt;
+		&lt;li class=&quot; &quot;&gt;
+			&lt;div class=&quot;category-filter&quot;&gt;
+				&lt;span class=&quot;category-title&quot;&gt;Tag Name&lt;/span&gt;
+				&lt;i class=&quot;material-icons category-close&quot;&gt;clear&lt;/i&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="toggle-switch">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Toggle Switch</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="toggle">
+	<div class="onoffswitch">
+		<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Curriculum" ng-checked="isCategorySelected()">
+		<label class="onoffswitch-label" for="myonoffswitch">
+			<span class="onoffswitch-inner"></span>
+			<span class="onoffswitch-switch"></span>
+		</label>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;toggle&quot;&gt;
+	&lt;div class=&quot;onoffswitch&quot;&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Curriculum&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+		&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+			&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 

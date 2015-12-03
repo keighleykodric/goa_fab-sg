@@ -60,7 +60,7 @@ span.filterTitle {
 .onoffswitch-inner:after{content:"OFF";padding-right:5px;background-color:#f1f1f1;color:#adb9ca;text-align:right}.onoffswitch-switch{display:block;width:25px;margin:3px;background:#a9b7c7;position:absolute;top:0;bottom:0;right:29px;border-radius:3px;transition:all .3s ease-in 0}.onoffswitch-checkbox:checked+.onoffswitch-label{border:1px solid #8091a5}.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner{margin-left:0}
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch{right:0;background-color:#8091a5}
 ul.categories li {
-    width: 96%;
+    width: 200px;
     margin: 2px 0;
     font-size: 12px;
     background: #f9fafb;
@@ -90,6 +90,8 @@ ul.categories {
     margin-right: 20px;
     vertical-align: top;
 }
+
+
 @media screen and (max-height: 820px) and (min-width: 200px){
 .filterCategories {
     height: calc(100% - 30vh);
@@ -102,7 +104,37 @@ ul.categories {
 }
 .filterCategories, .filterPersona {
     padding: 0 2%;
-    width: 96%;
+    width: 200px;
     font-size: 10px;
     overflow: auto;
+}
+
+.categories li.selected .mdl-badge[data-badge]:after {
+    background: #8091a5;
+}
+
+.categories .mdl-badge[data-badge]:after {
+    content: attr(data-badge);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    top: -3px;
+    right: -15px;
+    font-family: "Lato","Helvetica","Arial",sans-serif;
+    font-weight: 700;
+    font-size: 7px;
+    width: 13px;
+    height: 13px;
+    color: #fff;
+    border-radius: 50%;
+    background: #a5b6c9;
+    box-shadow: none;
+}
+
+.toggle {
+    float: right;
 }

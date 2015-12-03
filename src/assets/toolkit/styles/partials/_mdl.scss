@@ -3270,6 +3270,15 @@ _:-ms-input-placeholder,
     border-color: #de3226;
     box-shadow: none
 }
+.mdl-textfield.is-required .mdl-textfield__input {
+    border-color: $secondary-color;
+    color: $secondary-color;
+    box-shadow: none
+}
+.mdl-textfield__label.is-required {
+    color: $secondary-color;
+    font-size: 12px;
+}
 .mdl-textfield.is-disabled .mdl-textfield__input {
     background-color: transparent;
     border-bottom: 1px dotted rgba(0, 0, 0, .12);

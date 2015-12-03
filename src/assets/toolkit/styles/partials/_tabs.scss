@@ -1,3 +1,38 @@
+.refinements-container {
+    position: relative;
+    padding: 10px;
+    clear: both;
+    height: 30px;
+    background: #f7f7f7;
+}
+
+#category-container {
+    width: 90%;
+}
+#category-container ul {
+    padding: 0;
+    margin: 0;
+}
+#category-container li {
+    float: left;
+    margin: 0 5px 5px;
+    padding: 2px;
+    list-style-type: none;
+    border-radius: 3px;
+    background: #eee;
+    color: #a9b7c7;
+    border: 1px solid #a9b7c7;
+}
+.category-filter {
+    padding-left: 5px;
+}
+i.category-close {
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
 #viewSelector {
     cursor: pointer;
     right: 0px;
@@ -11,13 +46,7 @@
   margin-right:20px;
 }
 
-.refinements-container {
-    position: relative;
-    padding: 10px;
-    clear: both;
-    height: 50px;
-    background: #f7f7f7;
-}
+
 
 .journeyTab {
     padding:0;
