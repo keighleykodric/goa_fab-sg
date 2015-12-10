@@ -1,52 +1,50 @@
-$base-colors: (
-	dark: hsl(0, 0%, 12%),
-	medium: hsl(0, 0%, 46%),
-	light: hsl(0, 0%, 80%),
-	accent: hsl(0, 0%, 46%)
-);
-
-$theme-dark: (
-	menu-background: map-get($base-colors, dark),
-	menu-text: map-get($base-colors, light),
-	normal: map-get($base-colors, medium)
-);
-
-$theme-light: (
-	menu-background: hsl(0, 0%, 100%),
-	menu-text: map-get($base-colors, medium),
-	normal: map-get($base-colors, medium)
-);
-
-$theme: $theme-light;
-
-$colors: map-merge($base-colors, $theme);
-
-$menu-width: 14rem;
 
 
-// mixins
-@mixin clearfix {
-	&:after {
-		clear: both;
-	}
+/*** GoA Brand Colors ***/
 
-	&:before,
-	&:after {
-		display: table;
-		content: ' ';
-	}
-}
 
-@mixin border-box {
-	box-sizing: border-box;
-}
+$stone: #5f6a72;
+$stone-dark: #35424a;
+$stone-mid: #a5acb0;
+$stone-light: #d1d4d3;
+
+
+$prairie:#ebd700;
+$prairie-dark: #554217;
+$prairie-mid: #a47700;
+$prairie-light: #ebce7b;
+
+
+$dusk:#d40072;
+$dusk-dark: #682145;
+$dusk-mid: #a50069;
+$dusk-light: #ef69b9;
+
+
+$sky:#00aad2;
+$sky-dark: #005072;
+$sky-mid: #0081ab;
+$sky-light: #5fceea;
+
+
+$pasture:#77b800;
+$pasture-dark: #545f1d;
+$pasture-mid: #719500;
+$pasture-light: #bed600;
+
+
+$sunset:#ff7900;
+$sunset-dark: #703319;
+$sunset-mid: #c05017;
+$sunset-light: #fdc688;
+
 
 
 
 
 
 /*** Colors ***/
-$primary-color: #36424a !default;
+$primary-color: $stone-dark !default;
 $primary-color-light: "$stone-light" !default;
 $primary-color-dark: "$stone-dark" !default;
 
@@ -55,6 +53,10 @@ $secondary-color-light: "$pasture-light" !default;
 $secondary-color-dark: "$pasture-dark" !default;
 
 $white: #fff;
+
+.white{
+	color:$white !important;
+}
 
 
 

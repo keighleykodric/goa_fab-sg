@@ -1,31 +1,23 @@
 /* Footer Styles
  ------------------------------------------------------------- */
 
-.mini-footer {
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    clear:both;
-    -webkit-flex-flow:row wrap;
-    -ms-flex-flow:row wrap;
-    flex-flow:row wrap;
-    -webkit-box-pack:justify;
-    -webkit-justify-content:space-between;
-    -ms-flex-pack:justify;
-    justify-content:space-between;
-    padding:10px;
-    color:#fff;
-    background-color:#36424a;
-    position:relative;/*
-    position:fixed;
-    bottom:0; */
-    opacity:.5;
-    cursor:pointer;
-    width: auto;
-    z-index:999;
-    height: 40px;
-}
+ .mini-footer {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     clear: both;
+     -webkit-flex-flow: row wrap;
+     -ms-flex-flow: row wrap;
+     flex-flow: row wrap;
+     -webkit-box-pack: justify;
+     -webkit-justify-content: space-between;
+     -ms-flex-pack: justify;
+     justify-content: space-between;
+     padding: 2px 17px;
+     color: #fff;
+     background-color: #36424a;
+ }
 .mini-footer:hover {
     opacity:1;
     transition:all .3s ease
@@ -36,14 +28,13 @@
 .mini-footer .footer-logo img {
     max-width:120px
 }
-.mini-footer--left-section,
-.mini-footer__left-section {
-    display:inline-block;
-    -webkit-box-ordinal-group:1;
-    -webkit-order:0;
-    -ms-flex-order:0;
-    order:0;
-    margin-top:4px
+.mini-footer--left-section, .mini-footer__left-section {
+    display: inline-block;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    margin-top: 4px;
 }
 .mini-footer .footer-logo {
     line-height:8px
@@ -51,13 +42,12 @@
 .mini-footer .footer-logo img {
     vertical-align:middle
 }
-.mini-footer--right-section,
-.mini-footer__right-section {
-    display:inline-block;
-    -webkit-box-ordinal-group:2;
-    -webkit-order:1;
-    -ms-flex-order:1;
-    order:1
+.mini-footer--right-section, .mini-footer__right-section {
+    display: inline-block;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
 }
 .mini-footer--link-list,
 .mini-footer__link-list {
@@ -86,29 +76,29 @@
 }
 
 
-
-
 /* Footer Social
  ------------------------------------------------------------- */
 
-ul.social-links {
-    list-style:8px;
-    line-height:normal;
-    padding:0;
-    margin: -3px;
-}
-.social-links li {
-    display:inline-block;
-    line-height:1;
-    font-size:16px
-}
-.social-links a {
-    padding:7px 5px;
-    line-height:1;
-    height:32px;
-    width:32px;
-    margin-right:6px
-}
+ ul.social-links {
+     list-style: none;
+     line-height: normal;
+     padding: 0;
+     display: flex;
+     flex-flow: row;
+ }
+ .social-links li {
+     display: inline-block;
+     line-height: 1;
+     font-size: 16px;
+ }
+ .social-links a {
+     //padding: 7px 5px;
+     line-height: 1;
+     height: 32px;
+     width: 32px;
+     margin-right: 6px;
+     display: block;
+ }
 .social-links a:hover {
     background:#719500
 }
@@ -119,9 +109,14 @@ ul.social-links {
     font-size:16px;
     padding: 6px;
 }
-
-
-
+.alberta-ca a {
+    color: #fff;
+    font-size: .9em;
+    width: 100px;
+    padding: 0 5px;
+    text-align: center;
+    line-height: 28px;
+}
 /* Footer Mobile
  ------------------------------------------------------------- */
 

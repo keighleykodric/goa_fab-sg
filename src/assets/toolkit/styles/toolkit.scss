@@ -1,28 +1,31 @@
 /**
  * Toolkit styles
 */
-
+// Global
 @import 'partials/variables';
-@import 'partials/color-chips';
-@import 'partials/filter';
-@import 'partials/select';
-@import 'partials/table';
 @import 'partials/mdl';
+@import 'partials/home';
+
+
+// Base
 @import 'partials/radio';
 @import 'partials/checkbox';
 @import 'partials/blockquotes';
-@import 'partials/home';/*
-@import 'partials/inputs'; */
-@import 'partials/layout';
-@import 'partials/menu';
-@import 'partials/modal';
-@import 'partials/cards';
-@import 'partials/footer';
+
+
+// Components
 @import 'partials/header';
+@import 'partials/card';
+@import 'partials/table';
+@import 'partials/tabs';
 @import 'partials/timeline';
-@import 'partials/tabs';/*
-@import 'partials/form'; */
 @import 'partials/slider';
+@import 'partials/footer';
+
+
+// Structures
+@import 'partials/modal';
+@import 'partials/filter';
 
 body {
 	font-family: Lato, sans-serif;

@@ -12,6 +12,10 @@
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
 	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="assets/toolkit/scripts/test.js"></script>
+
+
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -23,41 +27,37 @@
 
 
 
-	  <header>
-	    <div class="topBar">
-	      <div class="logo">
-	        <a href="#">
-	          <img src="../assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
-	        </a>
-	      </div>
-	      <div class="utility">
-	        <div class="searchBar">
+	<header>
+	  <div class="topBar">
+	    <div class="logo">
+	      <a href="/">
+	        <img src="../assets/toolkit/images/GoA-Education_logo-w.png" alt="Government of Alberta">
+	      </a>
+	    </div>
+	    <div class="utility">
+	      <div class="searchBar">
+	
 	        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-	          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+	          <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 	            <i class="material-icons">search</i>
 	          </label>
+	          <span class="search-label">SEARCH</span>
 	          <div class="mdl-textfield__expandable-holder">
-	            <input class="mdl-textfield__input" type="text" id="sample6">
+	            <input class="mdl-textfield__input" type="text" id="search">
 	            <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
 	          </div>
-	        </div>      </div>
-	        <div class="fr-eng-toggle">
-	                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" data-upgraded=",MaterialButton,MaterialRipple">
-	                    <span class="lang-toggle-fr English">FR</span>
-	                    <span class="lang-toggle-en French">EN</span>
-	                <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 116.793px; height: 116.793px; transform: translate(-50%, -50%) translate(25px, 21px);"></span></span></button>
-	            </div><!--
-	                    <div class="fr-eng-toggle">
-	                      <input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
-	                      <label class="fr-eng-switch-label" for="fr-eng-switch">
-	            <span class="fr-eng-switch-inner"></span>
-	            <span class="fr-eng-switch-switch"></span>
-	                      </label>
-	                    </div> -->
-	
+	        </div>
+	      </div>
+	      <div class="fr-eng-toggle">
+	        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" id="languageToggle" data-upgraded=",MaterialButton,MaterialRipple">
+	          <span class="lang-toggle-fr English">FR</span>
+	          <span class="lang-toggle-en French">EN</span>
+	          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+	        </button>
 	      </div>
 	    </div>
-	  </header><div id="container" class="masonry home">
+	  </div>
+	</header><div id="container" class="masonry home">
   <div class="mainContent resizeable">
     <article>
       <div class="masGrid">
@@ -121,7 +121,14 @@
           <h1>Ministry</h1>
         </div>        <div id="home-sm" class="card item w2 administration" >
           <h1>School Administration</h1>
-        </div>      </div>
+        </div>        
+      </div>
+      <div id="container" class="masonry home">
+          <div class="spacer"></div>
+          <div class="mainContent resizeable">
+      <article>
+      
+          <div class="masGrid"></div>
       <div class="rightSidebar">
         <div class="welcome">
           <a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
@@ -159,38 +166,45 @@
             </div>
           <a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
         </div>
+      </div>
+      </article>
+      </div>
       </div>    </article>
   </div>
 </div>
+<div class="home">
 <footer class="mini-footer">
     <div class="mini-footer__left-section">
         <ul class="mini-footer__link-list desktop-only">
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Disclaimer</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">© Copyright</a></li>
+            <li><a href="/using-this-site/accessibility/">Accessibility</a></li>
+            <li><a href="/using-this-site/copyright-disclaimer/">Disclaimer</a></li>
+            <li><a href="/using-this-site/privacy/">Privacy</a></li>
+            <li>© Copyright <script>document.write(new Date().getFullYear())</script>2015</li>
         </ul>
         <div class="mobile-only">
-            <button id="menu-top-left" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+            <button id="menu-top-left" class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
             </button>
 
-            <div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--top-left"></div><ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" for="menu-top-left" data-upgraded=",MaterialMenu,MaterialRipple">
-                <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Accessibility</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
-                <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Disclaimer</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
-                <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Privacy</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
-            </ul></div>
+            <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="menu-top-left">
+                <li class="mdl-menu__item"><a href="/using-this-site/accessibility/">Accessibility</a></li>
+                <li class="mdl-menu__item"><a href="/using-this-site/copyright-disclaimer/">Disclaimer</a></li>
+                <li class="mdl-menu__item"><a href="/using-this-site/privacy/">Privacy</a></li>
+                <li class="mdl-menu__item"><a target="_blank" href="http://alberta.ca">Alberta.ca</a></li>
+            </ul>
         </div>
     </div>
     <div class="mini-footer__right-section">
         <ul class="social-links">
-            <li><a target="blank" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a target="blank" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a target="blank" href="https://www.youtube.com/" title="YouTube"><i class="fa fa-youtube"></i></a></li>
-            <li class="mobile-only">© Copyright</li>
+            <li class="desktop-only alberta-ca"><a target="_blank" href="http://alberta.ca">Alberta.ca</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+            <li class="mobile-only">© Copyright <script>document.write(new Date().getFullYear())</script>2015</li>
         </ul>
     </div>
 </footer>
+</div>
 
 
 
@@ -199,11 +213,8 @@
 	<script src="assets/toolkit/scripts/toolkit.js"></script>
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-	<script>
-		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-			this.MaterialProgress.setProgress(44);
-		});
-	</script>
+
+
 	<!-- /toolkit scripts -->
 
 </body>

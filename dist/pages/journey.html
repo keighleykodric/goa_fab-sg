@@ -12,6 +12,10 @@
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
 	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="assets/toolkit/scripts/test.js"></script>
+
+
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -23,41 +27,37 @@
 
 
 
-	  <header>
-	    <div class="topBar">
-	      <div class="logo">
-	        <a href="#">
-	          <img src="../assets/toolkit/images/GoA-Education_logo-w.png" height="30" width="179" alt="Government of Alberta">
-	        </a>
-	      </div>
-	      <div class="utility">
-	        <div class="searchBar">
+	<header>
+	  <div class="topBar">
+	    <div class="logo">
+	      <a href="/">
+	        <img src="../assets/toolkit/images/GoA-Education_logo-w.png" alt="Government of Alberta">
+	      </a>
+	    </div>
+	    <div class="utility">
+	      <div class="searchBar">
+	
 	        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-	          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+	          <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
 	            <i class="material-icons">search</i>
 	          </label>
+	          <span class="search-label">SEARCH</span>
 	          <div class="mdl-textfield__expandable-holder">
-	            <input class="mdl-textfield__input" type="text" id="sample6">
+	            <input class="mdl-textfield__input" type="text" id="search">
 	            <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
 	          </div>
-	        </div>      </div>
-	        <div class="fr-eng-toggle">
-	                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" data-upgraded=",MaterialButton,MaterialRipple">
-	                    <span class="lang-toggle-fr English">FR</span>
-	                    <span class="lang-toggle-en French">EN</span>
-	                <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 116.793px; height: 116.793px; transform: translate(-50%, -50%) translate(25px, 21px);"></span></span></button>
-	            </div><!--
-	                    <div class="fr-eng-toggle">
-	                      <input type="checkbox" name="fr-eng-switch" class="fr-eng-switch-checkbox" id="fr-eng-switch" onchange="AlbertaEducationApp.ToggleLanguage('fr-eng-switch')">
-	                      <label class="fr-eng-switch-label" for="fr-eng-switch">
-	            <span class="fr-eng-switch-inner"></span>
-	            <span class="fr-eng-switch-switch"></span>
-	                      </label>
-	                    </div> -->
-	
+	        </div>
+	      </div>
+	      <div class="fr-eng-toggle">
+	        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" id="languageToggle" data-upgraded=",MaterialButton,MaterialRipple">
+	          <span class="lang-toggle-fr English">FR</span>
+	          <span class="lang-toggle-en French">EN</span>
+	          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+	        </button>
 	      </div>
 	    </div>
-	  </header><div id="container" class="resizeable masonry js-masonry mainArea">
+	  </div>
+	</header><div id="container" class="resizeable masonry js-masonry mainArea">
   <div id="timeline-embed" class="tl-timeline tl-layout-landscape">
     <div class="tl-storyslider tl-storyslider" style="top: 1px; height: 2px;" id="tl-xrpnj">
     <div class="tl-slider-container-mask"><div class="tl-slider-container tlanimate" style="left: 0px;"><div class="tl-slider-item-container">
@@ -446,182 +446,56 @@
       <div class="rightContent">
 
         <div id="slideout" style="left: 0px;">
-                    <div id="containclickme">
-                        <div class="toggleFilter material-icons" id="click" ng-click="ToggleSideFilters()" style="display: none;">
-                            <i class="material-icons">arrow_back</i>
-                            <span class="filterTitle">FILTER</span>
-                        </div>
-                    </div>
-                    <div class="leftContent">
-        
-        
-        <script>
-            $(document).ready(function () {
+          <div id="containclickme">
+            <div class="toggleFilter material-icons" id="click" ng-click="ToggleSideFilters()" style="display: none;">
+              <i class="material-icons">chevron_left</i>
+              <span class="filterTitle">FILTER</span>
+            </div>
+          </div>
+          <div class="leftContent">
+            <script>
+              $(document).ready(function () {
                 $('.dd-menu').click(function () {
                     $(this).toggleClass("dd-open");
                 });
-            });
-        </script>
-        
-        <style>
-            .dd-selected{
-                background-color: #00ADD8;
-                color:white;
-            }
-        </style>
-        <div class="slide-out-div">
-            <div class="persona-dd">
-        
-        <span class="languageItem English" style="display: block;">Personalize</span>
-        <span class="languageItem French" style="display: none;">Personnaliser</span>
-        
-                <select class="personaList ng-pristine ng-untouched ng-valid" ng-model="searchFilter.Persona" ng-disabled="!filterToggle" ng-options="persona.Name as (persona.DisplayName + &quot; (&quot; + persona.Count  + &quot;)&quot;) for persona in personaList" ng-change="TogglePersona()"><option value="0" selected="selected" label="Everyone (6)">Everyone (6)</option><option value="1" label="Parent (3)">Parent (3)</option><option value="2" label="Student (1)">Student (1)</option><option value="3" label="Teacher (1)">Teacher (1)</option><option value="4" label="School Administrator (3)">School Administrator (3)</option></select>
-            </div>
-        
-        
-        <span class="languageItem English" style="display: block;">Categories</span>
-        <span class="languageItem French" style="display: none;">Catégories</span>
-            <span class="clear-filters"><a href="javascript:void(0)" ng-click="ClearCategoryFilter()">clear filters</a></span>
-            <div class="filterCategories">
+              });
+            </script>
+            <div class="slide-out-div">
+              <div class="persona-dd">
+                <span class="languageItem English" style="display: block;">Personalize</span>
+                <span class="languageItem French" style="display: none;">Personnaliser</span>
+                <select class="personaList ng-pristine ng-untouched ng-valid" ng-model="searchFilter.Persona" ng-disabled="!filterToggle" ng-options="persona.Name as (persona.DisplayName + &quot; (&quot; + persona.Count  + &quot;)&quot;) for persona in personaList" ng-change="TogglePersona()">
+                  <option value="0" selected="selected" label="Everyone (6)">Everyone (6)</option>
+                  <option value="1" label="Parent (3)">Parent (3)</option>
+                  <option value="2" label="Student (1)">Student (1)</option>
+                  <option value="3" label="Teacher (1)">Teacher (1)</option>
+                  <option value="4" label="School Administrator (3)">School Administrator (3)</option>
+                </select>
+              </div>
+              <span class="languageItem English" style="display: block;">Categories</span>
+              <span class="languageItem French" style="display: none;">Catégories</span>
+              <span class="clear-filters"><a href="javascript:void(0)" ng-click="ClearCategoryFilter()">clear filters</a></span>
+              <div class="filterCategories">
                 <ul class="categories">
-        
-                    <!-- ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="5"></span>
-                        <span class="category-title ng-binding">
-                            Curriculum
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Curriculum" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
+                  <li class="toggleBtn ng-scope">
+                    <span class="category-title ng-binding">
+                      Curriculum
+                    </span>
+                      <div class="toggle">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Curriculum" ng-checked="isCategorySelected()">
+                          <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                          </label>
                         </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="3"></span>
-                        <span class="category-title ng-binding">
-                            Diploma Exams
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Diploma Exams" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="1"></span>
-                        <span class="category-title ng-binding">
-                            French Education
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_French Education" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="3"></span>
-                        <span class="category-title ng-binding">
-                            International Education
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_International Education" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="1"></span>
-                        <span class="category-title ng-binding">
-                            Legislation
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Legislation" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="1"></span>
-                        <span class="category-title ng-binding">
-                            Ministry Initiatives
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Ministry Initiatives" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="1"></span>
-                        <span class="category-title ng-binding">
-                            PAT/SLA
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_PAT/SLA" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="1"></span>
-                        <span class="category-title ng-binding">
-                            Standards &amp; Policy
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Standards &amp; Policy" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList --><li class="toggleBtn ng-scope" ng-repeat="category in categoryList" ng-click="ToggleCategory()" ng-class="{selected: isCategorySelected()==true}">
-                        <span class="mdl-badge" data-badge="1"></span>
-                        <span class="category-title ng-binding">
-                            Teaching
-                        </span>
-                        <div class="toggle">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Teaching" ng-checked="isCategorySelected()">
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </li><!-- end ngRepeat: category in categoryList -->
+                      </div>          </li>
+                  <!-- end ngRepeat: category in categoryList -->
                 </ul>
+              </div>
             </div>
-        
-        
-        
-        </div>
-        
-        
-                    </div>
-                </div>          <div id="journey">
+          </div>
+        </div>          <div id="journey">
             <div class="journey-dd">
               <div class="dd-menu" ng-show="searchFilter.JourneyIds.length > 0">
                 <span class="ng-binding">Junior High</span>
@@ -672,172 +546,44 @@
                 <a href="javascript:void(0)" ><i style="float:right;" class="material-icons listView" id="view-inactive">menu</i></a>
               </div>
             </div>
-          </div>      </div>
-      <div class="card tileContent">
-        <div class="card-title default">Default card
-          <div id="shareThis" class="card-share">
-            <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-      <i class="material-icons white">share</i>
-      </button>
-          </div>
-        </div>
-      	<div class="card-subtopics">
-          <div class="">
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
-            </div>
-          </div>
-          </div>
-      		<div class="card-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-      		</div>
-      </div>      <div class="card tileContent">
-        <div class="card-title default">Default card
-          <div id="shareThis" class="card-share">
-            <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-      <i class="material-icons white">share</i>
-      </button>
-          </div>
-        </div>
-      	<div class="card-subtopics">
-          <div class="">
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
-            </div>
-          </div>
-          </div>
-      		<div class="card-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-      		</div>
-      </div>      <div class="card tileContent">
-        <div class="card-title default">Default card
-          <div id="shareThis" class="card-share">
-            <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-      <i class="material-icons white">share</i>
-      </button>
-          </div>
-        </div>
-      	<div class="card-subtopics">
-          <div class="">
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
-            </div>
-          </div>
-          </div>
-      		<div class="card-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-      		</div>
-      </div>      <div class="card tileContent">
-        <div class="card-title default">Default card
-          <div id="shareThis" class="card-share">
-            <!-- Icon button -->
-      <button class="mdl-button mdl-js-button mdl-button--icon">
-      <i class="material-icons white">share</i>
-      </button>
-          </div>
-        </div>
-      	<div class="card-subtopics">
-          <div class="">
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Teacher Stories</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Administrator Handbook</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Resources for Students</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Advisory Council</span>
-            </div>
-            <div class="">
-              <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">School Partnerships</span>
-            </div>
-          </div>
-          </div>
-      		<div class="card-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-      		</div>
+          </div>        
       </div>
     </article>
   </div>
 </div>
+<div class="home">
 <footer class="mini-footer">
     <div class="mini-footer__left-section">
         <ul class="mini-footer__link-list desktop-only">
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Disclaimer</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">© Copyright</a></li>
+            <li><a href="/using-this-site/accessibility/">Accessibility</a></li>
+            <li><a href="/using-this-site/copyright-disclaimer/">Disclaimer</a></li>
+            <li><a href="/using-this-site/privacy/">Privacy</a></li>
+            <li>© Copyright <script>document.write(new Date().getFullYear())</script>2015</li>
         </ul>
         <div class="mobile-only">
-            <button id="menu-top-left" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+            <button id="menu-top-left" class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
             </button>
 
-            <div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--top-left"></div><ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" for="menu-top-left" data-upgraded=",MaterialMenu,MaterialRipple">
-                <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Accessibility</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
-                <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Disclaimer</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
-                <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="#">Privacy</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
-            </ul></div>
+            <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="menu-top-left">
+                <li class="mdl-menu__item"><a href="/using-this-site/accessibility/">Accessibility</a></li>
+                <li class="mdl-menu__item"><a href="/using-this-site/copyright-disclaimer/">Disclaimer</a></li>
+                <li class="mdl-menu__item"><a href="/using-this-site/privacy/">Privacy</a></li>
+                <li class="mdl-menu__item"><a target="_blank" href="http://alberta.ca">Alberta.ca</a></li>
+            </ul>
         </div>
     </div>
     <div class="mini-footer__right-section">
         <ul class="social-links">
-            <li><a target="blank" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a target="blank" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a target="blank" href="https://www.youtube.com/" title="YouTube"><i class="fa fa-youtube"></i></a></li>
-            <li class="mobile-only">© Copyright</li>
+            <li class="desktop-only alberta-ca"><a target="_blank" href="http://alberta.ca">Alberta.ca</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+            <li class="mobile-only">© Copyright <script>document.write(new Date().getFullYear())</script>2015</li>
         </ul>
     </div>
 </footer>
+</div>
 
 
 
@@ -846,11 +592,8 @@
 	<script src="assets/toolkit/scripts/toolkit.js"></script>
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-	<script>
-		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-			this.MaterialProgress.setProgress(44);
-		});
-	</script>
+
+
 	<!-- /toolkit scripts -->
 
 </body>

@@ -1,0 +1,27 @@
+---
+notes: |
+  Header component.
+---
+<header>
+  <div class="topBar">
+    <div class="logo">
+      <a href="/">
+        <img src="{{baseurl}}/assets/toolkit/images/GoA-Education_logo-w.png" alt="Government of Alberta">
+      </a>
+    </div>
+    <div class="utility">
+      <div class="searchBar">
+
+        {{> inputs.search }}
+
+      </div>
+      <div class="fr-eng-toggle">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="AlbertaEducationApp.ToggleLanguage('')" id="languageToggle" data-upgraded=",MaterialButton,MaterialRipple">
+          <span class="lang-toggle-fr English">FR</span>
+          <span class="lang-toggle-en French">EN</span>
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

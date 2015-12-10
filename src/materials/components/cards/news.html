@@ -1,0 +1,52 @@
+---
+notes: |
+  `Cards` are self contained peices of information that open in a modal for further exploration.
+---
+<div class="tileContent ng-animate-enabled hover-card ng-scope newsTile" >
+  <div id="shareThis" class="cardToolbox">
+    <a href="#" data-add-share=" ">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">share</i>
+      </button>
+    </a>
+  </div>
+  <a class="card-content-wide card popup-with-zoom-anim" id="dialogBoxLink6704" href="#dialogBox" >
+    <h1 class="card-title topic">
+      <span class="ministryNews" ng-show="searchFilter.Language == 'English'">Ministry</span>
+      <!-- span class="ministryNews ng-hide" ng-show="searchFilter.Language == 'French'">Ministère</span> -->
+      <span class="featured" ng-show="topic.Language == 'English'">Featured</span>
+      <!-- <span class="featured ng-hide" ng-show="topic.Language == 'French'">Sélectionnée</span> -->
+      <span class="ng-binding">Education in Alberta</span>
+    </h1>
+    <div class="card-topics">
+      <div ng-if="topic.FirstToolboxItem.NodeTypeAlias != 'news'" class="ng-scope">
+        <div ng-repeat="subtopic in topic.SubTopics | limitTo: 5" ng-click="OpenSubTopic(topic, subtopic.NodeId, $event)" class="ng-scope">
+          <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Reconciliation</span>
+        </div>
+
+        <div ng-repeat="subtopic in topic.SubTopics | limitTo: 5" ng-click="OpenSubTopic(topic, subtopic.NodeId, $event)" class="ng-scope">
+          <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Closing the Gap</span>
+        </div>
+
+        <div ng-repeat="subtopic in topic.SubTopics | limitTo: 5" ng-click="OpenSubTopic(topic, subtopic.NodeId, $event)" class="ng-scope">
+          <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">MOU</span>
+        </div>
+
+        <div ng-repeat="subtopic in topic.SubTopics | limitTo: 5" ng-click="OpenSubTopic(topic, subtopic.NodeId, $event)" class="ng-scope">
+          <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Self Identification</span>
+        </div>
+
+        <div ng-repeat="subtopic in topic.SubTopics | limitTo: 5" ng-click="OpenSubTopic(topic, subtopic.NodeId, $event)" class="ng-scope">
+          <span href="#dialogBox" class="sub-topic popup-with-zoom-anim ng-binding">Ed Policy Framework</span>
+        </div>
+      </div>
+    </div>
+    <div class="topic-content">
+      <div ng-if="topic.FirstToolboxItem.NodeTypeAlias == 'content'" class="cardContainer ng-scope">
+        <p class="ng-binding">The statement if reconciliation is an important document that everyone should be made aware of.</p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</div>

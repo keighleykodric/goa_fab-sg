@@ -57,52 +57,11 @@
     -moz-box-shadow:0 3px 5px -4px #000;
     box-shadow:0 3px 5px -4px #000
 }
-#slideout.filterStick,
-#journey.journeyStick {
-    position:fixed;
-    top:107px;
-    z-index:999
-}
-#slideout.filterStick {
-    z-index:100;
-    background:#fff
-}
-#slideout.filterStick+div+article {
-    margin-left:251px
-}
-.filterClose #journey.journeyStick {
-    width:calc(100% - 45px)
-}
-.selected .toolbox-title {
-    background:#fff;
-    border-top:1px solid #fff;
-    border-bottom:1px solid #fff
-}
-.toolbox-title:hover {
-    background:#f1f1f1
-}
-.selected .toolbox-title:hover {
-    background:transparent
-}
-.selected .toolbox-internallinks .toolbox-title:hover {
-    background:#54657e
-}
-#slideout.filterStick.sideSticky,
-#journey.journeyStick.sideSticky {
-    top:245px!important;
-    transition:all .3s ease-in-out
-}
-.subContent.filterClose {
-    width:calc(100% + 210px);
-    left:-210px!important;
-    transition:all .3s ease
-}
-.leftContent {
-    clear:both;
-    padding:10px;
-    padding-top:20px;
-    height:100%
-}
+
+
+
+
+
 body {
     direction:ltr
 }

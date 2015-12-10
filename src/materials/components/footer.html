@@ -1,0 +1,37 @@
+---
+notes: |
+  Footer component.
+---
+<div class="home">
+<footer class="mini-footer">
+    <div class="mini-footer__left-section">
+        <ul class="mini-footer__link-list desktop-only">
+            <li><a href="/using-this-site/accessibility/">Accessibility</a></li>
+            <li><a href="/using-this-site/copyright-disclaimer/">Disclaimer</a></li>
+            <li><a href="/using-this-site/privacy/">Privacy</a></li>
+            <li>© Copyright <script>document.write(new Date().getFullYear())</script>2015</li>
+        </ul>
+        <div class="mobile-only">
+            <button id="menu-top-left" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" for="menu-top-left">
+                <li class="mdl-menu__item"><a href="/using-this-site/accessibility/">Accessibility</a></li>
+                <li class="mdl-menu__item"><a href="/using-this-site/copyright-disclaimer/">Disclaimer</a></li>
+                <li class="mdl-menu__item"><a href="/using-this-site/privacy/">Privacy</a></li>
+                <li class="mdl-menu__item"><a target="_blank" href="http://alberta.ca">Alberta.ca</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mini-footer__right-section">
+        <ul class="social-links">
+            <li class="desktop-only alberta-ca"><a target="_blank" href="http://alberta.ca">Alberta.ca</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/" title="YouTube"><i class="fa fa-youtube"></i></a></li>
+            <li class="mobile-only">© Copyright <script>document.write(new Date().getFullYear())</script>2015</li>
+        </ul>
+    </div>
+</footer>
+</div>

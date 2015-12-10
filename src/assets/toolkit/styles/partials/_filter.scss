@@ -60,12 +60,15 @@ span.filterTitle {
 .onoffswitch-inner:after{content:"OFF";padding-right:5px;background-color:#f1f1f1;color:#adb9ca;text-align:right}.onoffswitch-switch{display:block;width:25px;margin:3px;background:#a9b7c7;position:absolute;top:0;bottom:0;right:29px;border-radius:3px;transition:all .3s ease-in 0}.onoffswitch-checkbox:checked+.onoffswitch-label{border:1px solid #8091a5}.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner{margin-left:0}
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch{right:0;background-color:#8091a5}
 ul.categories li {
-    width: 200px;
+    width: 220px;
     margin: 2px 0;
-    font-size: 12px;
     background: #f9fafb;
     border-radius: 3px;
     padding: 4px 2%;
+}
+ul, ol {
+    font-size: 14px;
+    line-height: 24px;
 }
 ul.categories {
     list-style: none;
@@ -73,18 +76,20 @@ ul.categories {
     padding: 0;
     margin: 0;
 }
+.category-title {
+    margin-left: 0;
+    color: #8493a8;
+    line-height: 14px;
+    display: inline-block;
+}
+
+
 
 .toggleBtn .category-title {
     width: 110px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-.category-title {
-    margin-left: 0;
-    color: #a9b7c7;
-    line-height: 14px;
-    display: inline-block;
 }
 .categories .mdl-badge {
     margin-right: 20px;
@@ -103,8 +108,8 @@ ul.categories {
 }
 }
 .filterCategories, .filterPersona {
-    padding: 0 2%;
-    width: 200px;
+
+    width: 250px;
     font-size: 10px;
     overflow: auto;
 }
@@ -137,4 +142,98 @@ ul.categories {
 
 .toggle {
     float: right;
+}
+
+
+.dd-selected{
+    background-color: #00ADD8;
+    color:white;
+}
+
+.persona-dd {
+    margin-bottom: 20px;
+}
+.slide-out-div .languageItem {
+    float: left;
+}
+.English {
+    display: inline-block;
+}
+
+span.clear-filters a {
+    font-size: 11px;
+    padding-right: 10px;
+    color: #c49c46;
+}
+span.clear-filters {
+    display: inline-block;
+    float: right;
+}
+.slide-out-div {
+    padding: 0;
+    height: 100%;
+    display: block;
+}
+.toggleBtn {
+    cursor: pointer;
+}
+#click {
+    right: 0;
+    position: relative;
+    display: block!important;
+    overflow: visible;
+}
+
+
+
+
+#slideout{
+    z-index: 100;
+    background: #fff;
+}
+#slideout.filterStick,
+#journey.journeyStick {
+    position:fixed;
+    top:107px;
+    z-index:999
+}
+#slideout.filterStick {
+    z-index:100;
+    background:#fff
+}
+#slideout.filterStick+div+article {
+    margin-left:251px
+}
+.filterClose #journey.journeyStick {
+    width:calc(100% - 45px)
+}
+.selected .toolbox-title {
+    background:#fff;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff
+}
+.toolbox-title:hover {
+    background:#f1f1f1
+}
+.selected .toolbox-title:hover {
+    background:transparent
+}
+.selected .toolbox-internallinks .toolbox-title:hover {
+    background:#54657e
+}
+#slideout.filterStick.sideSticky,
+#journey.journeyStick.sideSticky {
+    top:245px!important;
+    transition:all .3s ease-in-out
+}
+.subContent.filterClose {
+    width:calc(100% + 210px);
+    left:-210px!important;
+    transition:all .3s ease
+}
+.leftContent {
+    clear:both;
+    padding:10px;
+    padding-top:20px;
+    height:100%
 }

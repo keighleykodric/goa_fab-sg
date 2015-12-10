@@ -85,22 +85,6 @@ HOMEPAGE Styles
 
 
 
-.filterClose .tileContent {
-  width:24%
-}
-.tileContent {
-  float:left;
-  width:32%;
-  margin:0 .5% 1%;
-  position:relative;
-  background-color:#fff;
-  position:relative;
-  height:229px;
-  overflow:hidden;
-  cursor:pointer;
-  border-radius:0;
-  box-shadow:0 2px 4px 0 rgba(0, 0, 0, .15)
-}
 #home.card {
   width:325px;
   height:380px;
@@ -286,9 +270,11 @@ HOMEPAGE Styles
 
 .minister-image {
     background-color: #64574d;
+    width:100%;
 }
 .minister-image img {
     height: 100%;
+    max-width:200px;
 }
 .minister-title {
   height: 100%;

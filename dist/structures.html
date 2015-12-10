@@ -14,6 +14,10 @@
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
 	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="assets/toolkit/scripts/test.js"></script>
+
+
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -70,110 +74,95 @@
 				</li>
 		
 				<li>
-					<a href="atoms.html" class="f-menu__heading">Atoms</a>
+					<a href="base.html" class="f-menu__heading">Base</a>
 					<ul>
 						<li>
-							<a href="atoms.html#badge-filters">Badge Filters</a>
+							<a href="base.html#badges">Badges</a>
 						</li>
 						<li>
-							<a href="atoms.html#badge-toolboxes">Badge Toolboxes</a>
+							<a href="base.html#blockquotes">Blockquotes</a>
 						</li>
 						<li>
-							<a href="atoms.html#blockquotes">Blockquotes</a>
+							<a href="base.html#buttons">Buttons</a>
 						</li>
 						<li>
-							<a href="atoms.html#buttons">Buttons</a>
+							<a href="base.html#checkboxes">Checkboxes</a>
 						</li>
 						<li>
-							<a href="atoms.html#checkboxes">Checkboxes</a>
+							<a href="base.html#inputs">Inputs</a>
 						</li>
 						<li>
-							<a href="atoms.html#inputs">Inputs</a>
+							<a href="base.html#list-items">List Items</a>
 						</li>
 						<li>
-							<a href="atoms.html#list-items">List Items</a>
+							<a href="base.html#loading">Loading</a>
 						</li>
 						<li>
-							<a href="atoms.html#loading">Loading</a>
+							<a href="base.html#modal-description">Modal Description</a>
 						</li>
 						<li>
-							<a href="atoms.html#modal-description">Modal Description</a>
+							<a href="base.html#paragraph">Paragraph</a>
 						</li>
 						<li>
-							<a href="atoms.html#paragraph">Paragraph</a>
+							<a href="base.html#radio">Radio</a>
 						</li>
 						<li>
-							<a href="atoms.html#radio">Radio</a>
+							<a href="base.html#switches">Switches</a>
 						</li>
 						<li>
-							<a href="atoms.html#select">Select</a>
-						</li>
-						<li>
-							<a href="atoms.html#switch">Switch</a>
-						</li>
-						<li>
-							<a href="atoms.html#tags">Tags</a>
-						</li>
-						<li>
-							<a href="atoms.html#toggle-switch">Toggle Switch</a>
+							<a href="base.html#tags">Tags</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="molecules.html" class="f-menu__heading">Molecules</a>
+					<a href="components.html" class="f-menu__heading">Components</a>
 					<ul>
 						<li>
-							<a href="molecules.html#accordian">Accordian</a>
+							<a href="components.html#accordian">Accordian</a>
 						</li>
 						<li>
-							<a href="molecules.html#forms">Forms</a>
+							<a href="components.html#boxes">Boxes</a>
 						</li>
 						<li>
-							<a href="molecules.html#home-cards">Home Cards</a>
+							<a href="components.html#cards">Cards</a>
 						</li>
 						<li>
-							<a href="molecules.html#lists">Lists</a>
+							<a href="components.html#footer">Footer</a>
 						</li>
 						<li>
-							<a href="molecules.html#modal">Modal</a>
+							<a href="components.html#forms">Forms</a>
 						</li>
 						<li>
-							<a href="molecules.html#slider">Slider</a>
+							<a href="components.html#header">Header</a>
 						</li>
 						<li>
-							<a href="molecules.html#table">Table</a>
+							<a href="components.html#lists">Lists</a>
 						</li>
 						<li>
-							<a href="molecules.html#tabs">Tabs</a>
+							<a href="components.html#slider">Slider</a>
 						</li>
 						<li>
-							<a href="molecules.html#toolboxes">Toolboxes</a>
+							<a href="components.html#table">Table</a>
+						</li>
+						<li>
+							<a href="components.html#tabs">Tabs</a>
+						</li>
+						<li>
+							<a href="components.html#timeline">Timeline</a>
+						</li>
+						<li>
+							<a href="components.html#toolboxes">Toolboxes</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="organisms.html" class="f-menu__heading">Organisms</a>
+					<a href="structures.html" class="f-menu__heading">Structures</a>
 					<ul>
 						<li>
-							<a href="organisms.html#cards">Cards</a>
+							<a href="structures.html#modals">Modals</a>
 						</li>
 						<li>
-							<a href="organisms.html#filters">Filters</a>
-						</li>
-						<li>
-							<a href="organisms.html#footer">Footer</a>
-						</li>
-						<li>
-							<a href="organisms.html#header">Header</a>
-						</li>
-						<li>
-							<a href="organisms.html#home-sidebar">Home Sidebar</a>
-						</li>
-						<li>
-							<a href="organisms.html#modals">Modals</a>
-						</li>
-						<li>
-							<a href="organisms.html#timeline">Timeline</a>
+							<a href="structures.html#sidebars">Sidebars</a>
 						</li>
 					</ul>
 				</li>
@@ -218,6 +207,1251 @@
 <p>In interfaces, molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom can combine them together to form a search form molecule.</p>
 
 
+<div class="f-item-group" id="modals">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Modals</h2>
+	</div>
+		<div class="f-item-group" id="modals.default">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Default</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes" >
+	<p>Modal template.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-modal">
+	<div class="mdl-layout__header is-casting-shadow">
+		<div class="mdl-layout__header-row mdl-modal__title">
+			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+		</div>
+
+		<div class="dialogToolbox">
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect ng-hide">
+				<span class="lang-toggle-fr">FR</span>
+				<!-- <span class="lang-toggle-en ng-hide" >EN</span> -->
+				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+			</button>
+
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+			<button class="close-button mdl-js-button mdl-button--icon">
+				<i class="material-icons">close</i>
+			</button>
+		</div>
+		<div class="templateFaqsContainer ng-scope">
+			<div class="dialogTopics">
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18920" class="ng-binding subTopic selected">
+          Sample SubTopic
+          </a>
+				</div>
+
+				<div id="subTopics" class="ng-scope">
+					<a href="#" id="dialogSubTopic18956" class="ng-binding subTopic">
+          Sample Alternate SubTopic
+          </a>
+				</div>
+			</div>
+
+			<div class="dialogContent">
+
+			</div>
+			<div class="dialogTool">
+				<div class="toolboxItemContainer">
+					<div class="toolboxItem ng-scope">
+						<div class="selected">
+							<a href="#">
+								<div class="toolbox-faq ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                    <span class="tool" title="Faq">
+                      <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                    </span> FAQs
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-resources ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem">
+						<div class="toolbox-content ">
+							<span class="toolbox-title  " style="font-weight: bold">
+                <span class="tool"  title="Internal Link">
+                  <i class="material-icons mdl-badge" >contacts</i>
+                </span> Contacts
+							</span>
+							<div class="toolbox-content toolbox-content-contact">
+								<div class="toolbox-link-display">
+									<div class="toolbox-link-title">
+										<div class="toolbox-preview Preview1-18071">
+											<span class="tool toolbox-icon">
+                        <i class="material-icons">perm_contact_calendar</i>
+                      </span>
+											<a href="#" class=" ">Business Intelligence</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-event ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<a href="#">
+							<div class="toolbox-poll ng-scope">
+								<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="sideBottom">
+						<div class="toolboxItem ">
+							<div>
+								<div class="toolbox-news">
+									<span class="toolbox-title" style="font-weight: bold">
+                            <span class="tool" title="News">
+                                <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                            </span> News
+									</span>
+									<a href="#">
+										<div class="toolbox-content toolbox-content-news">
+
+											<div class="toolbox-preview Preview1-18918" style="display: block;">
+												<div class="toolbox-news-details">
+													<span class="toolbox-news-headline ">
+                                            Bulletin Three - Priority
+                                          </span>
+													<div class="toolbox-news-description ">
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="toolboxItem">
+							<div>
+								<div class="toolbox-internallinks ">
+									<span class="toolbox-title" style="font-weight: bold">
+                    <span class="tool"  title="Internal Link">
+                      <i class="material-icons mdl-badge" >link</i>
+                    </span> Related Content
+									</span>
+									<div class="toolbox-content toolbox-content-link">
+										<div class="toolbox-link-display">
+											<div class="toolbox-link-title">
+												<div class="toolbox-preview Preview1-18071">
+													<span class="tool toolbox-icon">
+                             <i class="material-icons">link</i>
+                            </span>
+													<a href="#" class="">Business Intelligence</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
+	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title&quot;&gt;
+			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;dialogToolbox&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-js-ripple-effect ng-hide&quot;&gt;
+				&lt;span class=&quot;lang-toggle-fr&quot;&gt;FR&lt;/span&gt;
+				&lt;!-- &lt;span class=&quot;lang-toggle-en ng-hide&quot; &gt;EN&lt;/span&gt; --&gt;
+				&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;/button&gt;
+
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+			&lt;button class=&quot;close-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;templateFaqsContainer ng-scope&quot;&gt;
+			&lt;div class=&quot;dialogTopics&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18920&quot; class=&quot;ng-binding subTopic selected&quot;&gt;
+          Sample SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div id=&quot;subTopics&quot; class=&quot;ng-scope&quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic18956&quot; class=&quot;ng-binding subTopic&quot;&gt;
+          Sample Alternate SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;dialogContent&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;dialogTool&quot;&gt;
+				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div class=&quot;selected&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                    &lt;/span&gt; FAQs
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem&quot;&gt;
+						&lt;div class=&quot;toolbox-content &quot;&gt;
+							&lt;span class=&quot;toolbox-title  &quot; style=&quot;font-weight: bold&quot;&gt;
+                &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                  &lt;i class=&quot;material-icons mdl-badge&quot; &gt;contacts&lt;/i&gt;
+                &lt;/span&gt; Contacts
+							&lt;/span&gt;
+							&lt;div class=&quot;toolbox-content toolbox-content-contact&quot;&gt;
+								&lt;div class=&quot;toolbox-link-display&quot;&gt;
+									&lt;div class=&quot;toolbox-link-title&quot;&gt;
+										&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+											&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                        &lt;i class=&quot;material-icons&quot;&gt;perm_contact_calendar&lt;/i&gt;
+                      &lt;/span&gt;
+											&lt;a href=&quot;#&quot; class=&quot; &quot;&gt;Business Intelligence&lt;/a&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;
+							&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+								&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;sideBottom&quot;&gt;
+						&lt;div class=&quot;toolboxItem &quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-news&quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                                &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                            &lt;/span&gt; News
+									&lt;/span&gt;
+									&lt;a href=&quot;#&quot;&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+
+											&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+												&lt;div class=&quot;toolbox-news-details&quot;&gt;
+													&lt;span class=&quot;toolbox-news-headline &quot;&gt;
+                                            Bulletin Three - Priority
+                                          &lt;/span&gt;
+													&lt;div class=&quot;toolbox-news-description &quot;&gt;
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;toolboxItem&quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-internallinks &quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                    &lt;/span&gt; Related Content
+									&lt;/span&gt;
+									&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+										&lt;div class=&quot;toolbox-link-display&quot;&gt;
+											&lt;div class=&quot;toolbox-link-title&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+													&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                             &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                            &lt;/span&gt;
+													&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Business Intelligence&lt;/a&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="modals.news">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">News</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes" >
+	<p>News Modal template.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-modal">
+	<div class="mdl-layout__header is-casting-shadow">
+		<div class="mdl-layout__header-row mdl-modal__title newsDialog">
+			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+		</div>
+
+		<div class="dialogToolbox">
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">close</i>
+			</button>
+		</div>
+
+		<div class="templateFaqsContainer  ">
+			<div class="dialogTopics newsDialog">
+				<div id="subTopics" class=" ">
+					<a href="#" id="dialogSubTopic" class=" subTopic selected newsDialog">
+          Sample SubTopic
+          </a>
+				</div>
+
+				<div id="subTopics" class=" ">
+					<a href="#" id="dialogSubTopic" class=" subTopic">
+          Sample Alternate SubTopic
+          </a>
+				</div>
+			</div>
+
+			<div class="dialogContent">
+
+			</div>
+			<div class="dialogTool">
+				<div class="toolboxItemContainer">
+					<div class="toolboxItem ng-scope">
+						<div class="selected">
+							<a href="#">
+								<div class="toolbox-faq ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                    <span class="tool" title="Faq">
+                      <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                    </span> FAQs
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-resources ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-event ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<a href="#">
+							<div class="toolbox-poll ng-scope">
+								<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="sideBottom">
+						<div class="toolboxItem ">
+							<div>
+								<div class="toolbox-news">
+									<span class="toolbox-title" style="font-weight: bold">
+                            <span class="tool" title="News">
+                                <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                            </span> News
+									</span>
+									<a href="#">
+										<div class="toolbox-content toolbox-content-news">
+
+											<div class="toolbox-preview Preview1-18918" style="display: block;">
+												<div class="toolbox-news-details">
+													<span class="toolbox-news-headline ">
+                                            Bulletin Three - Priority
+                                          </span>
+													<div class="toolbox-news-description ">
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="toolboxItem">
+							<div>
+								<div class="toolbox-internallinks ">
+									<span class="toolbox-title" style="font-weight: bold">
+                    <span class="tool"  title="Internal Link">
+                      <i class="material-icons mdl-badge" >link</i>
+                    </span> Related Content
+									</span>
+									<div class="toolbox-content toolbox-content-link">
+										<div class="toolbox-link-display">
+											<div class="toolbox-link-title">
+												<div class="toolbox-preview Preview1-18071">
+													<span class="tool toolbox-icon">
+                             <i class="material-icons">link</i>
+                            </span>
+													<a href="#" class="">Business Intelligence</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
+	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title newsDialog&quot;&gt;
+			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;dialogToolbox&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;templateFaqsContainer  &quot;&gt;
+			&lt;div class=&quot;dialogTopics newsDialog&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot; &quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic&quot; class=&quot; subTopic selected newsDialog&quot;&gt;
+          Sample SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div id=&quot;subTopics&quot; class=&quot; &quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic&quot; class=&quot; subTopic&quot;&gt;
+          Sample Alternate SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;dialogContent&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;dialogTool&quot;&gt;
+				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div class=&quot;selected&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                    &lt;/span&gt; FAQs
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;
+							&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+								&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;sideBottom&quot;&gt;
+						&lt;div class=&quot;toolboxItem &quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-news&quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                                &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                            &lt;/span&gt; News
+									&lt;/span&gt;
+									&lt;a href=&quot;#&quot;&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+
+											&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+												&lt;div class=&quot;toolbox-news-details&quot;&gt;
+													&lt;span class=&quot;toolbox-news-headline &quot;&gt;
+                                            Bulletin Three - Priority
+                                          &lt;/span&gt;
+													&lt;div class=&quot;toolbox-news-description &quot;&gt;
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;toolboxItem&quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-internallinks &quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                    &lt;/span&gt; Related Content
+									&lt;/span&gt;
+									&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+										&lt;div class=&quot;toolbox-link-display&quot;&gt;
+											&lt;div class=&quot;toolbox-link-title&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+													&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                             &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                            &lt;/span&gt;
+													&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Business Intelligence&lt;/a&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="modals.promo">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Promo</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes" >
+	<p>Promo Modal template.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="mdl-modal">
+	<div class="mdl-layout__header is-casting-shadow">
+		<div class="mdl-layout__header-row mdl-modal__title promoDialog">
+			<h2 class="topic"><span class="ng-binding">iomer Jeff Test</span></h2>
+		</div>
+
+		<div class="dialogToolbox">
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">share</i>
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--icon">
+				<i class="material-icons white">close</i>
+			</button>
+		</div>
+
+		<div class="templateFaqsContainer ">
+			<div class="dialogTopics promoDialog">
+				<div id="subTopics" class="">
+					<a href="#subTopics" id="dialogSubTopic" class="subTopic selected promoDialog">
+          Sample SubTopic
+          </a>
+				</div>
+
+				<div id="subTopics" class=" ">
+					<a href="#" id="dialogSubTopic" class="subTopic">
+          Sample Alternate SubTopic
+          </a>
+				</div>
+			</div>
+
+			<div class="dialogContent">
+
+			</div>
+			<div class="dialogTool">
+				<div class="toolboxItemContainer">
+					<div class="toolboxItem ng-scope">
+						<div class="selected">
+							<a href="#">
+								<div class="toolbox-faq ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                    <span class="tool" title="Faq">
+                      <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+                    </span> FAQs
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-resources ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Document">
+                          <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                        </span> Documents
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<div>
+							<a href="#">
+								<div class="toolbox-event ng-scope">
+									<span class="toolbox-title ng-binding" style="font-weight: bold">
+                        <span class="tool"  title="Events">
+                          <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                        </span> Calendar
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="toolboxItem ng-scope">
+						<a href="#">
+							<div class="toolbox-poll ng-scope">
+								<span class="toolbox-title ng-binding" style="font-weight: bold">
+                  <span class="tool"  title="Poll">
+                    <i class="material-icons mdl-badge" >poll</i>
+                  </span> Poll
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="sideBottom">
+						<div class="toolboxItem ">
+							<div>
+								<div class="toolbox-news">
+									<span class="toolbox-title" style="font-weight: bold">
+                            <span class="tool" title="News">
+                                <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                            </span> News
+									</span>
+									<a href="#">
+										<div class="toolbox-content toolbox-content-news">
+
+											<div class="toolbox-preview Preview1-18918" style="display: block;">
+												<div class="toolbox-news-details">
+													<span class="toolbox-news-headline ">
+                                            Bulletin Three - Priority
+                                          </span>
+													<div class="toolbox-news-description ">
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="toolboxItem">
+							<div>
+								<div class="toolbox-internallinks ">
+									<span class="toolbox-title" style="font-weight: bold">
+                    <span class="tool"  title="Internal Link">
+                      <i class="material-icons mdl-badge" >link</i>
+                    </span> Related Content
+									</span>
+									<div class="toolbox-content toolbox-content-link">
+										<div class="toolbox-link-display">
+											<div class="toolbox-link-title">
+												<div class="toolbox-preview Preview1-18071">
+													<span class="tool toolbox-icon">
+                             <i class="material-icons">link</i>
+                            </span>
+													<a href="#" class="">Business Intelligence</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <button title="Close (Esc)" type="button" class="mfp-close">×</button> -->
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;mdl-modal&quot;&gt;
+	&lt;div class=&quot;mdl-layout__header is-casting-shadow&quot;&gt;
+		&lt;div class=&quot;mdl-layout__header-row mdl-modal__title promoDialog&quot;&gt;
+			&lt;h2 class=&quot;topic&quot;&gt;&lt;span class=&quot;ng-binding&quot;&gt;iomer Jeff Test&lt;/span&gt;&lt;/h2&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;dialogToolbox&quot;&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;share&lt;/i&gt;
+			&lt;/button&gt;
+			&lt;button class=&quot;mdl-button mdl-js-button mdl-button--icon&quot;&gt;
+				&lt;i class=&quot;material-icons white&quot;&gt;close&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;templateFaqsContainer &quot;&gt;
+			&lt;div class=&quot;dialogTopics promoDialog&quot;&gt;
+				&lt;div id=&quot;subTopics&quot; class=&quot;&quot;&gt;
+					&lt;a href=&quot;#subTopics&quot; id=&quot;dialogSubTopic&quot; class=&quot;subTopic selected promoDialog&quot;&gt;
+          Sample SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div id=&quot;subTopics&quot; class=&quot; &quot;&gt;
+					&lt;a href=&quot;#&quot; id=&quot;dialogSubTopic&quot; class=&quot;subTopic&quot;&gt;
+          Sample Alternate SubTopic
+          &lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div class=&quot;dialogContent&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class=&quot;dialogTool&quot;&gt;
+				&lt;div class=&quot;toolboxItemContainer&quot;&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div class=&quot;selected&quot;&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+                    &lt;/span&gt; FAQs
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                        &lt;/span&gt; Documents
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;div&gt;
+							&lt;a href=&quot;#&quot;&gt;
+								&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
+									&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                        &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
+                          &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                        &lt;/span&gt; Calendar
+									&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;toolboxItem ng-scope&quot;&gt;
+						&lt;a href=&quot;#&quot;&gt;
+							&lt;div class=&quot;toolbox-poll ng-scope&quot;&gt;
+								&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
+                  &lt;span class=&quot;tool&quot;  title=&quot;Poll&quot;&gt;
+                    &lt;i class=&quot;material-icons mdl-badge&quot; &gt;poll&lt;/i&gt;
+                  &lt;/span&gt; Poll
+								&lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;sideBottom&quot;&gt;
+						&lt;div class=&quot;toolboxItem &quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-news&quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                            &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
+                                &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                            &lt;/span&gt; News
+									&lt;/span&gt;
+									&lt;a href=&quot;#&quot;&gt;
+										&lt;div class=&quot;toolbox-content toolbox-content-news&quot;&gt;
+
+											&lt;div class=&quot;toolbox-preview Preview1-18918&quot; style=&quot;display: block;&quot;&gt;
+												&lt;div class=&quot;toolbox-news-details&quot;&gt;
+													&lt;span class=&quot;toolbox-news-headline &quot;&gt;
+                                            Bulletin Three - Priority
+                                          &lt;/span&gt;
+													&lt;div class=&quot;toolbox-news-description &quot;&gt;
+														Bulletin Three - Priority Bulletin Three - Priority Bulletin Three
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/a&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;toolboxItem&quot;&gt;
+							&lt;div&gt;
+								&lt;div class=&quot;toolbox-internallinks &quot;&gt;
+									&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
+                    &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
+                      &lt;i class=&quot;material-icons mdl-badge&quot; &gt;link&lt;/i&gt;
+                    &lt;/span&gt; Related Content
+									&lt;/span&gt;
+									&lt;div class=&quot;toolbox-content toolbox-content-link&quot;&gt;
+										&lt;div class=&quot;toolbox-link-display&quot;&gt;
+											&lt;div class=&quot;toolbox-link-title&quot;&gt;
+												&lt;div class=&quot;toolbox-preview Preview1-18071&quot;&gt;
+													&lt;span class=&quot;tool toolbox-icon&quot;&gt;
+                             &lt;i class=&quot;material-icons&quot;&gt;link&lt;/i&gt;
+                            &lt;/span&gt;
+													&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Business Intelligence&lt;/a&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;!-- &lt;button title=&quot;Close (Esc)&quot; type=&quot;button&quot; class=&quot;mfp-close&quot;&gt;×&lt;/button&gt; --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="sidebars">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Sidebars</h2>
+	</div>
+		<div class="f-item-group" id="sidebars.filter-panel">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Filter Panel</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes" >
+	<p>Filter sidebar.</p>
+
+</div>
+<div class="f-item-preview">
+	<div id="slideout" style="left: 0px;">
+	<div id="containclickme">
+		<div class="toggleFilter material-icons" id="click" ng-click="ToggleSideFilters()" style="display: none;">
+			<i class="material-icons">chevron_left</i>
+			<span class="filterTitle">FILTER</span>
+		</div>
+	</div>
+	<div class="leftContent">
+		<script>
+			$(document).ready(function() {
+				$('.dd-menu').click(function() {
+					$(this).toggleClass("dd-open");
+				});
+			});
+		</script>
+		<div class="slide-out-div">
+			<div class="persona-dd">
+				<span class="languageItem English" style="display: block;">Personalize</span>
+				<span class="languageItem French" style="display: none;">Personnaliser</span>
+				<select class="personaList ng-pristine ng-untouched ng-valid" ng-model="searchFilter.Persona" ng-disabled="!filterToggle" ng-options="persona.Name as (persona.DisplayName + &quot; (&quot; + persona.Count  + &quot;)&quot;) for persona in personaList" ng-change="TogglePersona()">
+					<option value="0" selected="selected" label="Everyone (6)">Everyone (6)</option>
+					<option value="1" label="Parent (3)">Parent (3)</option>
+					<option value="2" label="Student (1)">Student (1)</option>
+					<option value="3" label="Teacher (1)">Teacher (1)</option>
+					<option value="4" label="School Administrator (3)">School Administrator (3)</option>
+				</select>
+			</div>
+			<span class="languageItem English" style="display: block;">Categories</span>
+			<span class="languageItem French" style="display: none;">Catégories</span>
+			<span class="clear-filters"><a href="javascript:void(0)" ng-click="ClearCategoryFilter()">clear filters</a></span>
+			<div class="filterCategories">
+				<ul class="categories">
+					<li class="toggleBtn ng-scope">
+						<span class="category-title ng-binding">
+              Curriculum
+            </span>
+						<div class="toggle">
+							<div class="onoffswitch">
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Curriculum" ng-checked="isCategorySelected()">
+								<label class="onoffswitch-label" for="myonoffswitch">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</li>
+					<!-- end ngRepeat: category in categoryList -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;slideout&quot; style=&quot;left: 0px;&quot;&gt;
+	&lt;div id=&quot;containclickme&quot;&gt;
+		&lt;div class=&quot;toggleFilter material-icons&quot; id=&quot;click&quot; ng-click=&quot;ToggleSideFilters()&quot; style=&quot;display: none;&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;chevron_left&lt;/i&gt;
+			&lt;span class=&quot;filterTitle&quot;&gt;FILTER&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;leftContent&quot;&gt;
+		&lt;script&gt;
+			$(document).ready(function() {
+				$(&#x27;.dd-menu&#x27;).click(function() {
+					$(this).toggleClass(&quot;dd-open&quot;);
+				});
+			});
+		&lt;/script&gt;
+		&lt;div class=&quot;slide-out-div&quot;&gt;
+			&lt;div class=&quot;persona-dd&quot;&gt;
+				&lt;span class=&quot;languageItem English&quot; style=&quot;display: block;&quot;&gt;Personalize&lt;/span&gt;
+				&lt;span class=&quot;languageItem French&quot; style=&quot;display: none;&quot;&gt;Personnaliser&lt;/span&gt;
+				&lt;select class=&quot;personaList ng-pristine ng-untouched ng-valid&quot; ng-model=&quot;searchFilter.Persona&quot; ng-disabled=&quot;!filterToggle&quot; ng-options=&quot;persona.Name as (persona.DisplayName + &amp;quot; (&amp;quot; + persona.Count  + &amp;quot;)&amp;quot;) for persona in personaList&quot; ng-change=&quot;TogglePersona()&quot;&gt;
+					&lt;option value=&quot;0&quot; selected=&quot;selected&quot; label=&quot;Everyone (6)&quot;&gt;Everyone (6)&lt;/option&gt;
+					&lt;option value=&quot;1&quot; label=&quot;Parent (3)&quot;&gt;Parent (3)&lt;/option&gt;
+					&lt;option value=&quot;2&quot; label=&quot;Student (1)&quot;&gt;Student (1)&lt;/option&gt;
+					&lt;option value=&quot;3&quot; label=&quot;Teacher (1)&quot;&gt;Teacher (1)&lt;/option&gt;
+					&lt;option value=&quot;4&quot; label=&quot;School Administrator (3)&quot;&gt;School Administrator (3)&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+			&lt;span class=&quot;languageItem English&quot; style=&quot;display: block;&quot;&gt;Categories&lt;/span&gt;
+			&lt;span class=&quot;languageItem French&quot; style=&quot;display: none;&quot;&gt;Catégories&lt;/span&gt;
+			&lt;span class=&quot;clear-filters&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot; ng-click=&quot;ClearCategoryFilter()&quot;&gt;clear filters&lt;/a&gt;&lt;/span&gt;
+			&lt;div class=&quot;filterCategories&quot;&gt;
+				&lt;ul class=&quot;categories&quot;&gt;
+					&lt;li class=&quot;toggleBtn ng-scope&quot;&gt;
+						&lt;span class=&quot;category-title ng-binding&quot;&gt;
+              Curriculum
+            &lt;/span&gt;
+						&lt;div class=&quot;toggle&quot;&gt;
+							&lt;div class=&quot;onoffswitch&quot;&gt;
+								&lt;input type=&quot;checkbox&quot; name=&quot;onoffswitch&quot; class=&quot;onoffswitch-checkbox&quot; id=&quot;category_Curriculum&quot; ng-checked=&quot;isCategorySelected()&quot;&gt;
+								&lt;label class=&quot;onoffswitch-label&quot; for=&quot;myonoffswitch&quot;&gt;
+									&lt;span class=&quot;onoffswitch-inner&quot;&gt;&lt;/span&gt;
+									&lt;span class=&quot;onoffswitch-switch&quot;&gt;&lt;/span&gt;
+								&lt;/label&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/li&gt;
+					&lt;!-- end ngRepeat: category in categoryList --&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="sidebars.homepage">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Homepage</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes" >
+	<p>Footer component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div id="container" class="masonry home">
+	<div class="spacer"></div>
+	<div class="mainContent resizeable">
+		<article>
+
+			<div class="masGrid"></div>
+			<div class="rightSidebar">
+				<div class="welcome">
+					<a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
+						<div class="minister-image">
+							<img src="assets/toolkit/images/david-eggen.png" src="/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
+						<div class="minister-title">
+							<p>
+								<span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
+								<span style="font-weight:400; font-size:14px">Minister of Education</span>
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="news">
+					<h5>News</h5>
+					<div class="newsItem">
+						<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+							<h4 class="newsHeadline">Bulletin Two</h4>
+						</a>
+					</div>
+					<div class="newsItem">
+						<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+							<h4 class="newsHeadline">Bulletin Three - Priority</h4>
+						</a>
+					</div>
+					<div class="newsItem">
+						<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+							<h4 class="newsHeadline">Bulletin Four</h4>
+						</a>
+					</div>
+					<div class="newsItem">
+						<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
+							<h4 class="newsHeadline">As good as it gets</h4>
+						</a>
+					</div>
+					<a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;container&quot; class=&quot;masonry home&quot;&gt;
+	&lt;div class=&quot;spacer&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;mainContent resizeable&quot;&gt;
+		&lt;article&gt;
+
+			&lt;div class=&quot;masGrid&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;rightSidebar&quot;&gt;
+				&lt;div class=&quot;welcome&quot;&gt;
+					&lt;a href=&quot;http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;amp;rnumber=29&amp;amp;leg=29&quot; target=&quot;_blank&quot;&gt;
+						&lt;div class=&quot;minister-image&quot;&gt;
+							&lt;img src=&quot;assets/toolkit/images/david-eggen.png&quot; src=&quot;/assets/toolkit/images/david-eggen.png&quot; alt=&quot;Education Minister&quot;&gt;&lt;/div&gt;
+						&lt;div class=&quot;minister-title&quot;&gt;
+							&lt;p&gt;
+								&lt;span style=&quot;font-weight:600; font-size:16px; display:block;&quot;&gt;Hon. David Eggen&lt;/span&gt;
+								&lt;span style=&quot;font-weight:400; font-size:14px&quot;&gt;Minister of Education&lt;/span&gt;
+							&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;news&quot;&gt;
+					&lt;h5&gt;News&lt;/h5&gt;
+					&lt;div class=&quot;newsItem&quot;&gt;
+						&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+							&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Two&lt;/h4&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;newsItem&quot;&gt;
+						&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+							&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Three - Priority&lt;/h4&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;newsItem&quot;&gt;
+						&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+							&lt;h4 class=&quot;newsHeadline&quot;&gt;Bulletin Four&lt;/h4&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;div class=&quot;newsItem&quot;&gt;
+						&lt;a class=&quot;newsLink&quot; href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;newsId=18935&quot;&gt;
+							&lt;h4 class=&quot;newsHeadline&quot;&gt;As good as it gets&lt;/h4&gt;
+						&lt;/a&gt;
+					&lt;/div&gt;
+					&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot; class=&quot;news-view-all-btn&quot;&gt;View All&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/article&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
 
 
 		</div>
@@ -229,11 +1463,8 @@
 	<script src="assets/toolkit/scripts/toolkit.js"></script>
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
 	<script src="http://albertaeducation.iomer.com/bundles/jQuery?v=-rxPBZJMcNNh-z3bQMn2Gypwqw5RsYt3WGNGHnT0Bvc1"></script>
-	<script>
-		document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
-			this.MaterialProgress.setProgress(44);
-		});
-	</script>
+
+
 	<!-- /toolkit scripts -->
 
 </body>
