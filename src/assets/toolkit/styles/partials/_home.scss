@@ -51,8 +51,7 @@ HOMEPAGE Styles
   transition:all ease .1s
 }
 .masonry.home .item:hover {
-  transform:translate3d(0, -2px, 0);
-  box-shadow:0 4px 4px rgba(0, 0, 0, .24), 0 0 4px rgba(0, 0, 0, .12), 0 6px 18px rgba(2, 98, 194, .12)
+    box-shadow: 0 4px 4px rgba(0,0,0,.24),0 0 4px rgba(0,0,0,.12),0 6px 18px rgba(2,98,194,.12);
 }
 .masonry.home .item.card.postSecondary,
 .masonry.home .item.card.administration {
@@ -188,22 +187,6 @@ HOMEPAGE Styles
 
 /*-----Home Card Journey Styles-----*/
 
-.earlyChildhood .home-link-box a:hover {
-  background:rgba(255, 255, 255, .5);
-  border-radius:10px
-}
-.elementary .home-link-box a:hover {
-  background:rgba(255, 255, 255, .5);
-  border-radius:10px
-}
-.juniorHigh .home-link-box a:hover {
-  background:rgba(255, 255, 255, .5);
-  border-radius:10px
-}
-.highSchool .home-link-box a:hover {
-  background:rgba(255, 255, 255, .5);
-  border-radius:10px
-}
 .card.earlyChildhood {
   background:#ec098c;/*
   margin-left:30px */
@@ -212,6 +195,14 @@ HOMEPAGE Styles
   background:url(../images/early-childhood.png) no-repeat center 20px;
   background-size:30%
 }
+.earlyChildhood .home-link-box a:hover {
+  background:rgba(255, 255, 255, .5);
+  border-radius:10px
+}
+.card.earlyChildhood:hover {
+    background: #d80a7f;
+}
+
 .card.elementary {
   background:#00afdc
 }
@@ -219,6 +210,14 @@ HOMEPAGE Styles
   background:url(../images/elementary.png) no-repeat center 20px;
   background-size:30%
 }
+.elementary .home-link-box a:hover {
+  background:rgba(255, 255, 255, .5);
+  border-radius:10px
+}
+.card.elementary:hover {
+    background: #00a3cc;
+}
+
 .card.juniorHigh {
   background:#ffd400
 }
@@ -226,6 +225,14 @@ HOMEPAGE Styles
   background:url(../images/juniorhigh.png) no-repeat center 20px;
   background-size:30%
 }
+.juniorHigh .home-link-box a:hover {
+  background:rgba(255, 255, 255, .5);
+  border-radius:10px
+}
+.card.juniorHigh:hover {
+    background: #f2c500;
+}
+
 .card.highSchool {
   background:#8cc63e;/*
   margin-left:30px */
@@ -234,6 +241,14 @@ HOMEPAGE Styles
   background:url(../images/highschool.png) no-repeat center 20px;
   background-size:30%
 }
+.highSchool .home-link-box a:hover {
+  background:rgba(255, 255, 255, .5);
+  border-radius:10px
+}
+.card.highSchool:hover {
+    background: #7daf36;
+}
+
 .card.postSecondary {
   background:#d06f19
 }
@@ -241,6 +256,10 @@ HOMEPAGE Styles
   background:url(../images/ministry.png) no-repeat center 20px;
   background-size:15%
 }
+.card.postSecondary:hover {
+    background: #af5f18;
+}
+
 .card.administration {
   background:#69737b
 }
@@ -248,7 +267,9 @@ HOMEPAGE Styles
   background:url(../images/school-system.png) no-repeat center 20px;
   background-size:15%
 }
-
+.card.administration:hover {
+    background: #51585e;
+}
 
 
 /*-----Home Sidebar Styles-----*/
@@ -268,24 +289,6 @@ HOMEPAGE Styles
   float: right;
 }
 
-.minister-image {
-    background-color: #64574d;
-    width:100%;
-}
-.minister-image img {
-    height: 100%;
-    max-width:200px;
-}
-.minister-title {
-  height: 100%;
-  background: #eaeef3;
-  padding-top: 10px;
-}
-.welcome {
-  overflow: hidden;
-  text-align: center;
-  background: #eaeef3;
-}
 .newsItem{
   padding:10px;
   background:#fff;
@@ -294,3 +297,84 @@ HOMEPAGE Styles
   .newsItem:nth-child(even){
     background:#fafafa
   }
+
+.newsLink {
+  cursor: pointer;
+  display: block;
+}
+.newsHeadline {
+  display: inline-block;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  max-width: 90%;
+}
+.news-date {
+    display: block;
+}
+.news-description {
+    font-size: 1em;
+    display: none;
+}
+.news h5 {
+    margin-bottom: 5px;
+}
+a.news-view-all-btn {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    font-size: 12px;
+    color: #00a8ce;
+    float:right;
+}
+.English {
+    display: inline-block;
+}
+.French {
+    display: none;
+}
+
+
+
+
+//------------ Meet the Minister welcome section-------------------------//
+
+.welcome {
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    padding: 5px;
+}
+.minister-image {
+    float: right;
+    width: 51%;
+    padding: 2%;
+}
+.minister-image img {
+    height: 100%;
+}
+.minister-title {
+    height: 100%;
+    background: #fff;
+    float: right;
+    width: 41%;
+    text-align: left;
+    padding: 0 2%;
+}
+.minister-title ul {
+    padding: 0 0 0 17px;
+    line-height: 15px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.minister-title a {
+    color: #5f6a72;
+    text-decoration: underline;
+}
+.minister-title a:hover {
+    color: #3c4348;
+    text-decoration: underline;
+}
+.home .welcome, .home .news {
+    margin: 15px;
+}

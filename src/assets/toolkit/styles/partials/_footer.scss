@@ -17,6 +17,7 @@
      padding: 2px 17px;
      color: #fff;
      background-color: #36424a;
+     height: 50px;
  }
 .mini-footer:hover {
     opacity:1;
@@ -49,22 +50,10 @@
     -ms-flex-order: 1;
     order: 1;
 }
-.mini-footer--link-list,
-.mini-footer__link-list {
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    flex-flow:row nowrap;
-    list-style:none;
-    margin:0;
-    padding:0
-}
-.mini-footer--link-list li,
-.mini-footer__link-list li {
-    margin-bottom:0;
-    margin-right:16px;
-    line-height:8px
+.mini-footer--link-list li, .mini-footer__link-list li {
+    margin-bottom: 0;
+    margin-right: 16px;
+    line-height: 36px;
 }
 .mini-footer--link-list a,
 .mini-footer__link-list a {
@@ -74,17 +63,32 @@
     white-space:nowrap;
     font-weight:500
 }
-
+.mini-footer--link-list, .mini-footer__link-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 /* Footer Social
  ------------------------------------------------------------- */
-
+ ul, ol {
+     font-size: 14px;
+     line-height: 24px;
+ }
  ul.social-links {
      list-style: none;
      line-height: normal;
      padding: 0;
      display: flex;
      flex-flow: row;
+     margin: 10px 0;
  }
  .social-links li {
      display: inline-block;

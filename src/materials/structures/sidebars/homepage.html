@@ -6,35 +6,50 @@ notes: |
     <div class="spacer"></div>
     <div class="mainContent resizeable">
 <article>
-
-    <div class="masGrid"></div>
-<div class="rightSidebar">
-  <div class="welcome">
-    <a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
-      <div class="minister-image">
-        <img src="assets/toolkit/images/david-eggen.png" src="{{baseurl}}/assets/toolkit/images/david-eggen.png" alt="Education Minister"></div>
-        <div class="minister-title">
+  <div class="masGrid"></div>
+    <div class="rightSidebar">
+      <div class="welcome">
         <p>
-          <span style="font-weight:600; font-size:16px; display:block;">Hon. David Eggen</span>
-          <span style="font-weight:400; font-size:14px">Minister of Education</span>
+          <span style="font-weight:600; font-size:16px; display:block;">
+            <span class="English">Minister David Eggen</span>
+            <span class="French">Ministre David Eggen</span>
+          </span>
         </p>
+        <div class="minister-image">
+          <a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">
+            <img src="assets/toolkit/images/david-eggen.png" alt="Education Minister" width="145" height="103">
+          </a>
+        </div>
+        <div class="minister-title">
+          <ul>
+            <li><a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_bio&amp;rnumber=29&amp;leg=29" target="_blank">Biography</a></li>
+            <li><a href="http://www.assembly.ab.ca/net/index.aspx?p=mla_contact&amp;rnumber=29&amp;leg=29" target="_blank">Contact</a></li>
+            <li><a href="http://www.servicealberta.gov.ab.ca/Minister_Expenses/exp_reports_archive.cfm?path=educ" target="_blank">Minister's office expenses</a></li>
+            <li><a href="http://alberta.ca/expenditure/expenditure.cfm?id=50" target="_blank">International travel expenses</a></li>
+          </ul>
+        </div>
       </div>
-    </a>
-  </div>
-  <div class="news">
-    <h5>News</h5>
-    {{#each news-list.links}}
-      {{#each this}}
-      <div class="newsItem">
-      	<a class="newsLink" href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;newsId=18935">
-      		<h4 class="newsHeadline">{{this}}</h4>
-      	</a>
+      <div class="news">
+        <a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">
+          <span class="English">View All</span>
+          <span class="French">Afficher Tout</span>
+        </a>
+        <h5>News</h5>
+        {{#each news-list.links}}
+          {{#each this}}
+          <div class="newsItem">
+      	    <a class="newsLink" href=" ">
+      		    <h4 class="newsHeadline">{{this}}</h4>
+		            <span class="news-description">
+			            The Government of Alberta has introduced an amendment to the Public Education Collective Bargaining Act to ensure school boards will be involved in each stage of the bargaining process.
+	        	    </span>
+	        	    <span class="news-date">December 08, 2015</span>
+            </a>
+          </div>
+          {{/each}}
+        {{/each}}
       </div>
-      {{/each}}
-    {{/each}}
-    <a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true" class="news-view-all-btn">View All</a>
-  </div>
-</div>
-</article>
+    </div>
+  </article>
 </div>
 </div>
