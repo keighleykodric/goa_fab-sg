@@ -133,6 +133,9 @@
 							<a href="components.html#header">Header</a>
 						</li>
 						<li>
+							<a href="components.html#header-menu">Header Menu</a>
+						</li>
+						<li>
 							<a href="components.html#lists">Lists</a>
 						</li>
 						<li>
@@ -994,6 +997,9 @@
 					<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
 				</button>
 			</div>
+			<div class="user-voice">
+				<a data-uv-trigger="" data-uv-scanned="true" id="uv-1"><i class="material-icons">feedback</i></a>
+			</div>
 		</div>
 	</div>
 </header>
@@ -1027,9 +1033,95 @@
 					&lt;span class=&quot;mdl-button__ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
 				&lt;/button&gt;
 			&lt;/div&gt;
+			&lt;div class=&quot;user-voice&quot;&gt;
+				&lt;a data-uv-trigger=&quot;&quot; data-uv-scanned=&quot;true&quot; id=&quot;uv-1&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;feedback&lt;/i&gt;&lt;/a&gt;
+			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/header&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="header-menu">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Header Menu</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes" >
+	<p>Header menu component.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="local-nav-top">
+	<ul class="global-nav">
+		<li><a href="/"><i class="fa fa-home"></i></a></li>
+		<li class="desktop-only"><a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true">News</a></li>
+		<li class="desktop-only"><a href="/alberta-education/contact-us/">Contacts</a></li>
+		<li class="desktop-only"><a href="/using-this-site/">Using This Site</a></li>
+		<li class="desktop-only"><a href="https://archive.education.alberta.ca/" target="_blank">Archive</a></li>
+	</ul>
+	<div class="mobile-only">
+		<button id="menu-bottom-left" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+			<i class="material-icons">more_vert</i>
+		</button>
+		<div class="mdl-menu__container is-upgraded">
+			<div class="mdl-menu__outline mdl-menu--bottom-left"></div>
+			<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" for="menu-bottom-left" data-upgraded=",MaterialMenu,MaterialRipple">
+				<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true">News</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+				</li>
+				<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="/alberta-education/contact-us/">Contacts</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+				</li>
+				<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="/using-this-site">Using This Site</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+				</li>
+				<li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="https://archive.education.alberta.ca/" target="_blank">Archive</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;local-nav-top&quot;&gt;
+	&lt;ul class=&quot;global-nav&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;/&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;desktop-only&quot;&gt;&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;desktop-only&quot;&gt;&lt;a href=&quot;/alberta-education/contact-us/&quot;&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;desktop-only&quot;&gt;&lt;a href=&quot;/using-this-site/&quot;&gt;Using This Site&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;desktop-only&quot;&gt;&lt;a href=&quot;https://archive.education.alberta.ca/&quot; target=&quot;_blank&quot;&gt;Archive&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class=&quot;mobile-only&quot;&gt;
+		&lt;button id=&quot;menu-bottom-left&quot; class=&quot;mdl-button mdl-js-button mdl-button--icon&quot; data-upgraded=&quot;,MaterialButton&quot;&gt;
+			&lt;i class=&quot;material-icons&quot;&gt;more_vert&lt;/i&gt;
+		&lt;/button&gt;
+		&lt;div class=&quot;mdl-menu__container is-upgraded&quot;&gt;
+			&lt;div class=&quot;mdl-menu__outline mdl-menu--bottom-left&quot;&gt;&lt;/div&gt;
+			&lt;ul class=&quot;mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events&quot; for=&quot;menu-bottom-left&quot; data-upgraded=&quot;,MaterialMenu,MaterialRipple&quot;&gt;
+				&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;/topic-search/?journeyId=1089&amp;amp;resetFilter=1&amp;amp;showNews=true&quot;&gt;News&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+				&lt;/li&gt;
+				&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;/alberta-education/contact-us/&quot;&gt;Contacts&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+				&lt;/li&gt;
+				&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;/using-this-site&quot;&gt;Using This Site&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+				&lt;/li&gt;
+				&lt;li class=&quot;mdl-menu__item mdl-js-ripple-effect&quot; tabindex=&quot;-1&quot; data-upgraded=&quot;,MaterialRipple&quot;&gt;&lt;a href=&quot;https://archive.education.alberta.ca/&quot; target=&quot;_blank&quot;&gt;Archive&lt;/a&gt;&lt;span class=&quot;mdl-menu__item-ripple-container&quot;&gt;&lt;span class=&quot;mdl-ripple&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 
@@ -2697,7 +2789,7 @@
 	<div class="toolbox-content">
 		<span class="toolbox-title  " style="font-weight: bold">
                 <span class="tool"  title="Internal Link">
-                  <i class="material-icons mdl-badge" >today</i>
+                  <i class="material-icons" >today</i>
                 </span> Calendar
 		</span>
 		<div class="toolbox-content toolbox-content-calendar">
@@ -2727,7 +2819,7 @@
 	&lt;div class=&quot;toolbox-content&quot;&gt;
 		&lt;span class=&quot;toolbox-title  &quot; style=&quot;font-weight: bold&quot;&gt;
                 &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
-                  &lt;i class=&quot;material-icons mdl-badge&quot; &gt;today&lt;/i&gt;
+                  &lt;i class=&quot;material-icons&quot; &gt;today&lt;/i&gt;
                 &lt;/span&gt; Calendar
 		&lt;/span&gt;
 		&lt;div class=&quot;toolbox-content toolbox-content-calendar&quot;&gt;
@@ -2771,7 +2863,7 @@
 	<div class="toolbox-content ">
 		<span class="toolbox-title  " style="font-weight: bold">
       <span class="tool"  title="Internal Link">
-        <i class="material-icons mdl-badge" >contacts</i>
+        <i class="material-icons " >contacts</i>
       </span> Contacts
 		</span>
 		<div class="toolbox-content toolbox-content-contact">
@@ -2794,7 +2886,7 @@
 	&lt;div class=&quot;toolbox-content &quot;&gt;
 		&lt;span class=&quot;toolbox-title  &quot; style=&quot;font-weight: bold&quot;&gt;
       &lt;span class=&quot;tool&quot;  title=&quot;Internal Link&quot;&gt;
-        &lt;i class=&quot;material-icons mdl-badge&quot; &gt;contacts&lt;/i&gt;
+        &lt;i class=&quot;material-icons &quot; &gt;contacts&lt;/i&gt;
       &lt;/span&gt; Contacts
 		&lt;/span&gt;
 		&lt;div class=&quot;toolbox-content toolbox-content-contact&quot;&gt;
@@ -2833,7 +2925,7 @@
 			<div class="toolbox-resources ng-scope">
 				<span class="toolbox-title ng-binding" style="font-weight: bold">
               <span class="tool"  title="Document">
-                <i class="material-icons mdl-badge"  data-badge="5">insert_drive_file</i>
+                <i class="material-icons" >insert_drive_file</i>
               </span> Documents
 				</span>
 			</div>
@@ -2848,7 +2940,7 @@
 			&lt;div class=&quot;toolbox-resources ng-scope&quot;&gt;
 				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
               &lt;span class=&quot;tool&quot;  title=&quot;Document&quot;&gt;
-                &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;5&quot;&gt;insert_drive_file&lt;/i&gt;
+                &lt;i class=&quot;material-icons&quot; &gt;insert_drive_file&lt;/i&gt;
               &lt;/span&gt; Documents
 				&lt;/span&gt;
 			&lt;/div&gt;
@@ -2877,7 +2969,7 @@
 			<div class="toolbox-event ng-scope">
 				<span class="toolbox-title ng-binding" style="font-weight: bold">
               <span class="tool"  title="Events">
-                <i class="material-icons mdl-badge"  data-badge="2">today</i>
+                <i class="material-icons">today</i>
               </span> Calendar
 				</span>
 			</div>
@@ -2892,7 +2984,7 @@
 			&lt;div class=&quot;toolbox-event ng-scope&quot;&gt;
 				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
               &lt;span class=&quot;tool&quot;  title=&quot;Events&quot;&gt;
-                &lt;i class=&quot;material-icons mdl-badge&quot;  data-badge=&quot;2&quot;&gt;today&lt;/i&gt;
+                &lt;i class=&quot;material-icons&quot;&gt;today&lt;/i&gt;
               &lt;/span&gt; Calendar
 				&lt;/span&gt;
 			&lt;/div&gt;
@@ -2921,7 +3013,7 @@
 			<div class="toolbox-faq ng-scope">
 				<span class="toolbox-title ng-binding" style="font-weight: bold">
           <span class="tool" title="Faq">
-            <i class="material-icons mdl-badge" data-badge="2">question_answer</i>
+            <i class="material-icons" >question_answer</i>
           </span> FAQs
 				</span>
 			</div>
@@ -2936,7 +3028,7 @@
 			&lt;div class=&quot;toolbox-faq ng-scope&quot;&gt;
 				&lt;span class=&quot;toolbox-title ng-binding&quot; style=&quot;font-weight: bold&quot;&gt;
           &lt;span class=&quot;tool&quot; title=&quot;Faq&quot;&gt;
-            &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;2&quot;&gt;question_answer&lt;/i&gt;
+            &lt;i class=&quot;material-icons&quot; &gt;question_answer&lt;/i&gt;
           &lt;/span&gt; FAQs
 				&lt;/span&gt;
 			&lt;/div&gt;
@@ -3008,7 +3100,7 @@
 		<div class="toolbox-news">
 			<span class="toolbox-title" style="font-weight: bold">
                 <span class="tool" title="News">
-                    <i class="material-icons mdl-badge" data-badge="3">assignment</i>
+                    <i class="material-icons" >assignment</i>
                 </span> News
 			</span>
 			<a href="#">
@@ -3036,7 +3128,7 @@
 		&lt;div class=&quot;toolbox-news&quot;&gt;
 			&lt;span class=&quot;toolbox-title&quot; style=&quot;font-weight: bold&quot;&gt;
                 &lt;span class=&quot;tool&quot; title=&quot;News&quot;&gt;
-                    &lt;i class=&quot;material-icons mdl-badge&quot; data-badge=&quot;3&quot;&gt;assignment&lt;/i&gt;
+                    &lt;i class=&quot;material-icons&quot; &gt;assignment&lt;/i&gt;
                 &lt;/span&gt; News
 			&lt;/span&gt;
 			&lt;a href=&quot;#&quot;&gt;

@@ -55,6 +55,9 @@
 	          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
 	        </button>
 	      </div>
+	      <div class="user-voice">
+	                <a data-uv-trigger="" data-uv-scanned="true" id="uv-1"><i class="material-icons">feedback</i></a>
+	            </div>
 	    </div>
 	  </div>
 	</header><div id="container" class="resizeable masonry js-masonry mainArea">
@@ -455,7 +458,7 @@
           <div class="leftContent">
             <div class="slide-out-div">
               <div class="persona-dd">
-                <span class="languageItem English" style="display: block;">Personalize</span>
+                <span class="languageItem English" style="display: block;">Refine by Category</span>
                 <span class="languageItem French" style="display: none;">Personnaliser</span>
                 <select class="personaList ng-pristine ng-untouched ng-valid" ng-model="searchFilter.Persona" ng-disabled="!filterToggle" ng-options="persona.Name as (persona.DisplayName + &quot; (&quot; + persona.Count  + &quot;)&quot;) for persona in personaList" ng-change="TogglePersona()">
                   <option value="0" selected="selected" label="Everyone (6)">Everyone (6)</option>
@@ -470,19 +473,28 @@
               <span class="clear-filters"><a href="javascript:void(0)" ng-click="ClearCategoryFilter()">clear filters</a></span>
               <div class="filterCategories">
                 <ul class="categories">
-                  <li class="toggleBtn ng-scope">
-                    <span class="category-title ng-binding">
-                      Curriculum
-                    </span>
-                      <div class="toggle">
-                        <div class="onoffswitch">
-                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="category_Curriculum" ng-checked="isCategorySelected()">
-                          <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                          </label>
+        
+                  <li class="toggleBtn ng-scope" >
+                        <span class="category-title">
+                            <span ng-show="searchFilter.Language == 'English'" class="ng-binding">International Education</span>
+                            <span ng-show="searchFilter.Language == 'French'" class="ng-binding ng-hide">Internationale Education</span>
+                        </span>
+                        <div class="toggle">
+                            <div class="onoffswitch">
+        
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" >
+                                    <input type="checkbox" id="category_International Education" class="mdl-checkbox__input" ng-checked="isCategorySelected()">
+                                <span class="mdl-checkbox__focus-helper"></span>
+                                <span class="mdl-checkbox__box-outline">
+                                  <span class="mdl-checkbox__tick-outline"></span>
+                                </span>
+                                <span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple">
+                                  <span class="mdl-ripple is-animating" style="width: 103.823px; height: 103.823px; transform: translate(-50%, -50%) translate(18px, 18px);"></span>
+                                </span>
+                              </label>
+                            </div>
                         </div>
-                      </div>          </li>
+                    </li>
                   <!-- end ngRepeat: category in categoryList -->
                 </ul>
               </div>

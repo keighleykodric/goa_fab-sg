@@ -27,7 +27,8 @@ Modal Styles
 
 
 
-/*-----Base Modal Styles-----*/
+/*-----
+BASE MODAL STYLES-----*/
 
 
 .dialogBox {
@@ -409,7 +410,7 @@ select.personaList {
 .folderName {
     background:#eee;
     padding:5px;
-    color:#005883;
+    color:#52657b;
     font-weight:700
 }
 
@@ -550,7 +551,7 @@ select.personaList {
 }
 .eventDetails {
     display:inline-block;
-    color:#005883;
+    color:#52657b;
     background-color:#eee;
     padding:10px;
     height:65px;
@@ -830,7 +831,7 @@ select.personaList {
 .folderName {
   background: #eee;
   padding: 5px;
-  color:#005883;
+  color:#52657b;
   font-weight:bold;
 }
 
@@ -880,7 +881,7 @@ select.personaList {
     font-size:21px
 }
 .toolboxItem .mdl-badge[data-badge]:after {
-    color:#005883
+    color:#52657b
 }
 .toolboxItem .mdl-badge[data-badge]:after {
     content:attr(data-badge);
@@ -932,25 +933,25 @@ select.personaList {
 .toolboxDocuments a {
     padding-left:20px;
     margin:10px 0;
-    color:#005883;
+    color:#52657b;
     font-size:12px;
     display:block
 }
 .toolbox-title {
-    position:relative;
-    padding:0 5px 2px;
-    display:block;
-    font-size:14px;
-    background:#fff;
-    border-top:1px solid #fff;
-    border-bottom:1px solid #fff;
-    color:#005883
+    position: relative;
+    padding: 0 5px 2px;
+    display: block;
+    font-size: 16px;
+    background: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #52657b;
 }
 .toolbox-news .toolbox-title,
 .toolbox-internallinks .toolbox-title {
     background:none;
     border:0;
-    color:#005883;
+    color:#52657b;
     margin:5px 10px;
     padding-bottom:5px;
     border-bottom:1px solid #ddd
@@ -965,7 +966,9 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
     margin-bottom:12px;
     overflow:hidden;
     padding:0 10px;
-    background:#fff
+    background:#fff;
+    //height: 70px;
+    //margin-bottom: 0;
 }
 .toolboxTitle {
     font-size:11px
@@ -1011,7 +1014,7 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
     height:50px;
     font-size:1.5em;
     font-weight:700;
-    color:#005883;
+    color:#52657b;
     text-align:center;
     line-height:50px;
     margin:5px 10px
@@ -1054,7 +1057,7 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
     border-radius:50%;
     text-align:center;
     display:inline-block;
-    color:#005883
+    color:#52657b
 }
 .toolbox-event-month {
     text-align:center
@@ -1064,7 +1067,7 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
     height:50px;
     display:inline-block;
     font-size:1.5em;
-    color:#005883;
+    color:#52657b;
     margin-top:10px
 }
 .toolbox-link-display,
@@ -1076,7 +1079,7 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
 .toolbox-resources-title,
 .toolbox-contacts-title {
     position:relative;
-    color:#005883;
+    color:#52657b;
     font-size:14px
 }
 .toolbox-icon {
@@ -1087,7 +1090,7 @@ toolbox-internallinks .toolboxItem i.material-icons.mdl-badge {
     display:none
 }
 .contact-icon {
-    color:#005883
+    color:#52657b
 }
 .toolbox-contactName {
     font-size:12px;

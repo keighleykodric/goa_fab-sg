@@ -1,0 +1,27 @@
+---
+notes: |
+  Header menu component.
+---
+<div class="local-nav-top">
+  <ul class="global-nav">
+    <li><a href="/"><i class="fa fa-home"></i></a></li>
+    <li class="desktop-only"><a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true">News</a></li>
+    <li class="desktop-only"><a href="/alberta-education/contact-us/">Contacts</a></li>
+    <li class="desktop-only"><a href="/using-this-site/">Using This Site</a></li>
+    <li class="desktop-only"><a href="https://archive.education.alberta.ca/" target="_blank">Archive</a></li>
+  </ul>
+  <div class="mobile-only">
+    <button id="menu-bottom-left" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <div class="mdl-menu__container is-upgraded">
+      <div class="mdl-menu__outline mdl-menu--bottom-left"></div>
+      <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" for="menu-bottom-left" data-upgraded=",MaterialMenu,MaterialRipple">
+        <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="/topic-search/?journeyId=1089&amp;resetFilter=1&amp;showNews=true">News</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
+        <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="/alberta-education/contact-us/">Contacts</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
+        <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="/using-this-site">Using This Site</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
+        <li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple"><a href="https://archive.education.alberta.ca/" target="_blank">Archive</a><span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
