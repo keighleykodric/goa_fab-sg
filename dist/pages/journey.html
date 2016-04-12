@@ -457,27 +457,15 @@
           </div>
           <div class="leftContent">
             <div class="slide-out-div">
-              <div class="persona-dd">
-                <span class="languageItem English" style="display: block;">Refine by Category</span>
-                <span class="languageItem French" style="display: none;">Personnaliser</span>
-                <select class="personaList ng-pristine ng-untouched ng-valid" ng-model="searchFilter.Persona" ng-disabled="!filterToggle" ng-options="persona.Name as (persona.DisplayName + &quot; (&quot; + persona.Count  + &quot;)&quot;) for persona in personaList" ng-change="TogglePersona()">
-                  <option value="0" selected="selected" label="Everyone (6)">Everyone (6)</option>
-                  <option value="1" label="Parent (3)">Parent (3)</option>
-                  <option value="2" label="Student (1)">Student (1)</option>
-                  <option value="3" label="Teacher (1)">Teacher (1)</option>
-                  <option value="4" label="School Administrator (3)">School Administrator (3)</option>
-                </select>
-              </div>
-              <span class="languageItem English" style="display: block;">Categories</span>
-              <span class="languageItem French" style="display: none;">Catégories</span>
-              <span class="clear-filters"><a href="javascript:void(0)" ng-click="ClearCategoryFilter()">clear filters</a></span>
+              
+              <!-- <span class="languageItem English" style="display: block;">Categories</span> -->
+              <span class="clear-filters"><a href="javascript:void(0)" >clear filters</a></span>
               <div class="filterCategories">
                 <ul class="categories">
         
-                  <li class="toggleBtn ng-scope" >
+                  <li class="toggleBtn" >
                         <span class="category-title">
-                            <span ng-show="searchFilter.Language == 'English'" class="ng-binding">International Education</span>
-                            <span ng-show="searchFilter.Language == 'French'" class="ng-binding ng-hide">Internationale Education</span>
+                            <span ng-show="searchFilter.Language == 'English'" >International Education</span>
                         </span>
                         <div class="toggle">
                             <div class="onoffswitch">
